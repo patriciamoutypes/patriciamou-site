@@ -14,7 +14,7 @@ from their own CDNs, which is fine: none of them is Webflow.
   `assets/` holds 529 files, about 150 MB.
 - `webflow-export/` — the raw zip Webflow produced, for reference only.
   Its CMS-driven pages are empty templates. Don't deploy this folder.
-- `netlify.toml` — publishes `public/` and sets long cache headers on assets.
+- `public/_headers` — Cloudflare Pages cache rules for the assets.
 
 ## Known gaps carried over from the live site
 
@@ -37,19 +37,15 @@ From the `Vibe Coding` folder the `patriciamou-site` entry in
 npx --yes serve@14 public -l 8790
 ```
 
-## Go live
+## Hosting (Cloudflare Pages, since 2026-11-04)
 
-1. https://app.netlify.com/drop — drag the `public` folder in. You get a
-   `something.netlify.app` address. Check it.
-2. Netlify → Project configuration → General → turn off the
-   "Powered by Netlify" badge.
-3. Netlify → Domain management → Add a domain → `www.patriciamou.com`
-   (Netlify adds `patriciamou.com` too).
-4. The domain is registered at Squarespace Domains (formerly Google Domains)
-   and currently points at Webflow. In Squarespace → Domains → patriciamou.com
-   → DNS, delete the existing records that point to Webflow
-   (`A @ 198.202.211.1` and `CNAME www cdn.webflow.com`) and add:
-   - `A    @    75.2.60.5`
-   - `CNAME www  <your-site>.netlify.app`
-5. Wait up to an hour. Netlify issues HTTPS on its own. Then cancel the
-   Webflow plan for this site.
+This repo is connected to Cloudflare Pages (project `patriciamou-site`, account
+impatriciamou@gmail.com). Every push to `main` builds and goes live on
+patriciamou.com in about a minute. Preview copy: https://patriciamou-site.pages.dev.
+Settings: framework None, no build command, output directory `public`.
+DNS for patriciamou.com is on Cloudflare too, so custom domains and HTTPS are
+handled in Workers & Pages → patriciamou-site → Custom domains.
+
+Deploys are free on Cloudflare (no credit meter), which is why the site
+moved off Netlify. Pushes still deserve batching out of habit: one push
+per round of changes.
