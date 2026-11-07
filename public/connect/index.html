@@ -41,23 +41,24 @@ a{color:var(--rose);text-decoration:none}
 .nav.open .nav-toggle span:last-child{transform:rotate(-45deg)}
 .nav-toggle:focus-visible{outline:2px solid var(--rose);outline-offset:2px;border-radius:50%}
 
-/* the stage: a hairline moon orbit turning slowly around the form,
+/* the stage: the form in the middle, a small moon orbit turning slowly around the pink shell,
    two round cut-outs from the moodboard resting on its edge */
-.stage{position:relative;display:grid;place-items:center;min-height:880px;padding:40px 0;isolation:isolate}
-.ring{position:absolute;left:50%;top:50%;width:min(780px,112%);aspect-ratio:1;transform:translate(-50%,-50%);z-index:-1;pointer-events:none;overflow:visible}
+.stage{position:relative;display:grid;place-items:center;padding:110px 0 120px;isolation:isolate}
+.orbit{position:absolute;width:260px;height:260px;left:calc(50% - 510px);top:50px;z-index:1;pointer-events:none}
+.ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .ring circle.path{fill:none;stroke:#c9c6d2;stroke-width:1;vector-effect:non-scaling-stroke}
 .ring .m-dark{fill:#aaa7b3}
 .ring .m-lit{fill:#fff}
-.ring .m-edge{fill:none;stroke:#aaa7b3;stroke-width:1.8}
+.ring .m-edge{fill:none;stroke:#aaa7b3;stroke-width:1.4}
 /* the ring turns once every 123.75 seconds; each moon turns back the other way so it stays upright, lit side true */
-.ring .turn{transform-origin:400px 400px;animation:orbit 123.75s linear infinite}
+.ring .turn{transform-origin:150px 150px;animation:orbit 123.75s linear infinite}
 .ring .moon{transform-box:fill-box;transform-origin:center;animation:orbit 123.75s linear infinite reverse}
 @keyframes orbit{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.ring .turn,.ring .moon{animation:none}}
 .disc{position:absolute;z-index:1;border-radius:50%;object-fit:cover;pointer-events:none;
   box-shadow:0 14px 30px rgba(30,30,60,.22),0 2px 6px rgba(30,30,60,.1),0 0 0 4px #fff}
-.disc-a{width:128px;height:128px;left:calc(50% - 311px);top:121px}
-.disc-b{width:150px;height:150px;left:calc(50% + 196px);top:612px}
+.orbit .disc-a{width:128px;height:128px;left:66px;top:66px}
+.disc-b{width:150px;height:150px;left:calc(50% + 320px);top:400px}
 
 .panel{position:relative;width:min(470px,100%);text-align:center}
 h1{font:400 64px/1 var(--serif);margin:0 0 10px;letter-spacing:-.01em}
@@ -105,10 +106,10 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
   .nav.open .nav-links{opacity:1;visibility:visible;transform:none}
   .nav-links a{font-size:19px;padding:8px 0}
   .nav a::after{bottom:5px}
-  .stage{min-height:0;padding:190px 0 210px}
-  .ring{width:218vw}
+  .stage{padding:200px 0 150px}
+  .orbit{width:184px;height:184px;left:-12px;top:6px}
   h1{font-size:52px}
-  .disc-a{width:88px;height:88px;left:-4px;top:40px}
+  .orbit .disc-a{width:90px;height:90px;left:47px;top:47px}
   .disc-b{width:100px;height:100px;left:auto;top:auto;right:-4px;bottom:44px}
   .row{grid-template-columns:1fr}
 }
@@ -147,24 +148,26 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
 <script>(function () { var n = document.querySelector(".nav"); function f() { n.classList.toggle("stuck", window.scrollY > 4); } f(); window.addEventListener("scroll", f, { passive: true }); })();</script>
 
 <main class="stage">
-  <svg class="ring" viewBox="0 0 800 800" aria-hidden="true" shape-rendering="geometricPrecision">
-    <circle class="path" cx="400" cy="400" r="392"/>
-    <g class="turn">
-      <g transform="translate(400.00 8.00)"><g class="moon"><circle class="m-lit" r="12"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(596.00 60.52)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A8.40,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(739.48 204.00)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A3.60,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(792.00 400.00)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A0.00,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(739.48 596.00)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A3.60,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(596.00 739.48)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A8.40,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(400.00 792.00)"><g class="moon"><circle class="m-dark" r="12"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(204.00 739.48)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A8.40,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(60.52 596.00)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A3.60,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(8.00 400.00)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A0.00,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(60.52 204.00)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A3.60,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(204.00 60.52)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A8.40,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-    </g>
-  </svg>
-  <img class="disc disc-a" src="/assets/collage/connect-shell.jpg" alt="" aria-hidden="true"/>
+  <div class="orbit" aria-hidden="true">
+    <svg class="ring" viewBox="0 0 300 300" aria-hidden="true" shape-rendering="geometricPrecision">
+      <circle class="path" cx="150" cy="150" r="138"/>
+      <g class="turn">
+        <g transform="translate(150.00 12.00)"><g class="moon"><circle class="m-lit" r="9"/><circle class="m-edge" r="9"/></g></g>
+        <g transform="translate(219.00 30.49)"><g class="moon"><circle class="m-dark" r="9"/><path class="m-lit" d="M0,-9 A9,9 0 0 0 0,9 A6.30,9 0 0 0 0,-9 Z"/><circle class="m-edge" r="9"/></g></g>
+        <g transform="translate(269.51 81.00)"><g class="moon"><circle class="m-dark" r="9"/><path class="m-lit" d="M0,-9 A9,9 0 0 0 0,9 A2.70,9 0 0 0 0,-9 Z"/><circle class="m-edge" r="9"/></g></g>
+        <g transform="translate(288.00 150.00)"><g class="moon"><circle class="m-dark" r="9"/><path class="m-lit" d="M0,-9 A9,9 0 0 0 0,9 A0.00,9 0 0 0 0,-9 Z"/><circle class="m-edge" r="9"/></g></g>
+        <g transform="translate(269.51 219.00)"><g class="moon"><circle class="m-dark" r="9"/><path class="m-lit" d="M0,-9 A9,9 0 0 0 0,9 A2.70,9 0 0 1 0,-9 Z"/><circle class="m-edge" r="9"/></g></g>
+        <g transform="translate(219.00 269.51)"><g class="moon"><circle class="m-dark" r="9"/><path class="m-lit" d="M0,-9 A9,9 0 0 0 0,9 A6.30,9 0 0 1 0,-9 Z"/><circle class="m-edge" r="9"/></g></g>
+        <g transform="translate(150.00 288.00)"><g class="moon"><circle class="m-dark" r="9"/><circle class="m-edge" r="9"/></g></g>
+        <g transform="translate(81.00 269.51)"><g class="moon"><circle class="m-dark" r="9"/><path class="m-lit" d="M0,-9 A9,9 0 0 1 0,9 A6.30,9 0 0 0 0,-9 Z"/><circle class="m-edge" r="9"/></g></g>
+        <g transform="translate(30.49 219.00)"><g class="moon"><circle class="m-dark" r="9"/><path class="m-lit" d="M0,-9 A9,9 0 0 1 0,9 A2.70,9 0 0 0 0,-9 Z"/><circle class="m-edge" r="9"/></g></g>
+        <g transform="translate(12.00 150.00)"><g class="moon"><circle class="m-dark" r="9"/><path class="m-lit" d="M0,-9 A9,9 0 0 1 0,9 A0.00,9 0 0 0 0,-9 Z"/><circle class="m-edge" r="9"/></g></g>
+        <g transform="translate(30.49 81.00)"><g class="moon"><circle class="m-dark" r="9"/><path class="m-lit" d="M0,-9 A9,9 0 0 1 0,9 A2.70,9 0 0 1 0,-9 Z"/><circle class="m-edge" r="9"/></g></g>
+        <g transform="translate(81.00 30.49)"><g class="moon"><circle class="m-dark" r="9"/><path class="m-lit" d="M0,-9 A9,9 0 0 1 0,9 A6.30,9 0 0 1 0,-9 Z"/><circle class="m-edge" r="9"/></g></g>
+      </g>
+    </svg>
+    <img class="disc disc-a" src="/assets/collage/connect-shell.jpg" alt=""/>
+  </div>
   <img class="disc disc-b" src="/assets/collage/connect-swirl.jpg" alt="" aria-hidden="true"/>
 
   <section class="panel" aria-labelledby="h-connect">
