@@ -182,6 +182,7 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 .o-meta{font-size:12.5px;color:var(--faint);margin:0 0 8px}
 .o-desc{font-size:13.5px;line-height:1.55;color:var(--muted);margin:0}
 .cx-mech{display:flex;align-items:baseline;gap:12px;margin:40px 0 6px}
+.cx-eyebrow + .cx-mech{margin-top:0}
 .cx-mech h5{font:500 27px/1.1 var(--serif);margin:0}
 .cx-mech span{font-size:12px;letter-spacing:.06em;color:var(--faint)}
 .cx-banners{display:block;width:100%;max-width:560px;height:auto;margin:8px 0 14px}
@@ -206,16 +207,6 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 .cx-cycle li b{display:block;font-weight:500;color:var(--ink);font-size:13.5px;margin-bottom:3px}
 .cx-cycle li:not(:last-child)::after{content:"→";position:absolute;top:-12px;right:-9px;font-size:12px;color:#3f7a70;background:#fff;padding:0 2px}
 .cx-cycle li:last-child::after{content:"↺";position:absolute;top:-12px;right:-4px;font-size:13px;color:#3f7a70;background:#fff;padding:0 2px}
-.cx-practicums{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
-.cx-practicums li{text-align:center;font-size:12.5px;color:var(--muted);line-height:1.4}
-.p-icon{display:block;font-size:30px;line-height:1;margin-bottom:8px}
-.cx-practicums b{display:block;font:500 17px/1.2 var(--serif);color:var(--ink);margin-bottom:2px}
-.cx-week{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 22px}
-.cx-week .d{font:500 18px/1.2 var(--serif);margin:0 0 4px;padding-bottom:6px;border-bottom:1px solid var(--line)}
-.cx-week ul{list-style:none;margin:0;padding:0}
-.cx-week li{font-size:13px;line-height:1.4;padding:5px 0}
-.cx-week i{display:block;font-style:normal;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:1px}
-.cx-week .k-artist{color:#c98a82}.cx-week .k-mystic{color:#7a5a44}.cx-week .k-explorer{color:#3f7a70}.cx-week .k-builder{color:#7d9479}
 .cx mark{color:inherit;padding:0 .12em;border-radius:2px}
 .hl-a{background:#f4d6d1}.hl-b{background:#c6e3df}.hl-c{background:#dcebd8}
 .cx-rooms{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
@@ -254,8 +245,6 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
   .cx-photos,.cx-evenings,.cx-offerings,.cx-cycle{grid-template-columns:minmax(0,1fr)}
   .cx-photos img{height:200px}
   .cx-guilds,.cx-journey,.cx-cycle ol,.cx-rooms{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .cx-practicums{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:18px}
-  .cx-week{grid-template-columns:minmax(0,1fr)}
   .cx-explorer{padding:16px}
   .cx-cycle li::after{display:none}
   .step{grid-template-columns:38px minmax(0,1fr);gap:0 12px}
@@ -428,8 +417,6 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 
 <section class="cx-part">
   <p class="cx-eyebrow">version 02</p>
-  <h4 class="cx-title">guilds &amp; practicums</h4>
-
   <div class="cx-mech"><h5>guilds</h5><span>mechanism: bonding</span></div>
   <p class="cx-lead">Choose a guild for the quarter via the primary way you meaning-make &amp; express:</p>
   <img class="cx-banners" src="/assets/proj-curriculum-guild-banners.png" alt="the four guild banners: builders, mystics, artists, explorers" width="620" height="312" loading="lazy" decoding="async"/>
@@ -464,32 +451,6 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
     </div>
   </div>
 
-  <div class="cx-mech"><h5>practicums</h5><span>mechanism: bridging</span></div>
-  <p class="cx-lead">In-depth and expert-led workshops dedicated to aspects of inner development, meaning-making, spirituality, or self-expression.</p>
-  <ul class="cx-practicums">
-    <li><span class="p-icon" aria-hidden="true">👨‍👨‍👦</span><b>Relationships</b>self to others</li>
-    <li><span class="p-icon" aria-hidden="true">👩‍🎤</span><b>Creativity</b>self-expression</li>
-    <li><span class="p-icon" aria-hidden="true">🧭</span><b>Inner World</b>self to self</li>
-    <li><span class="p-icon" aria-hidden="true">🌌</span><b>Outer World</b>self to world</li>
-    <li><span class="p-icon" aria-hidden="true">🧘</span><b>Holistic Wellness</b>self to physical self</li>
-    <li><span class="p-icon" aria-hidden="true">🦉</span><b>Wisdom</b>transcending self</li>
-  </ul>
-
-  <h5 class="cx-sub">…on a typical week</h5>
-  <div class="cx-week">
-    <div><p class="d">tues 10/24</p><ul>
-      <li><i>socials</i>Daily On-Site Hello / Lunch (mon-fri)</li><li><i class="k-artist">artist guild</i>Science Fiction Writing</li><li><i>holistic wellness</i>Commons Gym at Fitness SF Fillmore</li><li><i class="k-mystic">mystic guild</i>Exploring the subconscious thru dreams &amp; astral projections</li><li><i class="k-explorer">explorer guild</i>the elephant vanishes (murakami short stories)</li><li><i class="k-artist">artist guild</i>Weekly Artist Guild Circle</li><li><i class="k-explorer">explorer guild</i>Neuro &amp; Consciousness Circle</li><li><i>holistic wellness</i>Zen Center Outing</li><li><i class="k-mystic">mystic guild</i>Dharma Talk Watch Party</li><li><i>inner world</i>Role-Play based Growth Coaching</li></ul></div>
-    <div><p class="d">wed 10/25</p><ul>
-      <li><i>holistic wellness</i>Morning Zazen at Zen Center</li><li><i class="k-builder">builders guild</i>Builders Build (2hr work block)</li><li><i>socials</i>Daily Commons Lunches (mon-thurs)</li><li><i class="k-explorer">explorer guild</i>New Punk Positive Futures Discussion Group</li><li><i>creative expression</i>Discovering Your Style</li><li><i class="k-explorer">explorer guild</i>Interactive People Watching</li><li><i class="k-explorer">explorer guild</i>Resurrecting Ancient Wisdom</li><li><i>relationships</i>Relationship Practicum</li></ul></div>
-    <div><p class="d">thurs 10/26</p><ul>
-      <li><i>holistic wellness</i>Holistic Wellness Opening Circle</li><li><i class="k-artist">artist guild</i>Weekly Artist Co-Creation Session</li><li><i class="k-mystic">mystic guild</i>Weekly Accountability Circle</li><li><i>socials</i>KARAOKE</li><li><i class="k-builder">builder guild</i>Hack Night</li></ul></div>
-    <div><p class="d">fri 10/27</p><ul>
-      <li><i class="k-builder">builder guild</i>Side Builder Circle</li><li><i>socials</i>Nomz &amp; Hangz</li><li><i>onboarding</i>Onboarding Makeup Session</li></ul></div>
-    <div><p class="d">sat 10/28</p><ul>
-      <li><i>relationships</i>Authentic Relating Circle</li><li><i>outer world</i>Design Your Life by Understanding Your Energy</li><li><i>wisdom</i>Retreat: Harmony Within and Beyond w Dr Lucy Xiao</li><li><i>onboarding</i>New Cohort Get To Know You</li><li><i>socials</i>Trippy Movie Night</li></ul></div>
-    <div><p class="d">sun 10/29</p><ul>
-      <li><i class="k-artist">artist guild</i>Writing Circle</li><li><i class="k-builder">builders guild</i>Builders Build (2x2hr work blocks)</li><li><i>holistic wellness</i>Sunday Meditation</li><li><i class="k-artist">artist guild</i>Create Together</li><li><i>wisdom</i>Bhakti SF field trip</li><li><i class="k-explorer">explorer guild</i>Call to adventure field trip</li><li><i class="k-builder">builder guild</i>Weekly Review</li></ul></div>
-  </div>
 </section>
 
 </div>
