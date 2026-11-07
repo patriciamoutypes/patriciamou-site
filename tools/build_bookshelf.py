@@ -142,21 +142,47 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
 .tip b{{display:block;font:500 18px/1.2 var(--serif)}}
 .tip span{{display:block;margin-top:3px;font-size:12px;letter-spacing:.03em;color:#7a7272}}
 .book a:hover .tip,.book a:focus-visible .tip,.book .nolink:hover .tip,.book .nolink:focus-visible .tip{{opacity:1;transform:translate(-50%,0)}}
-/* recommend a book: a quiet card under the last shelf that opens a pre-filled email */
-.rec{{max-width:560px;margin:84px auto 0;padding:34px 36px 30px;border:1px solid var(--line);border-radius:10px;background:#fcfbf9;text-align:center}}
-.rec h2{{font:500 30px/1.15 var(--serif);margin:0 0 8px}}
-.rec p{{margin:0 0 22px;color:var(--muted);font-size:15px}}
+/* recommend a book: a lavender-linen card from the moodboard: a moon-phase orbit turning slowly,
+   ripples spreading as on still water, a nautilus and a spiral of light hanging off its corners */
+.rec{{position:relative;max-width:580px;margin:110px auto 40px;padding:40px 44px 34px;border-radius:4px;text-align:center;isolation:isolate;
+  background:
+    repeating-linear-gradient(90deg,rgba(255,255,255,.14) 0 1px,transparent 1px 3px),
+    repeating-linear-gradient(0deg,rgba(90,80,120,.018) 0 1px,transparent 1px 5px),
+    radial-gradient(120% 70% at 50% 108%,#cbd5df 0%,rgba(203,213,223,0) 62%),
+    linear-gradient(180deg,#ebe6ef,#e3dfea);
+  box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 22px 50px -26px rgba(40,40,80,.45),0 2px 6px rgba(40,40,80,.08)}}
+.rec-water{{position:absolute;inset:0;overflow:hidden;border-radius:4px;z-index:-1;pointer-events:none}}
+.rec-ripples{{position:absolute;left:50%;bottom:-18%;width:120%;aspect-ratio:2/1;transform:translateX(-50%);opacity:.5}}
+.rec-ripples ellipse{{fill:none;stroke:#8f97ab;stroke-width:.6;transform-origin:50% 50%;transform-box:fill-box;animation:ripple 9s linear infinite;opacity:0}}
+.rec-ripples ellipse:nth-child(2){{animation-delay:-3s}}
+.rec-ripples ellipse:nth-child(3){{animation-delay:-6s}}
+@keyframes ripple{{0%{{transform:scale(.15);opacity:0}}15%{{opacity:.9}}100%{{transform:scale(1);opacity:0}}}}
+.rec-orbit{{display:block;width:96px;height:96px;margin:0 auto 12px}}
+.rec-orbit .ring{{fill:none;stroke:#6f6884;stroke-width:.7}}
+.rec-orbit .turn{{transform-origin:60px 60px;animation:orbit 80s linear infinite}}
+.rec-orbit .ph{{fill:#f3f0f5;stroke:#6f6884;stroke-width:.5}}
+.rec-orbit .dark{{fill:#3a3746}}
+@keyframes orbit{{to{{transform:rotate(360deg)}}}}
+.rec .cut{{position:absolute;z-index:2;pointer-events:none;border-radius:1px;box-shadow:0 12px 26px rgba(25,25,50,.28),0 2px 6px rgba(25,25,50,.12)}}
+.rec .cut-a{{width:118px;left:-62px;top:-46px;transform:rotate(-7deg)}}
+.rec .cut-b{{width:134px;right:-70px;bottom:-40px;transform:rotate(5deg)}}
+.rec h2{{font:500 34px/1.1 var(--serif);margin:0 0 8px;color:#24222c}}
+.rec p{{margin:0 0 24px;color:#5f5a6b;font-size:15px}}
 .rec form{{display:grid;gap:10px;text-align:left}}
 .rec .row{{display:grid;grid-template-columns:1fr 1fr;gap:10px}}
-.rec input,.rec textarea{{font:400 15px/1.5 var(--sans);color:var(--ink);background:#fff;border:1px solid #e4dfdf;border-radius:8px;padding:10px 12px;width:100%;outline:none;transition:border-color .2s,box-shadow .2s}}
+.rec input,.rec textarea{{font:400 15px/1.5 var(--sans);color:var(--ink);background:rgba(255,255,255,.62);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  border:1px solid rgba(95,90,130,.16);border-radius:8px;padding:10px 12px;width:100%;outline:none;transition:border-color .2s,box-shadow .2s,background-color .2s}}
 .rec textarea{{min-height:84px;resize:vertical}}
-.rec input:focus,.rec textarea:focus{{border-color:#bcc2cf;box-shadow:0 0 0 3px rgba(188,194,207,.35)}}
-.rec ::placeholder{{color:#a9a3a3}}
-.rec button{{justify-self:center;margin-top:6px;font:500 15px/1 var(--sans);color:#262a33;background:#cdd1da;border:1px solid #bcc2cf;border-radius:999px;padding:12px 24px;cursor:pointer;transition:background-color .2s}}
-.rec button:hover{{background:#c2c7d2}}
+.rec input:focus,.rec textarea:focus{{background:rgba(255,255,255,.85);border-color:#aab2c3;box-shadow:0 0 0 3px rgba(188,194,207,.4)}}
+.rec ::placeholder{{color:#9a94a6}}
+.rec button{{justify-self:center;margin-top:8px;font:500 15px/1 var(--sans);color:#262a33;background:#cdd1da;border:1px solid #b6bdcb;border-radius:999px;padding:12px 26px;cursor:pointer;
+  box-shadow:0 1px 0 rgba(255,255,255,.6) inset;transition:background-color .2s,transform .2s}}
+.rec button:hover{{background:#c2c7d3;transform:translateY(-1px)}}
 .rec button:focus-visible{{outline:2px solid #8a92a3;outline-offset:3px}}
-.rec .alt{{margin:16px 0 0;font-size:13px;color:var(--faint)}}
-.rec .alt a{{color:var(--muted);border-bottom:1px solid var(--line)}}
+.rec .alt{{margin:18px 0 0;font-size:13px;color:#7d7889}}
+.rec .alt br.m{{display:none}}
+.rec .alt a{{color:#5f5a6b;border-bottom:1px solid rgba(95,90,130,.25)}}
+@media (prefers-reduced-motion:reduce){{.rec-ripples ellipse,.rec-orbit .turn{{animation:none}}.rec-ripples ellipse{{opacity:.5}}.rec-ripples ellipse:nth-child(1){{transform:scale(.45)}}.rec-ripples ellipse:nth-child(2){{transform:scale(.7)}}}}
 @media (prefers-reduced-motion:reduce){{.book a,.book .nolink,.tip{{transition:none}}}}
 @media (max-width:860px){{
   :root{{--bh:120px;--gap:34px;--plank:10px}}
@@ -171,8 +197,12 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
   .faux{{padding:8px 7px}}
   .faux-title{{font-size:12px}}
   .faux-author{{font-size:8px}}
-  .rec{{margin-top:60px;padding:28px 20px 24px}}
+  .rec{{margin:84px 4px 70px;padding:34px 20px 34px}}
+  .rec .alt br.m{{display:inline}}
   .rec .row{{grid-template-columns:1fr}}
+  .rec h2{{font-size:30px}}
+  .rec .cut-a{{width:78px;left:-22px;top:-44px}}
+  .rec .cut-b{{width:84px;right:-16px;bottom:-62px}}
 }}
 </style>
 </head>
@@ -195,6 +225,9 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
 <div class="planks" aria-hidden="true"></div>
 </div>
 <section class="rec" aria-labelledby="rec-h">
+  <div class="rec-water"><svg class="rec-ripples" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><ellipse cx="100" cy="50" rx="98" ry="40"/><ellipse cx="100" cy="50" rx="98" ry="40"/><ellipse cx="100" cy="50" rx="98" ry="40"/></svg></div>
+  <img class="cut cut-a" src="/assets/collage/nautilus.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" data-no-zoom/><img class="cut cut-b" src="/assets/collage/spiral-light.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" data-no-zoom/>
+  <svg class="rec-orbit" viewBox="0 0 120 120" aria-hidden="true"><circle class="ring" cx="60" cy="60" r="44"/><g class="turn"><g transform="translate(60.0 16.0) rotate(0)"><circle class="ph" r="6"/><path class="dark" d="M0,-6 A6,6 0 0,1 0,6 Z"/></g><g transform="translate(91.1 28.9) rotate(45)"><circle class="ph" r="6"/><path class="dark" d="M0,-6 A6,6 0 0,1 0,6 Z"/></g><g transform="translate(104.0 60.0) rotate(90)"><circle class="ph" r="6"/><path class="dark" d="M0,-6 A6,6 0 0,1 0,6 Z"/></g><g transform="translate(91.1 91.1) rotate(135)"><circle class="ph" r="6"/><path class="dark" d="M0,-6 A6,6 0 0,1 0,6 Z"/></g><g transform="translate(60.0 104.0) rotate(180)"><circle class="ph" r="6"/><path class="dark" d="M0,-6 A6,6 0 0,1 0,6 Z"/></g><g transform="translate(28.9 91.1) rotate(225)"><circle class="ph" r="6"/><path class="dark" d="M0,-6 A6,6 0 0,1 0,6 Z"/></g><g transform="translate(16.0 60.0) rotate(270)"><circle class="ph" r="6"/><path class="dark" d="M0,-6 A6,6 0 0,1 0,6 Z"/></g><g transform="translate(28.9 28.9) rotate(315)"><circle class="ph" r="6"/><path class="dark" d="M0,-6 A6,6 0 0,1 0,6 Z"/></g></g><circle cx="60" cy="60" r="13" class="ph"/><path class="dark" d="M47,60 A13,13 0 0,0 73,60 Z"/></svg>
   <h2 id="rec-h">recommend me a book</h2>
   <p>a book that cracked you open? i'd love to read it.</p>
   <form id="rec-form">
@@ -206,7 +239,7 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
     <input name="from" placeholder="your name (optional)" aria-label="your name"/>
     <button type="submit">send it my way</button>
   </form>
-  <p class="alt">or write to me at <a href="mailto:impatriciamou@gmail.com?subject=a%20book%20for%20your%20shelf">impatriciamou@gmail.com</a></p>
+  <p class="alt">or write to me at<br class="m"/> <a href="mailto:impatriciamou@gmail.com?subject=a%20book%20for%20your%20shelf">impatriciamou@gmail.com</a></p>
 </section>
 </div>
 {SCRIPT}
