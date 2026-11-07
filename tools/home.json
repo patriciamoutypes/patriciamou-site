@@ -455,6 +455,117 @@
    ]
   },
   {
+   "id": "rabbit-holes",
+   "name": "rabbit holes",
+   "role": "a newsletter & a coffee table book",
+   "desc": [
+    "curation of the most soulful and psychoactive rabbit holes on the edges of the internet.",
+    "a sanctuary to pause from the world of doing and pass into the world of wonder, self-reflection, and aliveness. i curate across philosophy, art & poetry, architecture, personal development, spirituality, and world-building.",
+    "each issue unfolds in six movements:"
+   ],
+   "links": [
+    [
+     "read the newsletter",
+     "https://curatedrabbitholes.substack.com/"
+    ],
+    [
+     "the coffee table book",
+     "https://www.therabbitholes.xyz/book"
+    ]
+   ],
+   "images": [
+    [
+     "proj-rabbitholes-1.jpg",
+     "the Rabbit Holes coffee table book"
+    ],
+    [
+     "proj-rabbitholes-3.jpg",
+     "turning a page of the Rabbit Holes book"
+    ]
+   ],
+   "tagline": "what does it mean to live a life of meaning and beauty?",
+   "phases": [
+    [
+     "set the stage.",
+     "grab a coffee, meditate, put on a curated soundscape."
+    ],
+    [
+     "touch the heart.",
+     "poetry, photography, and quotes on love, life, loss, and wayfinding."
+    ],
+    [
+     "inspire the senses.",
+     "architecture, interiors, contemporary art, beautiful places."
+    ],
+    [
+     "engage the mind.",
+     "essays, books, and films on being and becoming."
+    ],
+    [
+     "tend the body.",
+     "wellness and spirituality for the physical and energetic body."
+    ],
+    [
+     "build.",
+     "profiles of artists and builders, with resources and tools."
+    ]
+   ],
+   "desc_after": [
+    "the book gathers five years and 50+ issues of curation into 170 hardcover pages, alongside personal essays and notes, each page paired with music."
+   ],
+   "figure": [
+    "proj-rabbitholes-newsletter.jpg",
+    "the Rabbit Holes newsletter header: a line-drawn rabbit circled by photographs of faces, a train at dusk, a flower seller, and a painted cosmos"
+   ]
+  },
+  {
+   "id": "hearth",
+   "name": "the mystical hearth",
+   "role": "sunday service",
+   "desc": [
+    "a sunday service for seekers of the sacred across every path.",
+    "The Hearth is the simplest sacred technology: a living center we tend to together. It belongs to no one, yet it warms everyone."
+   ],
+   "links": [
+    [
+     "themysticalhearth.com",
+     "https://themysticalhearth.com/"
+    ]
+   ],
+   "images": [
+    [
+     "proj-hearth-1.jpg",
+     "a circle gathered around candles"
+    ],
+    [
+     "proj-hearth-2.jpg",
+     "candles and cards on the floor"
+    ],
+    [
+     "proj-hearth-4.jpg",
+     "a circle and a smiling participant with a notebook"
+    ],
+    [
+     "proj-hearth-5.jpg",
+     "candles and a reading"
+    ],
+    [
+     "proj-hearth-6.jpg",
+     "a sunday gathering at The Commons"
+    ]
+   ],
+   "list": {
+    "intro": "We tend to this center at each service through different portals:",
+    "items": [
+     "co-creation of a collective altar",
+     "communal meditation",
+     "a sacred passage and sermon offered by a teacher from rotating wisdom lineages",
+     "45 mins of deep reading of a sacred text of one's choosing (however you define sacred; whether that's a textbook, poetry book, or 1,000 year old text)",
+     "sharing aloud the passages or poems that moved us in our reading"
+    ]
+   }
+  },
+  {
    "id": "cohere",
    "name": "cohere magazine",
    "role": "a magazine from the commons",
@@ -515,53 +626,6 @@
      "https://drive.google.com/file/d/1M5L1N-RbT3HJd67Y1mUFAYnn7huUQ22u/view"
     ]
    ]
-  },
-  {
-   "id": "hearth",
-   "name": "the mystical hearth",
-   "role": "sunday service",
-   "desc": [
-    "a sunday service for seekers of the sacred across every path.",
-    "The Hearth is the simplest sacred technology: a living center we tend to together. It belongs to no one, yet it warms everyone."
-   ],
-   "links": [
-    [
-     "themysticalhearth.com",
-     "https://themysticalhearth.com/"
-    ]
-   ],
-   "images": [
-    [
-     "proj-hearth-1.jpg",
-     "a circle gathered around candles"
-    ],
-    [
-     "proj-hearth-2.jpg",
-     "candles and cards on the floor"
-    ],
-    [
-     "proj-hearth-4.jpg",
-     "a circle and a smiling participant with a notebook"
-    ],
-    [
-     "proj-hearth-5.jpg",
-     "candles and a reading"
-    ],
-    [
-     "proj-hearth-6.jpg",
-     "a sunday gathering at The Commons"
-    ]
-   ],
-   "list": {
-    "intro": "We tend to this center at each service through different portals:",
-    "items": [
-     "co-creation of a collective altar",
-     "communal meditation",
-     "a sacred passage and sermon offered by a teacher from rotating wisdom lineages",
-     "45 mins of deep reading of a sacred text of one's choosing (however you define sacred; whether that's a textbook, poetry book, or 1,000 year old text)",
-     "sharing aloud the passages or poems that moved us in our reading"
-    ]
-   }
   },
   {
    "id": "hot-takes",
@@ -868,70 +932,6 @@
      "proj-haumbody-brick-nook.jpg",
      "a brick-walled sitting nook with a round wooden table"
     ]
-   ]
-  },
-  {
-   "id": "rabbit-holes",
-   "name": "rabbit holes",
-   "role": "a newsletter & a coffee table book",
-   "desc": [
-    "curation of the most soulful and psychoactive rabbit holes on the edges of the internet.",
-    "a sanctuary to pause from the world of doing and pass into the world of wonder, self-reflection, and aliveness. i curate across philosophy, art & poetry, architecture, personal development, spirituality, and world-building.",
-    "each issue unfolds in six movements:"
-   ],
-   "links": [
-    [
-     "read the newsletter",
-     "https://curatedrabbitholes.substack.com/"
-    ],
-    [
-     "the coffee table book",
-     "https://www.therabbitholes.xyz/book"
-    ]
-   ],
-   "images": [
-    [
-     "proj-rabbitholes-1.jpg",
-     "the Rabbit Holes coffee table book"
-    ],
-    [
-     "proj-rabbitholes-3.jpg",
-     "turning a page of the Rabbit Holes book"
-    ]
-   ],
-   "tagline": "what does it mean to live a life of meaning and beauty?",
-   "phases": [
-    [
-     "set the stage.",
-     "grab a coffee, meditate, put on a curated soundscape."
-    ],
-    [
-     "touch the heart.",
-     "poetry, photography, and quotes on love, life, loss, and wayfinding."
-    ],
-    [
-     "inspire the senses.",
-     "architecture, interiors, contemporary art, beautiful places."
-    ],
-    [
-     "engage the mind.",
-     "essays, books, and films on being and becoming."
-    ],
-    [
-     "tend the body.",
-     "wellness and spirituality for the physical and energetic body."
-    ],
-    [
-     "build.",
-     "profiles of artists and builders, with resources and tools."
-    ]
-   ],
-   "desc_after": [
-    "the book gathers five years and 50+ issues of curation into 170 hardcover pages, alongside personal essays and notes, each page paired with music."
-   ],
-   "figure": [
-    "proj-rabbitholes-newsletter.jpg",
-    "the Rabbit Holes newsletter header: a line-drawn rabbit circled by photographs of faces, a train at dusk, a flower seller, and a painted cosmos"
    ]
   }
  ],
