@@ -855,16 +855,16 @@
    "layout": "masonry",
    "images": [
     [
+     "proj-altars-3.jpg",
+     "lighting candles and incense around a floor mandala"
+    ],
+    [
      "proj-altars-1.jpg",
      "a mandala of grains, flowers and candles with people gathered around it"
     ],
     [
      "proj-altars-2.jpg",
      "arranging red roses and candles into an altar on a rug at The Commons"
-    ],
-    [
-     "proj-altars-3.jpg",
-     "lighting candles and incense around a floor mandala"
     ],
     [
      "proj-altars-4.jpg",
@@ -882,7 +882,8 @@
      "proj-altars-7.jpg",
      "sitting in meditation around a candle altar"
     ]
-   ]
+   ],
+   "lead": true
   },
   {
    "id": "haumbody",

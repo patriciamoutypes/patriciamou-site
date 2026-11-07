@@ -119,6 +119,7 @@ for pr in data['projects']:
                 tiles.append(f'<img src="/assets/{e(it[0])}" alt="{e(it[1])}" loading="lazy" decoding="async"/>')
         imgs = ''.join(tiles)
         cls = 'gallery gallery-masonry' if pr.get('layout') == 'masonry' else 'gallery'
+        if pr.get('lead'): cls += ' gallery-lead'   # first photo runs across all columns, the rest flow below
         parts.append(f'<div class="{cls}">{imgs}</div>')
     for b in pr.get('blocks', []):  # hand-written sections in tools/partials/
         parts.append(open(os.path.join(HERE, 'partials', b), encoding='utf-8').read())

@@ -123,6 +123,7 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 /* masonry: every photo whole, in columns */
 .gallery.gallery-masonry{display:block;columns:3 200px;column-gap:10px}
 .gallery.gallery-masonry > *,.gallery.gallery-masonry > *:nth-child(n){display:block;width:100%;height:auto;margin:0 0 10px;break-inside:avoid}
+.gallery.gallery-lead > *:first-child{column-span:all}
 /* exactly four tiles: an even two-by-two */
 .gallery > *:first-child:nth-last-child(4),.gallery > *:first-child:nth-last-child(4) ~ *{grid-column:span 3;grid-row:span 2}
 .gallery > *:first-child:nth-last-child(2),.gallery > *:first-child:nth-last-child(2) ~ *{grid-column:span 3;grid-row:span 2}
