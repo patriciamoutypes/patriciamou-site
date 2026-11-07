@@ -72,9 +72,9 @@ page = f'''<!DOCTYPE html>
 <link href="/assets/5eab87ea46d66a3036bdc28e_Screen-Shot-2020-04-30-at-7.18.48-PM.png" rel="apple-touch-icon"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&family=Inter:wght@400;500&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Della+Respira&family=Inter:wght@400;500&display=swap"/>
 <style>
-:root{{--ink:#1f1f1f;--muted:#6b6b6b;--faint:#9a9a9a;--rose:#816061;--line:#ece6e6;--serif:Cormorant,Georgia,serif;--sans:Inter,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+:root{{--ink:#1f1f1f;--muted:#6b6b6b;--faint:#9a9a9a;--rose:#816061;--line:#ece6e6;--serif:"Della Respira",Georgia,serif;--sans:Inter,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
   --bh:176px;--gap:46px;--plank:12px}}
 *{{box-sizing:border-box}}
 html,body{{overflow-x:clip}}
@@ -89,9 +89,9 @@ a{{color:var(--rose);text-decoration:none}}
 .nav a[aria-current]{{color:var(--ink)}}
 .nav a[aria-current]::after{{transform:scaleX(1)}}
 .nav a:hover{{color:var(--ink)}}
-.nav .nav-name{{margin-left:auto;font:500 20px/1 var(--serif);color:var(--ink)}}
+.nav .nav-name{{margin-left:auto;font:400 20px/1 var(--serif);color:var(--ink)}}
 .nav .nav-name::after{{display:none}}
-h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
+h1{{font:400 38px/1.1 var(--serif);margin:56px 0 30px}}
 .lede{{margin:0 0 34px;color:var(--muted);font-size:15px}}
 
 /* the bookcase: white wall, a wooden plank under every row of books */
@@ -120,13 +120,13 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
 .book a:hover,.book a:focus-visible,.book .nolink:hover,.book .nolink:focus-visible{{transform:translateY(-8px)}}
 .book a:focus-visible img,.book a:focus-visible .faux{{box-shadow:0 0 0 2px var(--rose)}}
 .faux{{aspect-ratio:2/3;background:var(--c);color:#fff;padding:12px 10px;display:flex;flex-direction:column;justify-content:space-between}}
-.faux-title{{font:500 15px/1.15 var(--serif)}}
+.faux-title{{font:400 15px/1.15 var(--serif)}}
 .faux-author{{font-size:9px;letter-spacing:.06em;text-transform:uppercase;opacity:.8}}
 .tip{{position:absolute;left:50%;bottom:calc(100% + 12px);transform:translate(-50%,4px);width:max-content;max-width:240px;padding:9px 14px;border-radius:10px;
   background:rgba(255,253,251,.97);color:#1f1f1f;text-align:center;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:2;
   box-shadow:0 0 0 1px rgba(60,50,60,.08),0 10px 24px -10px rgba(40,40,70,.35)}}
 .note{{margin:40px 0 0;font-size:12px;color:var(--faint)}}
-.tip b{{display:block;font:500 18px/1.2 var(--serif)}}
+.tip b{{display:block;font:400 18px/1.2 var(--serif)}}
 .tip span{{display:block;margin-top:3px;font-size:12px;letter-spacing:.03em;color:#7a7272}}
 .book a:hover .tip,.book a:focus-visible .tip,.book .nolink:hover .tip,.book .nolink:focus-visible .tip{{opacity:1;transform:translate(-50%,0)}}
 @media (prefers-reduced-motion:reduce){{.book a,.book .nolink,.tip{{transition:none}}}}
