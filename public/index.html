@@ -18,7 +18,7 @@
 <link href="/assets/5eab87ea46d66a3036bdc28e_Screen-Shot-2020-04-30-at-7.18.48-PM.png" rel="apple-touch-icon"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&family=Inter:wght@400;500&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cormorant:ital,wght@0,500;1,500&family=Inter:wght@400;500&display=swap"/>
 <style>
 :root{--ink:#1f1f1f;--muted:#6b6b6b;--faint:#9a9a9a;--rose:#816061;--line:#ece6e6;--wash:#faf7f6;--serif:Cormorant,Georgia,serif;--sans:Inter,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
 *{box-sizing:border-box}
@@ -268,6 +268,38 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 .project-phases li{padding:8px 0 8px 14px;border-left:2px solid var(--line);font-size:15px;line-height:1.6}
 .project-phases b{font-weight:500;color:var(--rose)}
 
+/* the commons: story timeline */
+.cs-title em{font-style:italic;color:#3f7a70}
+.cs-hand{font:500 21px/1.1 Caveat,cursive;color:#3f7a70;white-space:nowrap}
+.cs-line{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;position:relative}
+.cs-line::before{content:"";position:absolute;left:0;right:0;top:5px;height:1px;background:#cfc8c4}
+.cs-line li{position:relative;padding-top:24px;min-width:0}
+.cs-line li::before{content:"";position:absolute;left:0;top:0;width:11px;height:11px;border-radius:50%;background:var(--ink)}
+.cs-line li.cs-now::before{background:#3f7a70}
+.cs-date{margin:0 0 4px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#3f7a70}
+.cs-text{margin:0 0 14px;font-size:14px;line-height:1.55}
+.cs-text em{font-family:var(--serif);font-size:16px}
+.cs-text .cs-hand{display:block;margin-top:6px}
+.cs-pics{position:relative;padding-bottom:28px}
+.cs-pics img{display:block;width:100%;height:auto;border-radius:2px;box-shadow:0 6px 18px rgba(30,30,40,.16)}
+.cs-pics .cs-b,.cs-pics .cs-c{position:relative;width:62%;margin-top:-22%;margin-left:auto;transform:rotate(1.5deg)}
+.cs-pics .cs-c{margin-left:0;margin-top:-10%;transform:rotate(-2deg)}
+
+/* the commons: programming */
+.cp-note{display:inline-block;margin-left:10px;font-size:22px;transform:rotate(-3deg)}
+.cp{display:grid;grid-template-columns:minmax(0,1fr) 200px minmax(0,1fr);gap:28px;align-items:center;margin-top:8px}
+.cp-col{display:flex;flex-direction:column;gap:28px}
+.cp-col:last-child{text-align:right}
+.cp-col:last-child .cp-tags{justify-content:flex-end}
+.cp-name{margin:0;font:italic 500 40px/1 var(--serif);color:var(--tc)}
+.cp-lead{margin:4px 0 10px;font-size:14px;line-height:1.45;color:var(--tc)}
+.cp-tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.cp-tags li{font:500 10px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--tc);padding:6px 9px;border-radius:999px}
+.t-discover{--tc:#7a5a44}.t-expand{--tc:#2f6f68}.t-heal{--tc:#8b5bd8}.t-actualize{--tc:#e0634f}
+.cp-polaroid{margin:0;background:#fff;padding:10px 10px 38px;border-radius:3px;transform:rotate(-2deg);
+  box-shadow:0 2px 0 #fff,6px 8px 0 -2px #f4f1ee,0 14px 30px rgba(30,30,40,.18)}
+.cp-polaroid img{display:block;width:100%;height:auto}
+
 @media (max-width:860px){
   .wrap{padding:0 24px;margin:0 auto;border-radius:0;box-shadow:none}
   :root{--navh:50px}
@@ -303,6 +335,16 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
   .cx-photos img{height:200px}
   .cx-guilds,.cx-journey,.cx-cycle ol,.cx-rooms{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cx-explorer{padding:16px}
+  .cs-line{grid-template-columns:minmax(0,1fr);gap:28px}
+  .cs-line::before{left:5px;right:auto;top:0;bottom:0;width:1px;height:auto}
+  .cs-line li{padding:0 0 0 26px}
+  .cs-pics{max-width:340px}
+  .cp{grid-template-columns:minmax(0,1fr)}
+  .cp-polaroid{width:62%;max-width:240px;margin:0 auto;order:-1}
+  .cp-col:last-child{text-align:left}
+  .cp-col:last-child .cp-tags{justify-content:flex-start}
+  .cp-name{font-size:34px}
+  .cp-note{display:block;margin:6px 0 0}
   .cr-themes{grid-template-columns:minmax(0,1fr)}
   .cr-week{grid-template-columns:minmax(0,1fr)}
   .cr-week li{display:grid;grid-template-columns:44px minmax(0,1fr);align-items:start;gap:6px 10px}
@@ -402,6 +444,33 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 <div class="shelf-panels">
 <div class="panel" role="tabpanel" id="panel-projects-commons" aria-labelledby="tab-projects-commons" tabindex="0"><div class="panel-head"><h3>the commons</h3><span class="meta">co-founder</span></div><p class="project-desc">a community and third space rekindling intellectual curiosity, co-created play, &amp; inner-exploration, in the heart of San Francisco.</p><p class="project-links"><a class="ext" href="https://www.thesfcommons.com" target="_blank" rel="noopener">thesfcommons.com</a></p><div class="gallery"><img src="/assets/proj-commons-gathering.jpg" alt="a candlelit evening gathering in a circle at The Commons" loading="lazy" decoding="async"/><img src="/assets/proj-commons-2.jpg" alt="a lounge lit by string lights and tapestries" loading="lazy" decoding="async"/><img src="/assets/proj-commons-3.jpg" alt="a long community dinner" loading="lazy" decoding="async"/><img src="/assets/proj-commons-cowork.jpg" alt="people reading and working on laptops in the lounge at The Commons" loading="lazy" decoding="async"/><img src="/assets/proj-commons-5.jpg" alt="a group meditation" loading="lazy" decoding="async"/><img src="/assets/proj-commons-6.jpg" alt="the long study table" loading="lazy" decoding="async"/></div><div class="cx">
 
+<section class="cx-part cx-first">
+  <p class="cx-eyebrow">🔑 it started as an idea…</p>
+  <h4 class="cx-title cs-title"><em>four months</em> from napkin to key</h4>
+  <ol class="cs-line">
+    <li>
+      <p class="cs-date">march 2022</p>
+      <p class="cs-text">Co-founders meet + co-host brainstorm on <em>“what would our dream 3rd space look and feel like?”</em></p>
+      <div class="cs-pics"><img src="/assets/story-brainstorm.jpg" alt="the co-founders' brainstorm, a crowded living room of friends around sticky notes" loading="lazy" decoding="async"/></div>
+    </li>
+    <li>
+      <p class="cs-date">apr 2022</p>
+      <p class="cs-text">We find a space! <span class="cs-hand">↳ in Hayes Valley</span></p>
+      <div class="cs-pics"><img src="/assets/story-hallway.jpg" alt="walking down the brick hallway of the empty basement" loading="lazy" decoding="async"/><img class="cs-b" src="/assets/story-for-lease.jpg" alt="the for lease sign on the building" loading="lazy" decoding="async"/></div>
+    </li>
+    <li>
+      <p class="cs-date">may 2022</p>
+      <p class="cs-text">We launch a GoFundMe to secure the space and build the space with neighbors and friends</p>
+      <div class="cs-pics"><img src="/assets/story-volunteers.jpg" alt="a big group of volunteers in the unfinished space" loading="lazy" decoding="async"/><img class="cs-b" src="/assets/story-building.jpg" alt="friends unpacking boxes during the build" loading="lazy" decoding="async"/><img class="cs-c" src="/assets/story-mural.jpg" alt="painting the mural" loading="lazy" decoding="async"/></div>
+    </li>
+    <li class="cs-now">
+      <p class="cs-date">august 2022</p>
+      <p class="cs-text">We open the space!</p>
+      <div class="cs-pics"><img src="/assets/story-opening.jpg" alt="a packed opening night in the lounge" loading="lazy" decoding="async"/><img class="cs-b" src="/assets/story-talk.jpg" alt="a fireside conversation on stage" loading="lazy" decoding="async"/><img class="cs-c" src="/assets/story-cafe.jpg" alt="members around tables in the cafe" loading="lazy" decoding="async"/></div>
+    </li>
+  </ol>
+</section>
+
 <section class="cx-part">
   <p class="cx-eyebrow">the space</p>
   <h4 class="cx-title">designing a multi-purpose public space for <mark class="hl-a">connection</mark>, <mark class="hl-b">creativity</mark>, &amp; <mark class="hl-c">contemplation</mark></h4>
@@ -416,6 +485,27 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
     <li><img src="/assets/space-study-hall.jpg" alt="" loading="lazy" decoding="async"/><span>“Hogwarts” study hall</span></li>
   </ul>
 </section>
+
+<section class="cx-part">
+  <p class="cx-eyebrow">programming</p>
+  <h4 class="cx-title">a diverse variety of explorations all under one roof… <span class="cs-hand cp-note">bring your fullest self!</span></h4>
+  <div class="cp">
+    <div class="cp-col">
+      <div class="cp-theme t-discover"><p class="cp-name">Discover</p><p class="cp-lead">explore life’s bigger picture and questions</p>
+        <ul class="cp-tags"><li>meditation</li><li>metaphysics</li><li>philosophy</li><li>spiritual traditions</li><li>non-duality</li><li>morality</li><li>meaning-making</li><li>ethics</li><li>soul-making</li></ul></div>
+      <div class="cp-theme t-expand"><p class="cp-name">Expand</p><p class="cp-lead">take on new and diverse perspectives</p>
+        <ul class="cp-tags"><li>support circles</li><li>symposiums</li><li>book clubs</li><li>pluralistic discussion</li><li>debate</li><li>authentic relating</li><li>film club</li><li>roundtables</li></ul></div>
+    </div>
+    <figure class="cp-polaroid"><img src="/assets/programming-group.jpg" alt="members gathered in front of the community board at The Commons" loading="lazy" decoding="async"/></figure>
+    <div class="cp-col">
+      <div class="cp-theme t-heal"><p class="cp-name">Heal</p><p class="cp-lead">understand, resolve, and integrate our past</p>
+        <ul class="cp-tags"><li>energetics</li><li>somatics</li><li>attachment work</li><li>IFS</li><li>metta &amp; compassion</li><li>movement</li><li>root journeys</li><li>inner work</li><li>breathwork &amp; yoga</li></ul></div>
+      <div class="cp-theme t-actualize"><p class="cp-name">Actualize</p><p class="cp-lead">understand the world and our unique purpose within it</p>
+        <ul class="cp-tags"><li>creative expression</li><li>civic engagement</li><li>policy &amp; progress</li><li>career wayfinding</li><li>purpose-making</li><li>systems change</li><li>world building</li></ul></div>
+    </div>
+  </div>
+</section>
+
 
 
 </div>
