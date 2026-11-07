@@ -46,12 +46,21 @@ img{display:block;max-width:100%}
 /* nav */
 /* the nav stays pinned at the top while the page scrolls */
 :root{--navh:58px}
-.nav{position:sticky;top:0;z-index:50;display:flex;gap:30px;margin-top:10px;padding:18px 0 16px;font-size:15px;background:rgba(255,255,255,.94);-webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);transition:box-shadow .2s}
+.nav{position:sticky;top:0;z-index:50;display:flex;align-items:baseline;gap:30px;margin:10px -40px 0;padding:18px 40px 16px;font-size:15px;background:rgba(255,253,251,.92);-webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);transition:box-shadow .2s}
 .nav.stuck{box-shadow:0 1px 0 var(--line)}
 [id]{scroll-margin-top:calc(var(--navh) + 16px)}
-.nav a{color:var(--muted)}
-.nav a[aria-current]{color:#000}
-.nav a:hover{color:#000;text-decoration:none}
+/* the section you're in gets a soft lavender underline that follows you down the page */
+.nav a{position:relative;color:var(--muted);transition:color .2s}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1.5px;border-radius:1px;background:#aaa1e0;
+  transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.nav a.on{color:var(--ink)}
+.nav a.on::after{transform:scaleX(1)}
+.nav a:hover{color:var(--ink);text-decoration:none}
+/* your name appears at the right once the photo has scrolled away */
+.nav .nav-name{margin-left:auto;font:500 20px/1 var(--serif);color:var(--ink);opacity:0;visibility:hidden;transform:translateY(3px);
+  transition:opacity .3s,transform .3s,visibility .3s}
+.nav .nav-name::after{display:none}
+.nav.named .nav-name{opacity:1;visibility:visible;transform:none}
 
 /* intro: the part that stays put */
 .intro{display:grid;grid-template-columns:minmax(0,600px) 1fr;gap:40px;padding:56px 0 24px}
@@ -288,6 +297,8 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
   :root{--navh:50px}
   .nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:22px;margin:0 -24px;padding:16px 24px 12px;white-space:nowrap}
   .nav::-webkit-scrollbar{display:none}
+  .nav .nav-name{display:none}
+  .nav a::after{bottom:-3px}
   .intro{grid-template-columns:minmax(0,1fr);gap:20px;padding-top:40px;position:relative}
   /* the sigil sits beside the photo, the contact links drop below the newsletter box */
   .aside{display:contents}
@@ -362,11 +373,12 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 <div class="collage" aria-hidden="true"><figure class="cut r" style="top:2.5%;--w:250px;--r:2deg"><img src="/assets/collage/sun-rays.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut l" style="top:8%;--w:220px;--r:-3deg"><img src="/assets/collage/nautilus.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut r" style="top:19%;--w:215px;--r:1.5deg"><img src="/assets/collage/orchid.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut l" style="top:30%;--w:250px;--r:2.5deg"><img src="/assets/collage/lens-flare.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut r" style="top:40%;--w:270px;--r:-1.5deg"><img src="/assets/collage/flow-swirl.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut l" style="top:49%;--w:210px;--r:-2deg"><img src="/assets/collage/moon-phases.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut r" style="top:60%;--w:185px;--r:3deg"><img src="/assets/collage/water-light.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut l" style="top:69%;--w:240px;--r:1.5deg"><img src="/assets/collage/fireworks.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut r" style="top:79%;--w:245px;--r:-2.5deg"><img src="/assets/collage/spiral-light.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut l" style="top:88%;--w:215px;--r:2deg"><img src="/assets/collage/moon-pine.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure></div>
 <div class="wrap">
 <nav class="nav" aria-label="site">
-  <a href="/" aria-current="page">home</a>
-  <a href="#writing">writing</a>
-  <a href="#projects">projects</a>
+  <a href="/" aria-current="page" class="on" data-spy="top">home</a>
+  <a href="#writing" data-spy="writing">writing</a>
+  <a href="#projects" data-spy="projects">projects</a>
   <a href="/bookshelf/">bookshelf</a>
   <a href="https://www.therabbitholes.xyz/" target="_blank" rel="noopener">curations</a>
+  <a class="nav-name" href="/" tabindex="-1" aria-hidden="true">patricia mou</a>
 </nav>
 
 <header class="intro">
@@ -666,7 +678,33 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 })();
 </script>
 <script>
-(function () { var n = document.querySelector(".nav"); if (!n) return; function f() { n.classList.toggle("stuck", window.scrollY > 4); } f(); window.addEventListener("scroll", f, { passive: true }); })();
+(function () {
+  var n = document.querySelector(".nav"); if (!n) return;
+  var links = Array.prototype.slice.call(n.querySelectorAll("[data-spy]"));
+  var photo = document.querySelector(".photo"), cur = null, ticking = false;
+  function paint() {
+    ticking = false;
+    var y = window.scrollY, line = n.offsetHeight + 40, at = "top";
+    n.classList.toggle("stuck", y > 4);
+    n.classList.toggle("named", !!photo && photo.getBoundingClientRect().bottom < n.offsetHeight);
+    links.forEach(function (a) {
+      var s = a.dataset.spy !== "top" && document.getElementById(a.dataset.spy);
+      if (s && s.getBoundingClientRect().top <= line) at = a.dataset.spy;
+    });
+    if (at === cur) return;
+    cur = at;
+    links.forEach(function (a) {
+      var on = a.dataset.spy === at; a.classList.toggle("on", on);
+      // on phones the nav scrolls sideways: keep the current link in view
+      if (on && n.scrollWidth > n.clientWidth) {
+        var l = a.offsetLeft - 24;
+        if (a.offsetLeft < n.scrollLeft || a.offsetLeft + a.offsetWidth > n.scrollLeft + n.clientWidth) n.scrollTo({ left: l, behavior: "smooth" });
+      }
+    });
+  }
+  function ask() { if (!ticking) { ticking = true; requestAnimationFrame(paint); } }
+  paint(); addEventListener("scroll", ask, { passive: true }); addEventListener("resize", ask);
+})();
 </script>
 <script>
 (function () {
