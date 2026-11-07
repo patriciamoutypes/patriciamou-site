@@ -40,9 +40,9 @@ a{color:var(--rose);text-decoration:none}
 .ring .m-dark{fill:#aaa7b3}
 .ring .m-lit{fill:#fff}
 .ring .m-edge{fill:none;stroke:#aaa7b3;stroke-width:1.8}
-/* the ring turns once every 112.5 seconds; each moon turns back the other way so it stays upright, lit side true */
-.ring .turn{transform-origin:400px 400px;animation:orbit 112.5s linear infinite}
-.ring .moon{transform-box:fill-box;transform-origin:center;animation:orbit 112.5s linear infinite reverse}
+/* the ring turns once every 123.75 seconds; each moon turns back the other way so it stays upright, lit side true */
+.ring .turn{transform-origin:400px 400px;animation:orbit 123.75s linear infinite}
+.ring .moon{transform-box:fill-box;transform-origin:center;animation:orbit 123.75s linear infinite reverse}
 @keyframes orbit{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.ring .turn,.ring .moon{animation:none}}
 .disc{position:absolute;z-index:1;border-radius:50%;object-fit:cover;pointer-events:none;
