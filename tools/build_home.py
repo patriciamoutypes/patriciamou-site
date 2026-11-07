@@ -41,6 +41,7 @@ def shelf(sid, title, note, items, panels):
 items, panels = [], []
 for th in data['writing_themes']:
     posts = sorted([p for p in data['posts'] if p['theme'] == th['id']], key=lambda p: p['date'], reverse=True)
+    posts.sort(key=lambda p: p.get('order', 999))   # an "order" field pins a hand-picked sequence; the rest stay newest first
     items.append((th['id'], th['name'], len(posts)))
     lis = []
     for p in posts:
