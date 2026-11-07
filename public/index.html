@@ -301,7 +301,9 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
   .tabs::-webkit-scrollbar{display:none}
   .tab{flex:none;padding:5px 12px;border:1px solid var(--line);border-radius:999px;font-size:14px}
   .tab .leader{display:none}
-  .tab[aria-selected=true]{border-color:var(--rose)}
+  .tab{transition:background-color .2s,border-color .2s,color .2s}
+  .tab[aria-selected=true]{background:#eeebf8;border-color:#d3cdef;color:#3f3870}   /* light lavender, from the #7d74c9 in the palette */
+  .tab[aria-selected=true] .count{color:#7d74c9}
   .post a{grid-template-columns:72px minmax(0,1fr);gap:14px}
   .post img{width:72px;height:48px}
   .post-date{grid-column:2;margin-top:-6px}
