@@ -4,9 +4,9 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>bookshelf · patricia mou</title>
-<meta content="Books that moved me: 41 books on Patricia Mou's shelf." name="description"/>
+<meta content="Books that moved me: 57 books on Patricia Mou's shelf." name="description"/>
 <meta content="bookshelf · patricia mou" property="og:title"/>
-<meta content="Books that moved me: 41 books on Patricia Mou's shelf." property="og:description"/>
+<meta content="Books that moved me: 57 books on Patricia Mou's shelf." property="og:description"/>
 <meta content="bookshelf · patricia mou" name="twitter:title"/>
 <link href="/assets/5eab880b0556b29d7f262604_Screen-Shot-2020-04-30-at-7.18.48-PM.png" rel="shortcut icon" type="image/x-icon"/>
 <link href="/assets/5eab87ea46d66a3036bdc28e_Screen-Shot-2020-04-30-at-7.18.48-PM.png" rel="apple-touch-icon"/>
@@ -17,6 +17,7 @@
 :root{--ink:#1f1f1f;--muted:#6b6b6b;--faint:#9a9a9a;--rose:#816061;--line:#ece6e6;--serif:Cormorant,Georgia,serif;--sans:Inter,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
   --bh:176px;--gap:46px;--plank:12px}
 *{box-sizing:border-box}
+html,body{overflow-x:clip}
 body{margin:0;background:#fff;color:var(--ink);font:400 16px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
 a{color:var(--rose);text-decoration:none}
 .wrap{max-width:1080px;margin:0 auto;padding:0 40px 96px}
@@ -28,7 +29,7 @@ h1{font:500 38px/1.1 var(--serif);margin:56px 0 30px}
 .lede{margin:0 0 34px;color:var(--muted);font-size:15px}
 
 /* the bookcase: white wall, a wooden plank under every row of books */
-.case{padding:24px 0 0;background:#fff}
+.case{position:relative;padding:24px 0 0;background:#fff}
 .shelf{list-style:none;margin:0;padding:0 0 var(--gap);display:flex;flex-wrap:wrap;align-items:flex-end;gap:var(--gap) 14px;
   background:repeating-linear-gradient(180deg,
     transparent 0 var(--bh),
@@ -36,6 +37,14 @@ h1{font:500 38px/1.1 var(--serif);margin:56px 0 30px}
     #cdb28b calc(var(--bh) + 3px) calc(var(--bh) + var(--plank)),
     rgba(120,90,60,.16) calc(var(--bh) + var(--plank)) calc(var(--bh) + var(--plank) + 6px),
     transparent calc(var(--bh) + var(--plank) + 6px) calc(var(--bh) + var(--gap)))}
+/* real wooden planks with rounded ends, placed under each row by the script below */
+.shelf.js-planks{background:none;position:relative;z-index:1}
+.planks{position:absolute;inset:0;pointer-events:none;z-index:0}
+.plank{position:absolute;left:-14px;right:-14px;height:var(--plank);border-radius:7px;
+  background:url(/assets/wood-plank.jpg) 0 0/auto 100% repeat-x;
+  box-shadow:inset 0 2px 0 rgba(255,236,205,.45),inset 0 -2px 0 rgba(70,40,15,.22),0 7px 10px -5px rgba(60,35,12,.45),0 2px 2px rgba(60,35,12,.12)}
+.plank::after{content:"";position:absolute;left:10px;right:10px;top:100%;height:10px;border-radius:0 0 50% 50%;
+  background:radial-gradient(ellipse at top,rgba(60,35,12,.14),transparent 70%)}
 .book{height:var(--bh);display:flex;align-items:flex-end;position:relative}
 .book a,.book .nolink{display:block;position:relative;height:calc(var(--bh) * var(--h));transition:transform .25s ease;outline:none}
 .book img,.faux{display:block;height:100%;width:auto;border-radius:2px 4px 4px 2px;
@@ -119,8 +128,46 @@ h1{font:500 38px/1.1 var(--serif);margin:56px 0 30px}
 <li class="book" style="--h:0.97"><a href="https://www.goodreads.com/en/book/show/29044" target="_blank" rel="noopener"><img src="/assets/books/39-the-secret-history.jpg" alt="The Secret History by Donna Tartt" loading="lazy" decoding="async" style="aspect-ratio:0.647"/><span class="tip"><b>The Secret History</b><span>Donna Tartt</span></span></a></li>
 <li class="book" style="--h:0.88"><a href="https://www.amazon.com/-/he/Ground-Path-Fruition-Teachings-Rinpoche/dp/9937572266" target="_blank" rel="noopener"><span class="faux" role="img" aria-label="Ground, Path, Fruition" style="--c:#4b4a7a"><span class="faux-title">Ground, Path, Fruition</span></span><span class="tip"><b>Ground, Path, Fruition</b></span></a></li>
 <li class="book" style="--h:0.95"><a href="https://www.amazon.com/Womb-Awakening-Initiatory-Wisdom-Creatrix/dp/1591432790" target="_blank" rel="noopener"><img src="/assets/books/41-womb-awakening.jpg" alt="Womb Awakening by Azra Bertrand &amp; Seren Bertrand" loading="lazy" decoding="async" style="aspect-ratio:0.7"/><span class="tip"><b>Womb Awakening</b><span>Azra Bertrand &amp; Seren Bertrand</span></span></a></li>
+<li class="book" style="--h:0.9"><a href="https://openlibrary.org/works/OL8910407W" target="_blank" rel="noopener"><img src="/assets/books/42-the-ancient-secret-of-the-flower-of-life.jpg" alt="The Ancient Secret of the Flower of Life by Drunvalo Melchizedek" loading="lazy" decoding="async" style="aspect-ratio:0.836"/><span class="tip"><b>The Ancient Secret of the Flower of Life</b><span>Drunvalo Melchizedek</span></span></a></li>
+<li class="book" style="--h:1.0"><a href="https://openlibrary.org/works/OL2756244W" target="_blank" rel="noopener"><img src="/assets/books/43-a-republic-of-mind-and-spirit.jpg" alt="A Republic of Mind and Spirit by Catherine L. Albanese" loading="lazy" decoding="async" style="aspect-ratio:0.658"/><span class="tip"><b>A Republic of Mind and Spirit</b><span>Catherine L. Albanese</span></span></a></li>
+<li class="book" style="--h:0.86"><a href="https://openlibrary.org/works/OL20190336W" target="_blank" rel="noopener"><img src="/assets/books/44-hagia-sophia.jpg" alt="Hagia Sophia by Bissera V. Pentcheva" loading="lazy" decoding="async" style="aspect-ratio:0.7"/><span class="tip"><b>Hagia Sophia</b><span>Bissera V. Pentcheva</span></span></a></li>
+<li class="book" style="--h:0.94"><a href="https://openlibrary.org/works/OL20975080W" target="_blank" rel="noopener"><img src="/assets/books/45-participation-and-the-mystery.jpg" alt="Participation and the Mystery by Jorge N. Ferrer" loading="lazy" decoding="async" style="aspect-ratio:0.661"/><span class="tip"><b>Participation and the Mystery</b><span>Jorge N. Ferrer</span></span></a></li>
+<li class="book" style="--h:1.0"><a href="https://openlibrary.org/works/OL15297W" target="_blank" rel="noopener"><span class="faux" role="img" aria-label="Invisible Cities by Italo Calvino" style="--c:#4b4a7a"><span class="faux-title">Invisible Cities</span><span class="faux-author">Italo Calvino</span></span><span class="tip"><b>Invisible Cities</b><span>Italo Calvino</span></span></a></li>
+<li class="book" style="--h:0.92"><a href="https://openlibrary.org/works/OL2960639W" target="_blank" rel="noopener"><img src="/assets/books/47-women-who-run-with-the-wolves.jpg" alt="Women Who Run with the Wolves by Clarissa Pinkola Estés" loading="lazy" decoding="async" style="aspect-ratio:0.658"/><span class="tip"><b>Women Who Run with the Wolves</b><span>Clarissa Pinkola Estés</span></span></a></li>
+<li class="book" style="--h:0.97"><a href="https://openlibrary.org/works/OL2465759W" target="_blank" rel="noopener"><img src="/assets/books/48-initiation-human-and-solar.jpg" alt="Initiation, Human and Solar by Alice A. Bailey" loading="lazy" decoding="async" style="aspect-ratio:0.633"/><span class="tip"><b>Initiation, Human and Solar</b><span>Alice A. Bailey</span></span></a></li>
+<li class="book" style="--h:0.88"><a href="https://openlibrary.org/works/OL264533W" target="_blank" rel="noopener"><img src="/assets/books/49-meditations-on-the-tarot.jpg" alt="Meditations on the Tarot by Valentin Tomberg" loading="lazy" decoding="async" style="aspect-ratio:0.628"/><span class="tip"><b>Meditations on the Tarot</b><span>Valentin Tomberg</span></span></a></li>
+<li class="book" style="--h:0.95"><a href="https://openlibrary.org/works/OL20156281W" target="_blank" rel="noopener"><img src="/assets/books/50-the-kybalion.jpg" alt="The Kybalion by Three Initiates" loading="lazy" decoding="async" style="aspect-ratio:0.625"/><span class="tip"><b>The Kybalion</b><span>Three Initiates</span></span></a></li>
+<li class="book" style="--h:0.9"><a href="https://openlibrary.org/works/OL4116262W" target="_blank" rel="noopener"><img src="/assets/books/51-hermetica.jpg" alt="Hermetica by Brian P. Copenhaver" loading="lazy" decoding="async" style="aspect-ratio:0.647"/><span class="tip"><b>Hermetica</b><span>Brian P. Copenhaver</span></span></a></li>
+<li class="book" style="--h:1.0"><a href="https://openlibrary.org/works/OL3923600W" target="_blank" rel="noopener"><img src="/assets/books/52-a-pattern-language.jpg" alt="A Pattern Language by Christopher Alexander" loading="lazy" decoding="async" style="aspect-ratio:0.653"/><span class="tip"><b>A Pattern Language</b><span>Christopher Alexander</span></span></a></li>
+<li class="book" style="--h:0.86"><a href="https://openlibrary.org/works/OL8641458W" target="_blank" rel="noopener"><img src="/assets/books/53-the-nature-of-order.jpg" alt="The Nature of Order by Christopher Alexander" loading="lazy" decoding="async" style="aspect-ratio:0.7"/><span class="tip"><b>The Nature of Order</b><span>Christopher Alexander</span></span></a></li>
+<li class="book" style="--h:0.94"><a href="https://openlibrary.org/works/OL3923598W" target="_blank" rel="noopener"><img src="/assets/books/54-the-luminous-ground.jpg" alt="The Luminous Ground by Christopher Alexander" loading="lazy" decoding="async" style="aspect-ratio:0.7"/><span class="tip"><b>The Luminous Ground</b><span>Christopher Alexander</span></span></a></li>
+<li class="book" style="--h:1.0"><a href="https://openlibrary.org/works/OL20860765W" target="_blank" rel="noopener"><img src="/assets/books/55-the-royal-seal-of-mahamudra.jpg" alt="The Royal Seal of Mahamudra by Khamtrul Rinpoche III" loading="lazy" decoding="async" style="aspect-ratio:0.728"/><span class="tip"><b>The Royal Seal of Mahamudra</b><span>Khamtrul Rinpoche III</span></span></a></li>
+<li class="book" style="--h:0.92"><a href="https://openlibrary.org/works/OL52456W" target="_blank" rel="noopener"><img src="/assets/books/56-faust.jpg" alt="Faust by Johann Wolfgang von Goethe" loading="lazy" decoding="async" style="aspect-ratio:0.617"/><span class="tip"><b>Faust</b><span>Johann Wolfgang von Goethe</span></span></a></li>
+<li class="book" style="--h:0.97"><a href="https://openlibrary.org/works/OL20752295W" target="_blank" rel="noopener"><span class="faux" role="img" aria-label="Cross-Tradition Engagement in Philosophy by Bo Mou" style="--c:#87a083"><span class="faux-title">Cross-Tradition Engagement in Philosophy</span><span class="faux-author">Bo Mou</span></span><span class="tip"><b>Cross-Tradition Engagement in Philosophy</b><span>Bo Mou</span></span></a></li>
 </ul>
+<div class="planks" aria-hidden="true"></div>
 </div>
 </div>
+<script>
+(function () {
+  var shelf = document.querySelector(".shelf"), layer = document.querySelector(".planks");
+  if (!shelf || !layer) return;
+  shelf.classList.add("js-planks");
+  function lay() {
+    var rows = [];
+    Array.prototype.forEach.call(shelf.children, function (li) {
+      var b = li.offsetTop + li.offsetHeight;
+      if (rows.indexOf(b) < 0) rows.push(b);
+    });
+    layer.innerHTML = rows.map(function (b) {
+      return '<div class="plank" style="top:' + (shelf.offsetTop + b) + 'px"></div>';
+    }).join("");
+  }
+  var t; window.addEventListener("resize", function () { clearTimeout(t); t = setTimeout(lay, 80); });
+  lay();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(lay);
+})();
+</script>
+
 </body>
 </html>

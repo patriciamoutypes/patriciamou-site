@@ -35,6 +35,28 @@ for i, b in enumerate(books):
         inner = f'<span class="nolink" tabindex="0">{inner}</span>'
     items.append(f'<li class="book" style="--h:{h}">{inner}</li>')
 
+SCRIPT = '''<script>
+(function () {
+  var shelf = document.querySelector(".shelf"), layer = document.querySelector(".planks");
+  if (!shelf || !layer) return;
+  shelf.classList.add("js-planks");
+  function lay() {
+    var rows = [];
+    Array.prototype.forEach.call(shelf.children, function (li) {
+      var b = li.offsetTop + li.offsetHeight;
+      if (rows.indexOf(b) < 0) rows.push(b);
+    });
+    layer.innerHTML = rows.map(function (b) {
+      return '<div class="plank" style="top:' + (shelf.offsetTop + b) + 'px"></div>';
+    }).join("");
+  }
+  var t; window.addEventListener("resize", function () { clearTimeout(t); t = setTimeout(lay, 80); });
+  lay();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(lay);
+})();
+</script>
+'''
+
 page = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,6 +76,7 @@ page = f'''<!DOCTYPE html>
 :root{{--ink:#1f1f1f;--muted:#6b6b6b;--faint:#9a9a9a;--rose:#816061;--line:#ece6e6;--serif:Cormorant,Georgia,serif;--sans:Inter,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
   --bh:176px;--gap:46px;--plank:12px}}
 *{{box-sizing:border-box}}
+html,body{{overflow-x:clip}}
 body{{margin:0;background:#fff;color:var(--ink);font:400 16px/1.7 var(--sans);-webkit-font-smoothing:antialiased}}
 a{{color:var(--rose);text-decoration:none}}
 .wrap{{max-width:1080px;margin:0 auto;padding:0 40px 96px}}
@@ -65,7 +88,7 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
 .lede{{margin:0 0 34px;color:var(--muted);font-size:15px}}
 
 /* the bookcase: white wall, a wooden plank under every row of books */
-.case{{padding:24px 0 0;background:#fff}}
+.case{{position:relative;padding:24px 0 0;background:#fff}}
 .shelf{{list-style:none;margin:0;padding:0 0 var(--gap);display:flex;flex-wrap:wrap;align-items:flex-end;gap:var(--gap) 14px;
   background:repeating-linear-gradient(180deg,
     transparent 0 var(--bh),
@@ -73,6 +96,14 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
     #cdb28b calc(var(--bh) + 3px) calc(var(--bh) + var(--plank)),
     rgba(120,90,60,.16) calc(var(--bh) + var(--plank)) calc(var(--bh) + var(--plank) + 6px),
     transparent calc(var(--bh) + var(--plank) + 6px) calc(var(--bh) + var(--gap)))}}
+/* real wooden planks with rounded ends, placed under each row by the script below */
+.shelf.js-planks{{background:none;position:relative;z-index:1}}
+.planks{{position:absolute;inset:0;pointer-events:none;z-index:0}}
+.plank{{position:absolute;left:-14px;right:-14px;height:var(--plank);border-radius:7px;
+  background:url(/assets/wood-plank.jpg) 0 0/auto 100% repeat-x;
+  box-shadow:inset 0 2px 0 rgba(255,236,205,.45),inset 0 -2px 0 rgba(70,40,15,.22),0 7px 10px -5px rgba(60,35,12,.45),0 2px 2px rgba(60,35,12,.12)}}
+.plank::after{{content:"";position:absolute;left:10px;right:10px;top:100%;height:10px;border-radius:0 0 50% 50%;
+  background:radial-gradient(ellipse at top,rgba(60,35,12,.14),transparent 70%)}}
 .book{{height:var(--bh);display:flex;align-items:flex-end;position:relative}}
 .book a,.book .nolink{{display:block;position:relative;height:calc(var(--bh) * var(--h));transition:transform .25s ease;outline:none}}
 .book img,.faux{{display:block;height:100%;width:auto;border-radius:2px 4px 4px 2px;
@@ -117,8 +148,10 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
 <ul class="shelf">
 {chr(10).join(items)}
 </ul>
+<div class="planks" aria-hidden="true"></div>
 </div>
 </div>
+{SCRIPT}
 </body>
 </html>
 '''
