@@ -782,6 +782,43 @@
    }
   },
   {
+   "id": "altars",
+   "tab": "mandalas & altars",
+   "name": "mandalas & altars",
+   "role": "ritual art",
+   "layout": "masonry",
+   "images": [
+    [
+     "proj-altars-1.jpg",
+     "a mandala of grains, flowers and candles with people gathered around it"
+    ],
+    [
+     "proj-altars-2.jpg",
+     "arranging red roses and candles into an altar on a rug at The Commons"
+    ],
+    [
+     "proj-altars-3.jpg",
+     "lighting candles and incense around a floor mandala"
+    ],
+    [
+     "proj-altars-4.jpg",
+     "a white-rose altar with candles, crystals and a figure of Guanyin"
+    ],
+    [
+     "proj-altars-5.jpg",
+     "placing the last pieces of a spiral mandala"
+    ],
+    [
+     "proj-altars-6.jpg",
+     "a candlelit circle around an altar of books and candles"
+    ],
+    [
+     "proj-altars-7.jpg",
+     "sitting in meditation around a candle altar"
+    ]
+   ]
+  },
+  {
    "id": "haumbody",
    "name": "the haumbody",
    "role": "interior design studio",

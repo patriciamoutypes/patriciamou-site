@@ -95,6 +95,9 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 .gallery > *{width:100%;height:100%;object-fit:cover;border-radius:4px;background:var(--wash);grid-column:span 2}
 .gallery > *:first-child{grid-column:span 4;grid-row:span 2}
 .gallery > *:nth-child(4):nth-last-child(2),.gallery > *:nth-child(5):nth-last-child(1){grid-column:span 3}
+/* masonry: every photo whole, in columns */
+.gallery.gallery-masonry{display:block;columns:3 200px;column-gap:10px}
+.gallery.gallery-masonry > *,.gallery.gallery-masonry > *:nth-child(n){display:block;width:100%;height:auto;margin:0 0 10px;break-inside:avoid}
 /* exactly four tiles: an even two-by-two */
 .gallery > *:first-child:nth-last-child(4),.gallery > *:first-child:nth-last-child(4) ~ *{grid-column:span 3;grid-row:span 2}
 .project-gap{height:14px}
@@ -272,6 +275,8 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
   .gallery > *,.gallery > *:nth-child(4):nth-last-child(2),.gallery > *:nth-child(5):nth-last-child(1){grid-column:span 1}
   .gallery > *:first-child{grid-column:span 2}
   .gallery > *:nth-child(6){display:none}
+  .gallery.gallery-masonry{columns:2}
+  .gallery.gallery-masonry > *:nth-child(n){display:block}
   .gallery > *:first-child:nth-last-child(4),.gallery > *:first-child:nth-last-child(4) ~ *{grid-column:span 1;grid-row:span 2}
   .cx-formats{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cx-photos,.cx-evenings,.cx-cycle{grid-template-columns:minmax(0,1fr)}
