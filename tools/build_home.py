@@ -91,6 +91,9 @@ for pr in data['projects']:
     if pr.get('tagline'):
         parts.append(f'<p class="project-tagline">{e(pr["tagline"])}</p>')
     parts += [f'<p class="project-desc">{e(d)}</p>' for d in desc]
+    if pr.get('phases'):
+        parts.append('<ol class="project-phases">' + ''.join(f'<li><b>{e(l)}</b> {e(t)}</li>' for l, t in pr['phases']) + '</ol>')
+    parts += [f'<p class="project-desc">{e(d)}</p>' for d in pr.get('desc_after', [])]
     links = ''.join(f'<a class="ext" href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a>' for t, u in pr.get('links', []))
     parts.append(f'<p class="project-links">{links}</p>' if links else '<div class="project-gap"></div>')
     if pr.get('video'):
@@ -125,16 +128,18 @@ for pr in data['projects']:
     panels.append((pr['id'], ''.join(parts)))
 projects = shelf('projects', 'projects', '<p class="shelf-note">communities, rituals, books, and physical place-making</p>', items, panels)
 
-# elsewhere: a short list of what others have written, no tabs
-rows = []
+# elsewhere: pieces written about the work, one tab each
+items, panels = [], []
 for c in data['press']:
-    pic = (f'<img src="/assets/{e(c["image"])}" alt="" width="80" height="50" loading="lazy" decoding="async"/>' if c.get('image')
-           else f'<span class="press-type" aria-hidden="true">{e(c["source"].split()[0])}</span>')
-    rows.append(f'<li><a href="{e(c["url"])}" target="_blank" rel="noopener">{pic}'
-                f'<span><span class="press-source">{e(c["source"])}</span><span class="press-title">{e(c["title"])}</span></span></a></li>')
-press = ('<section class="elsewhere" id="elsewhere" aria-labelledby="h-elsewhere">'
-         '<h2 id="h-elsewhere">elsewhere</h2>'
-         f'<ul class="press">{"".join(rows)}</ul></section>')
+    items.append((c['id'], c.get('tab', c['title']), None))
+    pic = (f'<img class="press-img" src="/assets/{e(c["image"])}" alt="{e(c["title"])} on {e(c["source"])}" loading="lazy" decoding="async"/>'
+           if c.get('image') else f'<div class="press-type" aria-hidden="true"><span>{e(c["title"])}</span><small>{e(c["source"])}</small></div>')
+    meta = ' · '.join(x for x in [c.get('source'), c.get('date')] if x)
+    body = (f'<div class="panel-head"><h3>{e(c["title"])}</h3><span class="meta">{e(meta)}</span></div>'
+            f'{pic}<p class="project-desc">{e(c["desc"])}</p>'
+            f'<p class="project-links"><a class="ext" href="{e(c["url"])}" target="_blank" rel="noopener">{e(c.get("cta", "read"))}</a></p>')
+    panels.append((c['id'], body))
+press = shelf('elsewhere', 'elsewhere', '<p class="shelf-note">on the internet</p>', items, panels)
 
 page = tpl.replace('{{WRITING}}', writing).replace('{{PROJECTS}}', projects).replace('{{PRESS}}', press)
 assert '{{' not in page

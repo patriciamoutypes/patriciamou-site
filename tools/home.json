@@ -702,7 +702,8 @@
    "tagline": "re-enchanting the pursuit of multiple truths",
    "desc": [
     "Council of the Cosmos is a structured role-play workshop designed to help participants explore multiple, often conflicting, ways of knowing through embodied perspective-taking.",
-    "Each participant was assigned an archetype - such as the Scientist, Mystic, Artist, or Elder - and began by listening to a short audio meditation specific to their role (recorded by yours truly), accessed through QR codes and headphones. These archetypes were drawn from a custom deck that included guiding values, strengths, and blind spots."
+    "Each participant was assigned an archetype - such as the Scientist, Mystic, Artist, or Elder - and began by listening to a short audio meditation specific to their role (recorded by yours truly), accessed through QR codes and headphones. These archetypes were drawn from a custom deck that included guiding values, strengths, and blind spots.",
+    "From there, participants cosplayed and acted out a series of fictional cosmic events, first offering interpretations from their archetype’s perspective, and later navigating a shared crisis. Discussion prompts encouraged people to explain not just what they believed, but how their role might approach the unknown, what risks they perceived, and what actions they would take."
    ],
    "images": [
     [
@@ -803,7 +804,24 @@
       "Conclusion (10min) As you let go of your archetype, reflect on and share what you might have learned through this experience “What treasure from your archetype other archetypes do you want to keep alive in your own life?”"
      ]
     ]
-   }
+   },
+   "phases": [
+    [
+     "Phase 1.",
+     "Exploring the archetype's worldview and imagined the environment they inhabit."
+    ],
+    [
+     "Phase 2.",
+     "A fictional cosmic phenomenon is drawn from a deck of cards. Participants interpret it through their archetype’s lens, discuss perspectives, and decide whether intervention was needed."
+    ],
+    [
+     "Phase 3.",
+     "The phenomenon intensifies into a crisis, and participants proposed collective responses using symbolic tools."
+    ]
+   ],
+   "desc_after": [
+    "The workshop ended with a reflection on what aspects of the archetype and role play could be integrated into life."
+   ]
   },
   {
    "id": "altars",
@@ -924,22 +942,37 @@
  ],
  "press": [
   {
-   "title": "a salon for nones",
+   "id": "tablet",
+   "tab": "a salon for nones",
+   "title": "a salon for ‘nones’",
    "source": "tablet magazine",
+   "date": "april 2024",
    "url": "https://www.tabletmag.com/sections/community/articles/salon-nones-commons-san-francisco",
-   "image": null
+   "image": null,
+   "desc": "Maggie Phillips profiles The Commons as a “fourth place” for the religion-curious: atheists, agnostics, and the spiritual but not religious who gather in Hayes Valley for salons, meditation, potlucks, and concerts. The piece follows how it grew from a 2022 GoFundMe into a campus of courses, guilds, and practicums.",
+   "cta": "read on tablet"
   },
   {
-   "title": "patricia mou's desk setup and home workspace",
-   "source": "workspaces #368",
-   "url": "https://www.workspaces.xyz/p/368-patricia-mou",
-   "image": "press-workspaces.jpg"
-  },
-  {
-   "title": "self-respect, living like weasels, ideas are alive, in praise of shadows",
-   "source": "words that matter, issue 16",
+   "id": "matter",
+   "tab": "words that matter #16",
+   "title": "words that matter, issue 16",
+   "source": "matter",
+   "date": "february 2024",
    "url": "https://words.getmatter.com/p/words-that-matter-issue-16-feat-patricia",
-   "image": "press-words-that-matter.jpg"
+   "image": "press-words-that-matter.jpg",
+   "desc": "I was the guest curator for this issue of Matter’s newsletter, sharing the words that have mattered most to me, from Joan Didion’s “On Self-Respect” and Annie Dillard’s “Living Like Weasels” to Tanizaki’s “In Praise of Shadows” and Christopher Alexander. It also spotlights The Commons and Rabbit Holes.",
+   "cta": "read the issue"
+  },
+  {
+   "id": "workspaces",
+   "tab": "workspaces #368",
+   "title": "my desk setup and home workspace",
+   "source": "workspaces",
+   "date": "#368",
+   "url": "https://www.workspaces.xyz/p/368-patricia-mou",
+   "image": "press-workspaces.jpg",
+   "desc": "A peek at my desk and the rhythm of a day: coffee and a 30-minute sit at 6am, a morning on whatever feels most alive, afternoons at The Commons, and evenings at a salon, circle, or workshop. My one rabbit hole recommendation: your own answer to “Who am I?”",
+   "cta": "see the workspace"
   }
  ],
  "publications": [
