@@ -86,7 +86,7 @@
   var SPEED = 0.52;                       // units of line per second at full pen speed
   var END = 0;
   (function () {
-    var order = strokes.slice().sort(function (a, b) { return a.top - b.top || (a.spine ? -1 : 1); });
+    var order = strokes.filter(function (s) { return !s.wisp; }).sort(function (a, b) { return a.top - b.top || (a.spine ? -1 : 1); });
     var groups = [];
     order.forEach(function (s) {
       var g = groups[groups.length - 1];
@@ -102,6 +102,15 @@
         for (var k = 0; k < s.n; k++) { s.tr[k] = s.ts + s.dur * invPace(s.dn[k]); END = Math.max(END, s.tr[k]); }
       });
       prevDur = gd;
+    });
+    // wisp lines ride along: each starts a beat after the main lines reach its top
+    strokes.forEach(function (s) {
+      if (!s.wisp) return;
+      var ts = 0.15;
+      groups.forEach(function (g) { if (g.top <= s.top + 0.02) ts = g.items[0].ts; });
+      s.ts = ts + 0.25; s.dur = 0.35 + s.reach / SPEED;
+      s.tr = new Float32Array(s.n);
+      for (var k = 0; k < s.n; k++) { s.tr[k] = s.ts + s.dur * invPace(s.dn[k]); END = Math.max(END, s.tr[k]); }
     });
   })();
   var CYCLE = END + 5.0;
