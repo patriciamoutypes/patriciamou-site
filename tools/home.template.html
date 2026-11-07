@@ -69,8 +69,11 @@ h1{font:500 38px/1.1 var(--serif);letter-spacing:-.01em;margin:20px 0 12px}
 h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 .intro p{margin:0}
 .currently{margin-top:28px}
+/* "currently": a small blue-grey dot hangs in the margin (an echo of the sigil's pearls), wrapped lines align with the text */
 .dash{margin:0;padding:0;list-style:none}
-.dash li::before{content:"—"}
+.dash li{position:relative;padding-left:20px;margin:0 0 6px}
+.dash li:last-child{margin-bottom:0}
+.dash li::before{content:"";position:absolute;left:3px;top:calc(.85em - 3px);width:6px;height:6px;border-radius:50%;background:#b3bac8}
 .aside{display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-start;gap:28px;padding-top:0}
 .pm-sigil{width:160px}
 .contact{text-align:right;font-size:15px;line-height:1.9}
