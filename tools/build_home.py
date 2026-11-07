@@ -97,6 +97,9 @@ for pr in data['projects']:
         parts.append('<ul class="project-list">' + ''.join(f'<li>{e(i)}</li>' for i in L['items']) + '</ul>')
     if pr.get('phases'):
         parts.append('<ol class="project-phases">' + ''.join(f'<li><b>{e(l)}</b> {e(t)}</li>' for l, t in pr['phases']) + '</ol>')
+    if pr.get('figure'):  # one wide image between the main text and desc_after
+        fg = pr['figure']
+        parts.append(f'<figure class="project-figure"><img src="/assets/{e(fg[0])}" alt="{e(fg[1])}" loading="lazy" decoding="async"/></figure>')
     parts += [f'<p class="project-desc">{e(d)}</p>' for d in pr.get('desc_after', [])]
     links = ''.join(f'<a class="ext" href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a>' for t, u in pr.get('links', []))
     parts.append(f'<p class="project-links">{links}</p>' if links else '<div class="project-gap"></div>')
