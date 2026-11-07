@@ -155,7 +155,6 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
 </ul>
 <div class="planks" aria-hidden="true"></div>
 </div>
-<p class="note">As an Amazon Associate I earn from qualifying purchases.</p>
 </div>
 {SCRIPT}
 </body>
