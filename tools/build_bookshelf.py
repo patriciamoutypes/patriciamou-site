@@ -81,7 +81,8 @@ html,body{{overflow-x:clip}}
 body{{margin:0;background:#fff;color:var(--ink);font:400 16px/1.7 var(--sans);-webkit-font-smoothing:antialiased}}
 a{{color:var(--rose);text-decoration:none}}
 .wrap{{max-width:1080px;margin:0 auto;padding:0 40px 96px}}
-.nav{{display:flex;gap:30px;padding:28px 0 0;font-size:15px}}
+.nav{{position:sticky;top:0;z-index:50;display:flex;gap:30px;margin-top:10px;padding:18px 0 16px;font-size:15px;background:rgba(255,255,255,.94);-webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);transition:box-shadow .2s}}
+.nav.stuck{{box-shadow:0 1px 0 var(--line, #ece6e6)}}
 .nav a{{color:var(--muted)}}
 .nav a[aria-current]{{color:#000}}
 .nav a:hover{{color:#000}}
@@ -126,7 +127,8 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
 @media (max-width:860px){{
   :root{{--bh:120px;--gap:34px;--plank:10px}}
   .wrap{{padding:0 20px 72px}}
-  .nav{{flex-wrap:wrap;gap:6px 20px}}
+  .nav{{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:22px;margin:4px -20px 0;padding:14px 20px 12px;white-space:nowrap}}
+  .nav::-webkit-scrollbar{{display:none}}
   h1{{margin-top:40px}}
   .case{{padding:16px 0 0}}
   .shelf{{gap:var(--gap) 10px}}
@@ -145,6 +147,7 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
   <a href="/bookshelf/" aria-current="page">bookshelf</a>
   <a href="https://www.therabbitholes.xyz/" target="_blank" rel="noopener">curations</a>
 </nav>
+<script>(function () {{ var n = document.querySelector(".nav"); function f() {{ n.classList.toggle("stuck", window.scrollY > 4); }} f(); window.addEventListener("scroll", f, {{ passive: true }}); }})();</script>
 <h1>books that moved me</h1>
 <div class="case">
 <ul class="shelf">

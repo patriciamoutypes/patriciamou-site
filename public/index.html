@@ -32,7 +32,11 @@ img{display:block;max-width:100%}
 .wrap{max-width:1080px;margin:0 auto;padding:0 40px}
 
 /* nav */
-.nav{display:flex;gap:30px;padding:28px 0 0;font-size:15px}
+/* the nav stays pinned at the top while the page scrolls */
+:root{--navh:58px}
+.nav{position:sticky;top:0;z-index:50;display:flex;gap:30px;margin-top:10px;padding:18px 0 16px;font-size:15px;background:rgba(255,255,255,.94);-webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);transition:box-shadow .2s}
+.nav.stuck{box-shadow:0 1px 0 var(--line)}
+[id]{scroll-margin-top:calc(var(--navh) + 16px)}
 .nav a{color:var(--muted)}
 .nav a[aria-current]{color:#000}
 .nav a:hover{color:#000;text-decoration:none}
@@ -59,7 +63,7 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 
 /* shelves: sticky index on the left, swapping panel on the right */
 .shelf{display:grid;grid-template-columns:260px minmax(0,1fr);gap:64px;padding-top:112px}
-.shelf-index{position:sticky;top:28px;align-self:start}
+.shelf-index{position:sticky;top:calc(var(--navh) + 24px);align-self:start}
 .shelf-index h2{font-size:34px;margin-bottom:6px}
 .shelf-note{margin:0 0 22px;font-size:14px;color:var(--muted)}
 .tabs{display:flex;flex-direction:column}
@@ -251,7 +255,9 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 
 @media (max-width:860px){
   .wrap{padding:0 24px}
-  .nav{flex-wrap:wrap;gap:6px 20px}
+  :root{--navh:50px}
+  .nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:22px;margin:4px -24px 0;padding:14px 24px 12px;white-space:nowrap}
+  .nav::-webkit-scrollbar{display:none}
   .intro{grid-template-columns:minmax(0,1fr);gap:20px;padding-top:40px;position:relative}
   /* the sigil sits beside the photo, the contact links drop below the newsletter box */
   .aside{display:contents}
@@ -558,6 +564,9 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 
 <script src="/assets/sigil.v5.js" defer></script>
 <script src="/assets/zoom.v1.js" defer></script>
+<script>
+(function () { var n = document.querySelector(".nav"); if (!n) return; function f() { n.classList.toggle("stuck", window.scrollY > 4); } f(); window.addEventListener("scroll", f, { passive: true }); })();
+</script>
 <script>
 (function () {
   var fine = window.matchMedia && matchMedia("(hover: hover) and (pointer: fine)").matches;
