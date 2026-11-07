@@ -92,10 +92,25 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 .project-links{margin:0 0 22px;font-size:15px;display:flex;gap:18px;flex-wrap:wrap}
 /* six columns so the bottom row can hold three photos or two wider ones */
 .gallery{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:150px;gap:10px}
-.gallery img{width:100%;height:100%;object-fit:cover;border-radius:4px;background:var(--wash);grid-column:span 2}
-.gallery img:first-child{grid-column:span 4;grid-row:span 2}
-.gallery img:nth-child(4):nth-last-child(2),.gallery img:nth-child(5):nth-last-child(1){grid-column:span 3}
+.gallery > *{width:100%;height:100%;object-fit:cover;border-radius:4px;background:var(--wash);grid-column:span 2}
+.gallery > *:first-child{grid-column:span 4;grid-row:span 2}
+.gallery > *:nth-child(4):nth-last-child(2),.gallery > *:nth-child(5):nth-last-child(1){grid-column:span 3}
 .project-gap{height:14px}
+.project-tagline{font:italic 500 20px/1.3 var(--serif);color:var(--muted);margin:-6px 0 14px}
+
+/* slide strip */
+.slides{margin-top:44px}
+.slides-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:14px}
+.slides-head .program-head{margin:0}
+.slides-nav{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.slides-nav button{all:unset;cursor:pointer;width:30px;height:30px;border:1px solid var(--line);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:14px;color:var(--ink)}
+.slides-nav button:hover{border-color:var(--rose);color:var(--rose)}
+.slides-nav button:focus-visible,.slides-track:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+.slides-count{min-width:52px;text-align:center;font-variant-numeric:tabular-nums}
+.slides-track{list-style:none;margin:0;padding:0;display:grid;grid-auto-flow:column;grid-auto-columns:86%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:none;border-radius:4px}
+.slides-track::-webkit-scrollbar{display:none}
+.slides-track li{scroll-snap-align:start}
+.slides-track img{width:100%;height:auto;border-radius:4px;border:1px solid var(--line)}
 .video{position:relative;aspect-ratio:16/9;margin:0 0 8px;border-radius:4px;overflow:hidden;background:#111}
 .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
@@ -160,9 +175,9 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
   .post img{width:72px;height:48px}
   .post-date{grid-column:2;margin-top:-6px}
   .gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:120px}
-  .gallery img,.gallery img:nth-child(4):nth-last-child(2),.gallery img:nth-child(5):nth-last-child(1){grid-column:span 1}
-  .gallery img:first-child{grid-column:span 2}
-  .gallery img:nth-child(6){display:none}
+  .gallery > *,.gallery > *:nth-child(4):nth-last-child(2),.gallery > *:nth-child(5):nth-last-child(1){grid-column:span 1}
+  .gallery > *:first-child{grid-column:span 2}
+  .gallery > *:nth-child(6){display:none}
   .step{grid-template-columns:38px minmax(0,1fr);gap:0 12px}
   .step-body{padding-left:16px}
   .step-body .step-title{font-size:19px}
@@ -243,6 +258,7 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
         document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
       });
       if (focus) tab.focus();
+      wake(document.getElementById(tab.getAttribute("aria-controls")));
       // if a long panel was scrolled past and the new one is short, bring it back into view
       var panel = document.getElementById(tab.getAttribute("aria-controls"));
       var r = panel.getBoundingClientRect();
@@ -265,6 +281,36 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
     });
   });
 })();
+
+// short silent loops: load and play only while their panel is open (a still poster under reduced motion)
+var calm = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+function wake(panel) {
+  document.querySelectorAll(".panel video").forEach(function (v) {
+    if (panel.contains(v)) {
+      if (v.dataset.src) { v.src = v.dataset.src; delete v.dataset.src; }
+      if (calm) v.controls = true; else { var p = v.play(); if (p) p.catch(function () {}); }
+    } else if (!v.paused) v.pause();
+  });
+}
+document.querySelectorAll('[role="tabpanel"]:not([hidden])').forEach(wake);
+
+// slide strips: arrows step one slide, the counter follows scrolling
+document.querySelectorAll("[data-slides]").forEach(function (box) {
+  var track = box.querySelector(".slides-track"), count = box.querySelector(".slides-count");
+  var n = track.children.length;
+  function step() { var li = track.children[0]; return li ? li.getBoundingClientRect().width + 12 : 1; }
+  function at() { return Math.min(n - 1, Math.round(track.scrollLeft / step())); }
+  box.querySelectorAll("button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var i = Math.max(0, Math.min(n - 1, at() + Number(b.dataset.dir)));
+      track.scrollTo({ left: i * step(), behavior: calm ? "auto" : "smooth" });
+    });
+  });
+  track.addEventListener("scroll", function () { count.textContent = (at() + 1) + " / " + n; }, { passive: true });
+  track.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowRight" || e.key === "ArrowLeft") { e.preventDefault(); box.querySelector('[data-dir="' + (e.key === "ArrowRight" ? 1 : -1) + '"]').click(); }
+  });
+});
 </script>
 </body>
 </html>

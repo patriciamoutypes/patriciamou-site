@@ -87,6 +87,8 @@ for pr in data['projects']:
     items.append((pr['id'], pr.get('tab', pr['name']), None))
     desc = pr['desc'] if isinstance(pr['desc'], list) else [pr['desc']]
     parts = [f'<div class="panel-head"><h3>{e(pr["name"])}</h3><span class="meta">{e(pr["role"])}</span></div>']
+    if pr.get('tagline'):
+        parts.append(f'<p class="project-tagline">{e(pr["tagline"])}</p>')
     parts += [f'<p class="project-desc">{e(d)}</p>' for d in desc]
     links = ''.join(f'<a class="ext" href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a>' for t, u in pr.get('links', []))
     parts.append(f'<p class="project-links">{links}</p>' if links else '<div class="project-gap"></div>')
@@ -96,12 +98,28 @@ for pr in data['projects']:
                      'loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" '
                      'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>')
     if pr.get('images'):
-        imgs = ''.join(f'<img src="/assets/{e(f)}" alt="{e(a)}" loading="lazy" decoding="async"/>' for f, a in pr['images'])
+        tiles = []
+        for it in pr['images']:
+            if isinstance(it, dict):  # a short silent loop; the page script loads it when its panel is shown
+                tiles.append(f'<video muted loop playsinline preload="none" poster="/assets/{e(it["poster"])}" '
+                             f'data-src="/assets/{e(it["video"])}" aria-label="{e(it["alt"])}"></video>')
+            else:
+                tiles.append(f'<img src="/assets/{e(it[0])}" alt="{e(it[1])}" loading="lazy" decoding="async"/>')
+        imgs = ''.join(tiles)
         parts.append(f'<div class="gallery">{imgs}</div>')
+    if pr.get('slides'):
+        sl = pr['slides']; n = len(sl['images'])
+        frames = ''.join(f'<li><img src="/assets/{e(f)}" alt="{e(a)}" width="1280" height="720" loading="lazy" decoding="async"/></li>'
+                         for f, a in sl['images'])
+        parts.append(f'<div class="slides" data-slides><div class="slides-head"><h4 class="program-head">{e(sl["title"])}</h4>'
+                     f'<div class="slides-nav"><button type="button" data-dir="-1" aria-label="previous slide">←</button>'
+                     f'<span class="slides-count" aria-live="polite">1 / {n}</span>'
+                     f'<button type="button" data-dir="1" aria-label="next slide">→</button></div></div>'
+                     f'<ol class="slides-track" tabindex="0" aria-label="{e(sl["title"])}">{frames}</ol></div>')
     if pr.get('program'):
         parts.append(f'<h4 class="program-head">{e(pr["program"]["title"])}</h4>{ritual(pr["program"]["steps"])}')
     panels.append((pr['id'], ''.join(parts)))
-projects = shelf('projects', 'projects', '<p class="shelf-note">things I steward</p>', items, panels)
+projects = shelf('projects', 'projects', '<p class="shelf-note">communities, rituals, books, and physical place-making</p>', items, panels)
 
 # elsewhere: a short list of what others have written, no tabs
 rows = []

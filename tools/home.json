@@ -654,6 +654,120 @@
    }
   },
   {
+   "id": "council",
+   "name": "council of the cosmos",
+   "role": "workshop",
+   "tagline": "re-enchanting the pursuit of multiple truths",
+   "desc": [
+    "Council of the Cosmos is a structured role-play workshop designed to help participants explore multiple, often conflicting, ways of knowing through embodied perspective-taking.",
+    "Each participant was assigned an archetype - such as the Scientist, Mystic, Artist, or Elder - and began by listening to a short audio meditation specific to their role (recorded by yours truly), accessed through QR codes and headphones. These archetypes were drawn from a custom deck that included guiding values, strengths, and blind spots."
+   ],
+   "images": [
+    [
+     "proj-council-logo.jpg",
+     "Council of the Cosmos: re-enchanting the pursuit of multiple truths"
+    ],
+    [
+     "proj-council-cards.jpg",
+     "the archetype cards (the politician, the elder, the priestess, the philosopher, the scientist, the mystic, the artist, the farmer, the revolutionary) beside a phenomenon card and a candle"
+    ],
+    [
+     "proj-council-booklets.jpg",
+     "Council of the Cosmos booklets fanned out beside a candle and incense"
+    ],
+    [
+     "proj-council-writing.jpg",
+     "a participant writing in her council booklet"
+    ],
+    {
+     "video": "proj-council-cards.mp4",
+     "poster": "proj-council-video-poster.jpg",
+     "alt": "a short clip moving over the archetype cards, candle and incense"
+    }
+   ],
+   "slides": {
+    "title": "the slides that guided the council",
+    "images": [
+     [
+      "council-slide-01.jpg",
+      "Council of the Cosmos Re-enchanting the Pursuit of Multiple Truths"
+     ],
+     [
+      "council-slide-02.jpg",
+      "In the near future... In times of need, a council is called to discussed earthly and cosmological matters"
+     ],
+     [
+      "council-slide-03.jpg",
+      "Representatives from all walks of life are invited to share their perspectives and discuss ways to move forward"
+     ],
+     [
+      "council-slide-04.jpg",
+      "Phase 1 Convening"
+     ],
+     [
+      "council-slide-05.jpg",
+      "As a member of the council, you represent an archetype, a particular way of knowing and living To find your archetype, draw three cards and select one to represent throughout this workshopand meditate if you wish Setting the stage"
+     ],
+     [
+      "council-slide-06.jpg",
+      "A moment to step into your archetype’s shoes • Scan the QR code on your chosen card to listen to stories about your archetype • Take a moment to close your and meditate if you wish Getting into character (7 min)"
+     ],
+     [
+      "council-slide-07.jpg",
+      "Based on the stories, the information on the card, and your extrapolations think of where this archetype might inhabit, what they might be called • Draw or write a description of where your archetype might inhabit • What meaning do the tools on your card reveal to you? Share out (10 min)"
+     ],
+     [
+      "council-slide-08.jpg",
+      "• Share one thing you have discovered about your character with the group Share out (10 min)"
+     ],
+     [
+      "council-slide-09.jpg",
+      "Phase 2 A strange phenomenon..."
+     ],
+     [
+      "council-slide-10.jpg",
+      "The oldest participant of the council draws a card from the Phenomenon card deck and reads it out loud to the group A strange phenomenon occurs"
+     ],
+     [
+      "council-slide-11.jpg",
+      "From your archetype’s perspective, elaborate a possible explanation for this phenomenon • What might have caused it? • Does it pose a risk? • Should anything be done about it? Explanation (5 min)"
+     ],
+     [
+      "council-slide-12.jpg",
+      "The Council convenes... • Share your explanation with the group and how you came to it • Engage with other participants to understand their perspectives Discussion (10 min)"
+     ],
+     [
+      "council-slide-13.jpg",
+      "Having listened to the different perspectives on the phenomenon at hand, Council members determine whether any interference is necessary • Did the discusison shift your perspective or has it reinforced your original point of view? • Are there value systems of others that are particularly complementary or averse to the ones you hold? Next Steps (10 min)"
+     ],
+     [
+      "council-slide-14.jpg",
+      "Phase 3 The aggravation..."
+     ],
+     [
+      "council-slide-15.jpg",
+      "The youngest member of the council reads the backside of the phenomenon card in play to the group The strange phenomenon intensifies..."
+     ],
+     [
+      "council-slide-16.jpg",
+      "Response (10min) Using the unique mediums at the disposal of each archetype, council members asses how to move forward given the recent aggravation • How do you move forward from here now that it’s a crisis from your point of view? (use your objects) • Write the explanation out in your book"
+     ],
+     [
+      "council-slide-17.jpg",
+      "Discussion (10min) The Council convenes again... • Share your explanation with the group and how you came to it • Engage with other participants to understand their perspectives"
+     ],
+     [
+      "council-slide-18.jpg",
+      "Conclusion"
+     ],
+     [
+      "council-slide-19.jpg",
+      "Conclusion (10min) As you let go of your archetype, reflect on and share what you might have learned through this experience “What treasure from your archetype other archetypes do you want to keep alive in your own life?”"
+     ]
+    ]
+   }
+  },
+  {
    "id": "haumbody",
    "name": "the haumbody",
    "role": "interior design studio",
