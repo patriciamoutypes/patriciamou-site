@@ -21,11 +21,16 @@ html,body{overflow-x:clip}
 body{margin:0;background:#fff;color:var(--ink);font:400 16px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
 a{color:var(--rose);text-decoration:none}
 .wrap{max-width:1080px;margin:0 auto;padding:0 40px 96px}
-.nav{position:sticky;top:0;z-index:50;display:flex;gap:30px;margin-top:10px;padding:18px 0 16px;font-size:15px;background:rgba(255,255,255,.94);-webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);transition:box-shadow .2s}
+.nav{position:sticky;top:0;z-index:50;display:flex;align-items:baseline;gap:30px;margin:10px -40px 0;padding:18px 40px 16px;font-size:15px;background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);transition:box-shadow .2s}
 .nav.stuck{box-shadow:0 1px 0 var(--line, #ece6e6)}
-.nav a{color:var(--muted)}
-.nav a[aria-current]{color:#000}
-.nav a:hover{color:#000}
+/* same nav as the home page: a soft blue-grey underline under the current page, your name at the right */
+.nav a{position:relative;color:var(--muted);transition:color .2s}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;border-radius:1px;background:#bcc2cf;transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.nav a[aria-current]{color:var(--ink)}
+.nav a[aria-current]::after{transform:scaleX(1)}
+.nav a:hover{color:var(--ink)}
+.nav .nav-name{margin-left:auto;font:500 20px/1 var(--serif);color:var(--ink)}
+.nav .nav-name::after{display:none}
 h1{font:500 38px/1.1 var(--serif);margin:56px 0 30px}
 .lede{margin:0 0 34px;color:var(--muted);font-size:15px}
 
@@ -70,6 +75,8 @@ h1{font:500 38px/1.1 var(--serif);margin:56px 0 30px}
   .wrap{padding:0 20px 72px}
   .nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:22px;margin:4px -20px 0;padding:14px 20px 12px;white-space:nowrap}
   .nav::-webkit-scrollbar{display:none}
+  .nav .nav-name{display:none}
+  .nav a::after{bottom:-3px}
   h1{margin-top:40px}
   .case{padding:16px 0 0}
   .shelf{gap:var(--gap) 10px}
@@ -87,6 +94,7 @@ h1{font:500 38px/1.1 var(--serif);margin:56px 0 30px}
   <a href="/#projects">projects</a>
   <a href="/bookshelf/" aria-current="page">bookshelf</a>
   <a href="https://www.therabbitholes.xyz/" target="_blank" rel="noopener">curations</a>
+  <a class="nav-name" href="/">patricia mou</a>
 </nav>
 <script>(function () { var n = document.querySelector(".nav"); function f() { n.classList.toggle("stuck", window.scrollY > 4); } f(); window.addEventListener("scroll", f, { passive: true }); })();</script>
 <h1>books that moved me</h1>
