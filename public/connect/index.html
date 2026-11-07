@@ -32,16 +32,16 @@ a{color:var(--rose);text-decoration:none}
 .nav .nav-name{margin-left:auto;font:500 20px/1 var(--serif);color:var(--ink)}
 .nav .nav-name::after{display:none}
 
-/* the stage: a soft lavender-to-water disc with a hairline orbit around it,
+/* the stage: a hairline moon orbit turning slowly around the form,
    two round cut-outs from the moodboard resting on its edge */
 .stage{position:relative;display:grid;place-items:center;min-height:880px;padding:40px 0;isolation:isolate}
-.orb{position:absolute;left:50%;top:50%;width:min(700px,100%);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;z-index:-2;
-  background:radial-gradient(circle at 34% 28%,#f7f5f9 0%,#ebe7f0 34%,#dfe2ea 64%,#d3dae3 100%);
-  box-shadow:inset 0 2px 0 rgba(255,255,255,.8),inset 0 -30px 60px rgba(150,165,190,.18),0 40px 80px -50px rgba(40,50,90,.35)}
 .ring{position:absolute;left:50%;top:50%;width:min(780px,112%);aspect-ratio:1;transform:translate(-50%,-50%);z-index:-1;pointer-events:none;overflow:visible}
 .ring circle.path{fill:none;stroke:#a9a3b8;stroke-width:.6}
 .ring .ph{fill:#f3f0f5;stroke:#8d869f;stroke-width:.6}
 .ring .dark{fill:#3a3746}
+.ring .turn{transform-origin:100px 100px;animation:orbit 60s linear infinite}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.ring .turn{animation:none}}
 .disc{position:absolute;z-index:1;border-radius:50%;object-fit:cover;pointer-events:none;
   box-shadow:0 14px 30px rgba(30,30,60,.22),0 2px 6px rgba(30,30,60,.1),0 0 0 4px #fff}
 .disc-a{width:128px;height:128px;left:calc(50% - 311px);top:121px}
@@ -51,20 +51,12 @@ a{color:var(--rose);text-decoration:none}
 h1{font:500 64px/1 var(--serif);margin:0 0 10px;letter-spacing:-.01em}
 .lede{margin:0 0 26px;color:#5f5a6b;font-size:15px}
 
-/* what kind of note: pills, the chosen one in the home page's blue-grey */
-.kinds{border:0;margin:0 0 14px;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
-.kinds legend{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-.kinds input{position:absolute;opacity:0;pointer-events:none}
-.kinds label{padding:6px 14px;border:1px solid rgba(95,90,130,.18);border-radius:999px;font-size:14px;color:#4d4858;background:rgba(255,255,255,.55);cursor:pointer;transition:background-color .2s,border-color .2s,color .2s}
-.kinds label:hover{background:rgba(255,255,255,.85)}
-.kinds input:checked + label{background:#cdd1da;border-color:#bcc2cf;color:#262a33}
-.kinds input:focus-visible + label{outline:2px solid #8a92a3;outline-offset:2px}
 
 form{display:grid;gap:10px}
-.field{font:400 15px/1.5 var(--sans);color:var(--ink);width:100%;outline:none;background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
-  border:1px solid rgba(95,90,130,.14);border-radius:999px;padding:11px 18px;transition:border-color .2s,box-shadow .2s,background-color .2s}
+.field{font:400 15px/1.5 var(--sans);color:var(--ink);width:100%;outline:none;background:#faf9fb;
+  border:1px solid rgba(95,90,130,.16);border-radius:999px;padding:11px 18px;transition:border-color .2s,box-shadow .2s,background-color .2s}
 textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 18px}
-.field:focus{background:rgba(255,255,255,.92);border-color:#aab2c3;box-shadow:0 0 0 4px rgba(188,194,207,.4)}
+.field:focus{background:#fff;border-color:#aab2c3;box-shadow:0 0 0 4px rgba(188,194,207,.4)}
 .field::placeholder{color:#9a94a6}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 
@@ -74,14 +66,10 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
 .button:hover{background:var(--rose);color:#fff}
 .button:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
 
-/* elsewhere: round links */
-.elsewhere{display:flex;justify-content:center;gap:34px;margin:0 0 40px;padding:0;list-style:none}
-.elsewhere a{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:13px;color:var(--muted);transition:color .2s}
-.elsewhere .dot{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);background:#fff;color:var(--rose);transition:background-color .2s,color .2s,border-color .2s,transform .2s}
-.elsewhere svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.elsewhere a:hover{color:var(--ink)}
-.elsewhere a:hover .dot{background:var(--rose);border-color:var(--rose);color:#fff;transform:translateY(-2px)}
-.elsewhere a:focus-visible .dot{outline:2px solid var(--rose);outline-offset:3px}
+/* elsewhere: plain rose links with the little arrow, as on the home page */
+.elsewhere{display:flex;justify-content:center;gap:26px;margin:0 0 56px;font-size:15px}
+.elsewhere a:hover{color:#000;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.ext::after{content:"\2197";font-size:.85em;margin-left:1px}
 
 @media (max-width:860px){
   .wrap{padding:0 20px 40px}
@@ -90,13 +78,11 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
   .nav .nav-name{display:none}
   .nav a::after{bottom:-3px}
   .stage{min-height:0;padding:150px 0 170px}
-  .orb{width:156vw}
   .ring{width:172vw}
   h1{font-size:52px}
   .disc-a{width:88px;height:88px;left:-4px;top:40px}
   .disc-b{width:100px;height:100px;left:auto;top:auto;right:-4px;bottom:44px}
   .row{grid-template-columns:1fr}
-  .elsewhere{gap:26px}
 }
 </style>
 </head>
@@ -107,21 +93,22 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
   <a href="/#writing">writing</a>
   <a href="/#projects">projects</a>
   <a href="/bookshelf/">bookshelf</a>
-  <a href="/connect/" aria-current="page">connect</a>
   <a href="https://www.therabbitholes.xyz/" target="_blank" rel="noopener">curations</a>
+  <a href="/connect/" aria-current="page">connect</a>
   <a class="nav-name" href="/">patricia mou</a>
 </nav>
 <script>(function () { var n = document.querySelector(".nav"); function f() { n.classList.toggle("stuck", window.scrollY > 4); } f(); window.addEventListener("scroll", f, { passive: true }); })();</script>
 
 <main class="stage">
-  <div class="orb" aria-hidden="true"></div>
   <svg class="ring" viewBox="0 0 200 200" aria-hidden="true">
     <circle class="path" cx="100" cy="100" r="99"/>
+    <g class="turn">
     <g transform="translate(100 1)"><circle class="ph" r="2.6"/><path class="dark" d="M0,-2.6 A2.6,2.6 0 0,1 0,2.6 Z"/></g>
     <g transform="translate(170 30) rotate(45)"><circle class="ph" r="2.6"/><path class="dark" d="M0,-2.6 A2.6,2.6 0 0,1 0,2.6 Z"/></g>
     <g transform="translate(199 100) rotate(90)"><circle class="ph" r="2.6"/><path class="dark" d="M0,-2.6 A2.6,2.6 0 0,1 0,2.6 Z"/></g>
     <g transform="translate(30 170) rotate(225)"><circle class="ph" r="2.6"/><path class="dark" d="M0,-2.6 A2.6,2.6 0 0,1 0,2.6 Z"/></g>
     <g transform="translate(1 100) rotate(270)"><circle class="ph" r="2.6"/><path class="dark" d="M0,-2.6 A2.6,2.6 0 0,1 0,2.6 Z"/></g>
+    </g>
   </svg>
   <img class="disc disc-a" src="/assets/collage/connect-shell.jpg" alt="" aria-hidden="true"/>
   <img class="disc disc-b" src="/assets/collage/connect-swirl.jpg" alt="" aria-hidden="true"/>
@@ -130,13 +117,6 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
     <h1 id="h-connect">connect</h1>
     <p class="lede">send me a note, a book, an idea, a little inspiration</p>
     <form id="note">
-      <fieldset class="kinds">
-        <legend>what are you sending?</legend>
-        <input type="radio" name="kind" id="k-note" value="a note" checked/><label for="k-note">a note</label>
-        <input type="radio" name="kind" id="k-book" value="a book"/><label for="k-book">a book</label>
-        <input type="radio" name="kind" id="k-idea" value="an idea"/><label for="k-idea">an idea</label>
-        <input type="radio" name="kind" id="k-insp" value="inspiration"/><label for="k-insp">inspiration</label>
-      </fieldset>
       <textarea class="field" name="msg" placeholder="write to me…" aria-label="your message" required></textarea>
       <div class="row">
         <input class="field" name="link" placeholder="a link (optional)" aria-label="a link"/>
@@ -147,11 +127,11 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
   </section>
 </main>
 
-<ul class="elsewhere" aria-label="elsewhere">
-  <li><a href="https://twitter.com/patriciamou_" target="_blank" rel="noopener"><span class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg></span>twitter</a></li>
-  <li><a href="https://www.instagram.com/patriciaxmou/" target="_blank" rel="noopener"><span class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg></span>instagram</a></li>
-  <li><a href="mailto:hi@patriciamou.com" aria-label="email hi@patriciamou.com"><span class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/><path d="M4 7l8 6 8-6"/></svg></span>email</a></li>
-</ul>
+<p class="elsewhere">
+  <a class="ext" href="https://twitter.com/patriciamou_" target="_blank" rel="noopener">twitter</a>
+  <a class="ext" href="https://www.instagram.com/patriciaxmou/" target="_blank" rel="noopener">instagram</a>
+  <a class="ext" href="mailto:hi@patriciamou.com" aria-label="email hi@patriciamou.com">email</a>
+</p>
 </div>
 <script>
 (function () {
@@ -159,10 +139,9 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
   f.addEventListener("submit", function (ev) {
     ev.preventDefault();
     var v = function (n) { return (f.elements[n].value || "").trim(); };
-    var kind = (f.querySelector('input[name="kind"]:checked') || {}).value || "a note";
     var msg = v("msg"), link = v("link"), who = v("from");
     var body = msg + (link ? "\n\n" + link : "") + (who ? "\n\n" + who : "");
-    location.href = "mailto:impatriciamou@gmail.com?subject=" + encodeURIComponent(kind + " for you" + (who ? " from " + who : "")) +
+    location.href = "mailto:impatriciamou@gmail.com?subject=" + encodeURIComponent("a note for you" + (who ? " from " + who : "")) +
       "&body=" + encodeURIComponent(body);
   });
 })();
