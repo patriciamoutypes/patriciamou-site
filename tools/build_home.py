@@ -130,7 +130,7 @@ for pr in data['projects']:
     if pr.get('program'):
         parts.append(f'<h4 class="program-head">{e(pr["program"]["title"])}</h4>{ritual(pr["program"]["steps"])}')
     panels.append((pr['id'], ''.join(parts)))
-projects = shelf('projects', 'projects', '<p class="shelf-note">communities, rituals, books, and physical place-making</p>', items, panels)
+projects = shelf('projects', 'projects', '<p class="shelf-note">community design, rituals, zines, and physical place-making</p>', items, panels)
 
 # elsewhere: pieces written about the work, one tab each
 items, panels = [], []
