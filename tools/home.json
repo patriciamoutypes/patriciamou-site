@@ -873,12 +873,16 @@
   {
    "id": "rabbit-holes",
    "name": "rabbit holes",
-   "role": "curations & a coffee table book",
-   "desc": "a newsletter for the soul - curation of the most psychoactive rabbit holes on the edges of the internet.",
+   "role": "a newsletter & a coffee table book",
+   "desc": [
+    "a newsletter for the soul - curation of the most psychoactive rabbit holes on the edges of the internet.",
+    "a sanctuary to pause from the world of doing and pass into the world of wonder, self-reflection, and aliveness. i curate across philosophy, art & poetry, architecture, personal development, spirituality, and world-building.",
+    "each issue unfolds in six movements:"
+   ],
    "links": [
     [
-     "therabbitholes.xyz",
-     "https://www.therabbitholes.xyz/"
+     "read the newsletter",
+     "https://curatedrabbitholes.substack.com/"
     ],
     [
      "the coffee table book",
@@ -891,28 +895,39 @@
      "the Rabbit Holes coffee table book"
     ],
     [
-     "proj-rabbitholes-2.jpg",
-     "a spread from the book"
-    ],
-    [
      "proj-rabbitholes-3.jpg",
-     "a spread from the book"
-    ],
-    [
-     "proj-rabbitholes-4.jpg",
-     "a spread from the book"
-    ],
-    [
-     "proj-rabbitholes-5.jpg",
-     "a spread from the book"
-    ],
-    [
-     "proj-rabbitholes-6.jpg",
-     "a spread from the book"
+     "turning a page of the Rabbit Holes book"
     ]
    ],
-   "blocks": [
-    "rabbitholes-anatomy.html"
+   "tagline": "what does it mean to live a life of meaning and beauty?",
+   "phases": [
+    [
+     "set the stage.",
+     "grab a coffee, meditate, put on a curated soundscape."
+    ],
+    [
+     "touch the heart.",
+     "poetry, photography, and quotes on love, life, loss, and wayfinding."
+    ],
+    [
+     "inspire the senses.",
+     "architecture, interiors, contemporary art, beautiful places."
+    ],
+    [
+     "engage the mind.",
+     "essays, books, and films on being and becoming."
+    ],
+    [
+     "tend the body.",
+     "wellness and spirituality for the physical and energetic body."
+    ],
+    [
+     "build.",
+     "profiles of artists and builders, with resources and tools."
+    ]
+   ],
+   "desc_after": [
+    "the book gathers five years and 50+ issues of curation into 170 hardcover pages, alongside personal essays and notes, each page paired with music."
    ]
   }
  ],
