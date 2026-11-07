@@ -40,9 +40,9 @@ a{color:var(--rose);text-decoration:none}
 .ring .m-dark{fill:#7a7588}
 .ring .m-lit{fill:#fff}
 .ring .m-edge{fill:none;stroke:#7a7588;stroke-width:1.8}
-/* the ring turns once a minute; each moon turns back the other way so it stays upright, lit side true */
-.ring .turn{transform-origin:400px 400px;animation:orbit 60s linear infinite}
-.ring .moon{transform-box:fill-box;transform-origin:center;animation:orbit 60s linear infinite reverse}
+/* the ring turns once every 90 seconds; each moon turns back the other way so it stays upright, lit side true */
+.ring .turn{transform-origin:400px 400px;animation:orbit 90s linear infinite}
+.ring .moon{transform-box:fill-box;transform-origin:center;animation:orbit 90s linear infinite reverse}
 @keyframes orbit{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.ring .turn,.ring .moon{animation:none}}
 .disc{position:absolute;z-index:1;border-radius:50%;object-fit:cover;pointer-events:none;
@@ -114,33 +114,17 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
     <circle class="path" cx="400" cy="400" r="392"/>
     <g class="turn">
       <g transform="translate(400.00 8.00)"><g class="moon"><circle class="m-lit" r="12"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(487.23 17.83)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A11.70,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(570.08 46.82)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A10.81,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(644.41 93.52)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A9.38,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(706.48 155.59)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A7.48,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(753.18 229.92)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A5.21,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(782.17 312.77)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A2.67,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(596.00 60.52)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A8.40,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(739.48 204.00)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A3.60,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
       <g transform="translate(792.00 400.00)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A0.00,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(782.17 487.23)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A2.67,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(753.18 570.08)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A5.21,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(706.48 644.41)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A7.48,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(644.41 706.48)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A9.38,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(570.08 753.18)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A10.81,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(487.23 782.17)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A11.70,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(739.48 596.00)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A3.60,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(596.00 739.48)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A8.40,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
       <g transform="translate(400.00 792.00)"><g class="moon"><circle class="m-dark" r="12"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(312.77 782.17)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A11.70,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(229.92 753.18)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A10.81,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(155.59 706.48)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A9.38,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(93.52 644.41)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A7.48,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(46.82 570.08)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A5.21,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(17.83 487.23)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A2.67,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(204.00 739.48)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A8.40,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(60.52 596.00)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A3.60,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
       <g transform="translate(8.00 400.00)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A0.00,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(17.83 312.77)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A2.67,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(46.82 229.92)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A5.21,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(93.52 155.59)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A7.48,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(155.59 93.52)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A9.38,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(229.92 46.82)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A10.81,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
-      <g transform="translate(312.77 17.83)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A11.70,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(60.52 204.00)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A3.60,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(204.00 60.52)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A8.40,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
     </g>
   </svg>
   <img class="disc disc-a" src="/assets/collage/connect-shell.jpg" alt="" aria-hidden="true"/>
@@ -148,7 +132,7 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
 
   <section class="panel" aria-labelledby="h-connect">
     <h1 id="h-connect">connect</h1>
-    <p class="lede">send me a note, a book, an idea, a little inspiration</p>
+    <p class="lede">send me a note, a book, an idea, an inspiration</p>
     <form id="note" novalidate>
       <textarea class="field" name="message" placeholder="write to me…" aria-label="your message" required></textarea>
       <div class="row">
