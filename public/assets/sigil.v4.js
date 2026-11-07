@@ -1,5 +1,5 @@
 /*!
- * Patricia Mou sigil: each line draws itself with a living pen, cascading down.
+ * Patricia Mou sigil: each line draws itself with its own pen, cascading down.
  * Drop-in: <div class="pm-sigil"></div><script src="sigil.js" defer></script>
  * Options (data attributes on the div):
  *   data-theme="light" | "dark"   light = graphite on white (default)
@@ -131,8 +131,6 @@
     { amp: 0.022, f1: 3.1, f2: 2.3, sp: 0.18, ph: 0.4, lag: 0.28, w: 0.6 },
     { amp: 0.036, f1: 2.0, f2: 3.2, sp: 0.12, ph: 2.6, lag: 0.48, w: 0.55 }
   ];
-  // the living motion: a fresh line ripples like a serpent's body, then settles into the drawing
-  var RIPPLE = 0.024, RIPPLE_DECAY = 0.5;
 
   function frame(ctx, W, H, t, opts) {
     var o = { theme: "light", loop: false };
@@ -154,16 +152,12 @@
     var heads = [];
 
     function trace(c2, time, s, off, collect) {
-      var xy = s.xy, nv = s.nx, tr = s.tr, al = s.al, pen = -1;
+      var xy = s.xy, tr = s.tr, pen = -1;
+      // echoes are clean copies of the line, nudged as a whole and drifting slowly
+      var ox = cx, oy = cy;
+      if (off) { ox += off.amp * S * Math.sin(tt * off.sp * TAU + off.ph); oy += off.amp * 0.7 * S * Math.cos(tt * off.sp * 0.8 * TAU + off.ph * 1.7); }
       function P(j) {
-        var x = xy[j * 2], y = xy[j * 2 + 1], age = tt - tr[j];
-        if (age < 3) {
-          var amp = RIPPLE * Math.exp(-Math.max(0, age) / RIPPLE_DECAY) * Math.min(1, al[j] / 0.05 + 0.15);
-          var w = amp * Math.sin(al[j] * 26 - tt * 9 + s.ph);
-          x += nv[j * 2] * w; y += nv[j * 2 + 1] * w;
-        }
-        if (off) { x += off.amp * Math.sin(off.f1 * y + tt * off.sp * TAU + off.ph); y += off.amp * 0.7 * Math.sin(off.f2 * x + tt * off.sp * 0.8 * TAU + off.ph * 1.7); }
-        return [cx + x * S, cy + y * S];
+        return [ox + xy[j * 2] * S, oy + xy[j * 2 + 1] * S];
       }
       for (var j = 1; j < s.n; j++) {
         var a = tr[j - 1], b = tr[j];
