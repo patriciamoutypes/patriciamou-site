@@ -196,11 +196,12 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
 
 </div>
 <script>
-/* notes go straight to Patricia's inbox through FormSubmit (formsubmit.co); the sender's email becomes the reply-to */
+/* notes go straight to Patricia's inbox through Web3Forms (web3forms.com); the sender's email becomes the reply-to.
+   The access key is public by design: it can only deliver notes to her inbox. */
 (function () {
   var f = document.getElementById("note"); if (!f) return;
   var status = f.querySelector(".status"), btn = f.querySelector("button");
-  var ENDPOINT = "https://formsubmit.co/ajax/impatriciamou@gmail.com";
+  var ENDPOINT = "https://api.web3forms.com/submit", KEY = "ed676236-6684-49dd-bf6c-23c79dd28adb";
   function val(n) { return (f.elements[n].value || "").trim(); }
   function mark(n, bad) { f.elements[n].classList.toggle("bad", bad); }
   f.addEventListener("input", function (e) { if (e.target.classList) e.target.classList.remove("bad"); });
@@ -218,16 +219,19 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
       body: JSON.stringify({
-        _subject: "a note for you from " + (who || email),
-        _template: "box",
+        access_key: KEY,
+        subject: "a note for you from " + (who || email),
+        from_name: "patriciamou.com",
         name: who || "(no name)",
         email: email,
+        replyto: email,
         message: msg,
-        link: val("link") || "(none)"
+        link: val("link") || "(none)",
+        botcheck: ""
       })
     }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return { ok: r.ok, d: d }; }); })
       .then(function (res) {
-        if (res.ok && String(res.d.success) === "true") {
+        if (res.ok && res.d.success === true) {
           f.hidden = true; f.nextElementSibling.hidden = false;
         } else { throw new Error(res.d && res.d.message || "failed"); }
       })
