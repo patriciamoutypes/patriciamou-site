@@ -69,6 +69,21 @@ h1{font:500 38px/1.1 var(--serif);margin:56px 0 30px}
 .tip b{display:block;font:500 18px/1.2 var(--serif)}
 .tip span{display:block;margin-top:3px;font-size:12px;letter-spacing:.03em;color:#7a7272}
 .book a:hover .tip,.book a:focus-visible .tip,.book .nolink:hover .tip,.book .nolink:focus-visible .tip{opacity:1;transform:translate(-50%,0)}
+/* recommend a book: a quiet card under the last shelf that opens a pre-filled email */
+.rec{max-width:560px;margin:84px auto 0;padding:34px 36px 30px;border:1px solid var(--line);border-radius:10px;background:#fcfbf9;text-align:center}
+.rec h2{font:500 30px/1.15 var(--serif);margin:0 0 8px}
+.rec p{margin:0 0 22px;color:var(--muted);font-size:15px}
+.rec form{display:grid;gap:10px;text-align:left}
+.rec .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rec input,.rec textarea{font:400 15px/1.5 var(--sans);color:var(--ink);background:#fff;border:1px solid #e4dfdf;border-radius:8px;padding:10px 12px;width:100%;outline:none;transition:border-color .2s,box-shadow .2s}
+.rec textarea{min-height:84px;resize:vertical}
+.rec input:focus,.rec textarea:focus{border-color:#bcc2cf;box-shadow:0 0 0 3px rgba(188,194,207,.35)}
+.rec ::placeholder{color:#a9a3a3}
+.rec button{justify-self:center;margin-top:6px;font:500 15px/1 var(--sans);color:#262a33;background:#cdd1da;border:1px solid #bcc2cf;border-radius:999px;padding:12px 24px;cursor:pointer;transition:background-color .2s}
+.rec button:hover{background:#c2c7d2}
+.rec button:focus-visible{outline:2px solid #8a92a3;outline-offset:3px}
+.rec .alt{margin:16px 0 0;font-size:13px;color:var(--faint)}
+.rec .alt a{color:var(--muted);border-bottom:1px solid var(--line)}
 @media (prefers-reduced-motion:reduce){.book a,.book .nolink,.tip{transition:none}}
 @media (max-width:860px){
   :root{--bh:120px;--gap:34px;--plank:10px}
@@ -83,6 +98,8 @@ h1{font:500 38px/1.1 var(--serif);margin:56px 0 30px}
   .faux{padding:8px 7px}
   .faux-title{font-size:12px}
   .faux-author{font-size:8px}
+  .rec{margin-top:60px;padding:28px 20px 24px}
+  .rec .row{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -164,7 +181,34 @@ h1{font:500 38px/1.1 var(--serif);margin:56px 0 30px}
 </ul>
 <div class="planks" aria-hidden="true"></div>
 </div>
+<section class="rec" aria-labelledby="rec-h">
+  <h2 id="rec-h">recommend me a book</h2>
+  <p>a book that cracked you open? i'd love to read it.</p>
+  <form id="rec-form">
+    <div class="row">
+      <input name="title" placeholder="title" aria-label="book title" required/>
+      <input name="author" placeholder="author" aria-label="author"/>
+    </div>
+    <textarea name="why" placeholder="why it moved you (optional)" aria-label="why it moved you"></textarea>
+    <input name="from" placeholder="your name (optional)" aria-label="your name"/>
+    <button type="submit">send it my way</button>
+  </form>
+  <p class="alt">or write to me at <a href="mailto:impatriciamou@gmail.com?subject=a%20book%20for%20your%20shelf">impatriciamou@gmail.com</a></p>
+</section>
 </div>
+<script>
+(function () {
+  var f = document.getElementById("rec-form"); if (!f) return;
+  f.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var v = function (n) { return (f.elements[n].value || "").trim(); };
+    var t = v("title"), a = v("author"), w = v("why"), who = v("from");
+    var body = t + (a ? " by " + a : "") + (w ? "\n\n" + w : "") + (who ? "\n\n" + who : "");
+    location.href = "mailto:impatriciamou@gmail.com?subject=" + encodeURIComponent("a book for your shelf: " + t) +
+      "&body=" + encodeURIComponent(body);
+  });
+})();
+</script>
 <script>
 (function () {
   var shelf = document.querySelector(".shelf"), layer = document.querySelector(".planks");
