@@ -49,9 +49,9 @@ img{display:block;max-width:100%}
 .nav{position:sticky;top:0;z-index:50;display:flex;align-items:baseline;gap:30px;margin:10px -40px 0;padding:18px 40px 16px;font-size:15px;background:rgba(255,253,251,.92);-webkit-backdrop-filter:saturate(1.4) blur(8px);backdrop-filter:saturate(1.4) blur(8px);transition:box-shadow .2s}
 .nav.stuck{box-shadow:0 1px 0 var(--line)}
 [id]{scroll-margin-top:calc(var(--navh) + 16px)}
-/* the section you're in gets a soft lavender underline that follows you down the page */
+/* the section you're in gets a soft blue-grey underline that follows you down the page */
 .nav a{position:relative;color:var(--muted);transition:color .2s}
-.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1.5px;border-radius:1px;background:#aaa1e0;
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;border-radius:1px;background:#bcc2cf;
   transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
 .nav a.on{color:var(--ink)}
 .nav a.on::after{transform:scaleX(1)}
@@ -313,8 +313,8 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
   .tab{flex:none;padding:5px 12px;border:1px solid var(--line);border-radius:999px;font-size:14px}
   .tab .leader{display:none}
   .tab{transition:background-color .2s,border-color .2s,color .2s}
-  .tab[aria-selected=true]{background:#eeebf8;border-color:#d3cdef;color:#3f3870}   /* light lavender, from the #7d74c9 in the palette */
-  .tab[aria-selected=true] .count{color:#7d74c9}
+  .tab[aria-selected=true]{background:#cdd1da;border-color:#bcc2cf;color:#262a33}   /* soft blue-grey */
+  .tab[aria-selected=true] .count{color:#555c6b}
   .post a{grid-template-columns:72px minmax(0,1fr);gap:14px}
   .post img{width:72px;height:48px}
   .post-date{grid-column:2;margin-top:-6px}
