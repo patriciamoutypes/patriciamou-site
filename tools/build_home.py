@@ -28,7 +28,7 @@ def shelf(sid, title, note, items, panels):
             f'<span>{e(label)}</span><span class="leader"></span>'
             + (f'<span class="count">{count}</span>' if count is not None else '') + '</button>')
     out = [f'<section class="shelf" id="{sid}" data-shelf aria-labelledby="h-{sid}">',
-           '<div class="shelf-index">', f'<h2 id="h-{sid}">{e(title)}</h2>', f'<p class="shelf-note">{note}</p>',
+           '<div class="shelf-index">', f'<h2 id="h-{sid}">{e(title)}</h2>', note,
            f'<div class="tabs" role="tablist" aria-label="{e(title)}" aria-orientation="vertical">', *tabs, '</div></div>',
            '<div class="shelf-panels">']
     for i, (iid, body) in enumerate(panels):
@@ -50,12 +50,14 @@ for th in data['writing_themes']:
         lis.append(f'<li class="post"><a href="{e(p["url"])}" target="_blank" rel="noopener">{img}'
                    f'<span><span class="post-title">{e(p["title"])}</span>{sub}</span>'
                    f'<span class="post-date">{when(p["date"])}</span></a></li>')
-    more = (f'<p class="more"><a class="ext" href="{e(th["more"]["url"])}" target="_blank" rel="noopener">{e(th["more"]["label"])}</a></p>'
-            if th.get('more') else '')
-    body = (f'<div class="panel-head"><h3>{e(th["name"])}</h3><span class="meta">{len(posts)} essays</span></div>'
-            f'<ul class="posts">{"".join(lis)}</ul>{more}')
+    meta = (f'<a class="meta ext" href="{e(th["more"]["url"])}" target="_blank" rel="noopener">{e(th["more"]["label"])}</a>'
+            if th.get('more') else f'<span class="meta">{len(posts)} essays</span>')
+    body = (f'<div class="panel-head"><h3>{e(th["name"])}</h3>{meta}</div>'
+            f'<ul class="posts">{"".join(lis)}</ul>')
     panels.append((th['id'], body))
-writing = shelf('writing', 'writing', 'from <a class="ext" href="https://templeuponahill.substack.com/" target="_blank" rel="noopener">temple upon a hill</a>', items, panels)
+pubs = ''.join(f'<p class="pub"><a class="ext" href="{e(pb["url"])}" target="_blank" rel="noopener">{e(pb["name"])}</a>'
+               f'<span>{e(pb["desc"])}</span></p>' for pb in data['publications'])
+writing = shelf('writing', 'writing', f'<div class="pubs">{pubs}</div>', items, panels)
 
 # projects
 items, panels = [], []
@@ -67,18 +69,18 @@ for pr in data['projects']:
             f'<p class="project-desc">{e(pr["desc"])}</p><p class="project-links">{links}</p>'
             f'<div class="gallery">{imgs}</div>')
     panels.append((pr['id'], body))
-projects = shelf('projects', 'projects', 'things I steward', items, panels)
+projects = shelf('projects', 'projects', '<p class="shelf-note">things I steward</p>', items, panels)
 
-# where i've been: no tabs, every piece shows at once
-cards = []
+# elsewhere: a short list of what others have written, no tabs
+rows = []
 for c in data['press']:
-    pic = (f'<img class="card-img" src="/assets/{e(c["image"])}" alt="" loading="lazy" decoding="async"/>' if c.get('image')
-           else f'<div class="card-type" aria-hidden="true">{e(c["title"])}</div>')
-    cards.append(f'<a class="card" href="{e(c["url"])}" target="_blank" rel="noopener">{pic}'
-                 f'<span class="card-source">{e(c["source"])}</span><span class="card-title">{e(c["title"])}</span></a>')
-press = ('<section class="shelf" id="elsewhere" aria-labelledby="h-elsewhere"><div class="shelf-index">'
-         '<h2 id="h-elsewhere">where I\'ve been</h2><p class="shelf-note">what others have written about the work</p></div>'
-         f'<div class="press">{"".join(cards)}</div></section>')
+    pic = (f'<img src="/assets/{e(c["image"])}" alt="" width="80" height="50" loading="lazy" decoding="async"/>' if c.get('image')
+           else f'<span class="press-type" aria-hidden="true">{e(c["source"].split()[0])}</span>')
+    rows.append(f'<li><a href="{e(c["url"])}" target="_blank" rel="noopener">{pic}'
+                f'<span><span class="press-source">{e(c["source"])}</span><span class="press-title">{e(c["title"])}</span></span></a></li>')
+press = ('<section class="elsewhere" id="elsewhere" aria-labelledby="h-elsewhere">'
+         '<h2 id="h-elsewhere">elsewhere</h2>'
+         f'<ul class="press">{"".join(rows)}</ul></section>')
 
 page = tpl.replace('{{WRITING}}', writing).replace('{{PROJECTS}}', projects).replace('{{PRESS}}', press)
 assert '{{' not in page

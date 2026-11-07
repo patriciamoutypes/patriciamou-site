@@ -267,14 +267,6 @@
    "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5a17ec3c-3758-46a7-ac3a-d4ddb5e34fd0_599x992.png"
   },
   {
-   "theme": "sacred",
-   "title": "a spirituality that transforms",
-   "subtitle": "a journal entry from Ken Wilber",
-   "date": "2024-01-14",
-   "url": "https://templeuponahill.substack.com/p/a-spirituality-that-transforms",
-   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3b1b7c5c-3b66-46f6-ae88-730bad1abab0_500x328.webp"
-  },
-  {
    "theme": "cities",
    "title": "cities and purpose",
    "subtitle": "building cities around purpose, not ambition",
@@ -355,14 +347,6 @@
    "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F7bc9b132-a7de-4557-be8e-1dac6fd92524_4032x3024.jpeg"
   },
   {
-   "theme": "sacred",
-   "title": "the current state of affairs",
-   "subtitle": "meditation practice as a leaving and returning to",
-   "date": "2022-11-16",
-   "url": "https://templeuponahill.substack.com/p/vol-50-the-current-state-of-affairs",
-   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F0f379ed9-0e2d-4dd7-9033-029d58ed6fb7_1072x1420.png"
-  },
-  {
    "theme": "cities",
    "title": "when picking furniture becomes spiritual",
    "subtitle": "+ before & after photos of The Commons",
@@ -387,14 +371,6 @@
    "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fbfd7f01a-b519-44bd-9b06-430de57e6ac5_1500x1125.jpeg"
   },
   {
-   "theme": "sacred",
-   "title": "good vibes and maps of consciousness",
-   "subtitle": "on the importance of vibe checks",
-   "date": "2022-02-28",
-   "url": "https://templeuponahill.substack.com/p/-wellness-wisdom-vol-46-good-vibes",
-   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F9e97ade3-eaaf-47fb-9110-07aaa2786553_2560x2560.jpeg"
-  },
-  {
    "theme": "notes",
    "title": "30 pieces of unsolicited advice",
    "subtitle": "reflections and wisdom from the past year",
@@ -417,14 +393,6 @@
    "date": "2021-10-16",
    "url": "https://templeuponahill.substack.com/p/-wellness-wisdom-vol42-my-current",
    "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fe9c7d2fc-6fc3-4883-9910-7c4e881f9f7f_1108x676.png"
-  },
-  {
-   "theme": "sacred",
-   "title": "to be a monk or a capitalist?",
-   "subtitle": "",
-   "date": "2021-09-24",
-   "url": "https://templeuponahill.substack.com/p/-wellness-wisdom-vol42-to-be-a-monk",
-   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F69b0d16b-8789-4ae1-b762-3a0731856bb1_1848x1362.png"
   },
   {
    "theme": "fourth-places",
@@ -635,6 +603,18 @@
    "source": "words that matter, issue 16",
    "url": "https://words.getmatter.com/p/words-that-matter-issue-16-feat-patricia",
    "image": "press-words-that-matter.jpg"
+  }
+ ],
+ "publications": [
+  {
+   "name": "temple upon a hill",
+   "url": "https://templeuponahill.substack.com/",
+   "desc": "finding our way towards beauty, wisdom, & re-enchantment."
+  },
+  {
+   "name": "rabbit holes",
+   "url": "https://www.therabbitholes.xyz/",
+   "desc": "a newsletter for the soul. weekly curation of the most psychoactive rabbit holes on the edges of the internet."
   }
  ]
 }
