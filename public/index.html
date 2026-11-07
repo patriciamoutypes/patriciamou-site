@@ -177,6 +177,9 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 .cx-sched .what .tag{margin-bottom:4px}
 .cx-sched em{font-style:normal;color:var(--faint)}
 .cx-offerings{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.cx-carousel{margin-top:36px}
+.cx-carousel .slides-head .cx-sub{margin:0}
+.slides-track.cx-offerings{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:300px;gap:12px}
 .cx-offerings li{padding:16px 16px 14px;border:1px solid var(--line);border-radius:6px}
 .o-title{font:500 20px/1.25 var(--serif);margin:10px 0 2px}
 .o-meta{font-size:12.5px;color:var(--faint);margin:0 0 8px}
@@ -232,6 +235,17 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 .cr-legend{display:flex;gap:14px;flex-wrap:wrap;margin:12px 0 0}
 .cr-legend span{display:inline-block;background:none;padding:0 0 0 8px;font-size:12px;color:var(--muted)}
 
+/* desktop: the right-hand window keeps one height and scrolls inside */
+@media (min-width:861px){
+  .shelf-panels{height:clamp(520px,74vh,780px);overflow-y:auto;overscroll-behavior:contain;padding-right:16px;
+    scrollbar-width:thin;scrollbar-color:#dcd1d1 transparent;
+    -webkit-mask-image:linear-gradient(180deg,#000 calc(100% - 40px),transparent);mask-image:linear-gradient(180deg,#000 calc(100% - 40px),transparent)}
+  .shelf-panels::-webkit-scrollbar{width:6px}
+  .shelf-panels::-webkit-scrollbar-thumb{background:#dcd1d1;border-radius:3px}
+  .shelf-panels .panel{padding-bottom:48px}
+  .shelf-panels .panel-head{position:sticky;top:0;z-index:1;background:#fff}
+}
+
 @media (max-width:860px){
   .wrap{padding:0 24px}
   .nav{flex-wrap:wrap;gap:6px 20px}
@@ -258,7 +272,8 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
   .gallery > *:nth-child(6){display:none}
   .gallery > *:first-child:nth-last-child(4),.gallery > *:first-child:nth-last-child(4) ~ *{grid-column:span 1;grid-row:span 2}
   .cx-formats{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .cx-photos,.cx-evenings,.cx-offerings,.cx-cycle{grid-template-columns:minmax(0,1fr)}
+  .cx-photos,.cx-evenings,.cx-cycle{grid-template-columns:minmax(0,1fr)}
+  .slides-track.cx-offerings{grid-auto-columns:82%}
   .cx-photos img{height:200px}
   .cx-guilds,.cx-journey,.cx-cycle ol,.cx-rooms{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cx-explorer{padding:16px}
@@ -421,8 +436,9 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
     </div>
   </div>
 
-  <h5 class="cx-sub">a sample of the offerings</h5>
-  <ul class="cx-offerings">
+  <div class="slides cx-carousel" data-slides>
+  <div class="slides-head"><h5 class="cx-sub">a sample of the offerings</h5><div class="slides-nav"><button type="button" data-dir="-1" aria-label="previous offering">←</button><span class="slides-count" aria-live="polite">1 / 10</span><button type="button" data-dir="1" aria-label="next offering">→</button></div></div>
+  <ol class="slides-track cx-offerings" tabindex="0" aria-label="a sample of the offerings">
     <li><span class="tag t-salon">salon</span><p class="o-title">Opening the American Mind</p><p class="o-meta">with Karthik Bala · 6 weeks</p><p class="o-desc">Stepping out of the present to empathize with classical and traditionalist cultures on their ideas about art, politics, happiness, education, and metaphysics. Can we learn something from the “primitive”?</p></li>
     <li><span class="tag t-circle">circle</span><p class="o-title">Artist Sacred Circle</p><p class="o-meta">with Morgan Fabian · 8 weeks</p><p class="o-desc">This group will create a container where our craft takes center stage. We’ll show up for our art by letting our inner child play, forging creative alliances, identifying blockers, &amp; celebrating the gifts each of us bring to the world.</p></li>
     <li><span class="tag t-circle">circle</span><p class="o-title">Novel User Interface Design</p><p class="o-meta">with Andy Matuschak · 4 weeks</p><p class="o-desc">A small group for designers inventing novel dynamic media or unusual user interfaces in any modality. We’ll dive deep on each other’s work, offer crit, and jam on ideas.</p></li>
@@ -433,7 +449,8 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
     <li><span class="tag t-salon">salon</span><p class="o-title">The how of Why</p><p class="o-meta">with Naim Kabir · 3 weeks</p><p class="o-desc">What does “causation” even mean? Why do we tend to care about it? When we care about it, what do we need to figure out what causes what? A journey through philosophy to hardcore econometrics: the how &amp; why of… well, Why.</p></li>
     <li><span class="tag t-circle">circle</span><p class="o-title">Form &amp; Feeling: Poetry Circle</p><p class="o-meta">with Jessica Zhou · 8 weeks</p><p class="o-desc">This is a poetry hangout - where we’ll meander through questions, conversations, and generative prompts focused on guiding people through different orientations to reading and writing poems.</p></li>
     <li><span class="tag t-play">play</span><p class="o-title">Foreign Movie Club</p><p class="o-meta">with James Hennessy · monthly</p><p class="o-desc">We watch one foreign (non western) movie per month and have a discussion on it, while acknowledging cultural and time period context.</p></li>
-  </ul>
+  </ol>
+  </div>
 </section>
 
 <section class="cx-part">
@@ -532,7 +549,9 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
       wake(document.getElementById(tab.getAttribute("aria-controls")));
       // if a long panel was scrolled past and the new one is short, bring it back into view
       var panel = document.getElementById(tab.getAttribute("aria-controls"));
-      var r = panel.getBoundingClientRect();
+      // each panel opens at its top inside the fixed-height window
+      if (panel.parentElement) panel.parentElement.scrollTop = 0;
+      var r = panel.parentElement.getBoundingClientRect();
       if (r.bottom < 120) shelf.scrollIntoView({ block: "start" });
     }
     tabs.forEach(function (tab, i) {

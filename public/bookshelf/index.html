@@ -24,12 +24,12 @@ a{color:var(--rose);text-decoration:none}
 .nav a{color:var(--muted)}
 .nav a[aria-current]{color:#000}
 .nav a:hover{color:#000}
-h1{font:500 38px/1.1 var(--serif);margin:56px 0 6px}
+h1{font:500 38px/1.1 var(--serif);margin:56px 0 30px}
 .lede{margin:0 0 34px;color:var(--muted);font-size:15px}
 
-/* the bookcase: a warm back wall with a plank under every row of books */
-.case{padding:34px 30px 0;border-radius:8px;background:linear-gradient(180deg,#f8f3ec,#f3ece2);box-shadow:inset 0 0 0 1px #ece2d4}
-.shelf{list-style:none;margin:0 -30px;padding:0 30px var(--gap);display:flex;flex-wrap:wrap;align-items:flex-end;gap:var(--gap) 14px;
+/* the bookcase: white wall, a wooden plank under every row of books */
+.case{padding:24px 0 0;background:#fff}
+.shelf{list-style:none;margin:0;padding:0 0 var(--gap);display:flex;flex-wrap:wrap;align-items:flex-end;gap:var(--gap) 14px;
   background:repeating-linear-gradient(180deg,
     transparent 0 var(--bh),
     #dcc7a6 var(--bh) calc(var(--bh) + 3px),
@@ -58,8 +58,8 @@ h1{font:500 38px/1.1 var(--serif);margin:56px 0 6px}
   .wrap{padding:0 20px 72px}
   .nav{flex-wrap:wrap;gap:6px 20px}
   h1{margin-top:40px}
-  .case{padding:24px 16px 0}
-  .shelf{margin:0 -16px;padding:0 16px var(--gap);gap:var(--gap) 10px}
+  .case{padding:16px 0 0}
+  .shelf{gap:var(--gap) 10px}
   .faux{padding:8px 7px}
   .faux-title{font-size:12px}
   .faux-author{font-size:8px}
@@ -76,7 +76,6 @@ h1{font:500 38px/1.1 var(--serif);margin:56px 0 6px}
   <a href="https://www.therabbitholes.xyz/" target="_blank" rel="noopener">curations</a>
 </nav>
 <h1>books that moved me</h1>
-<p class="lede">41 books on the shelf. Hover a book for its title.</p>
 <div class="case">
 <ul class="shelf">
 <li class="book" style="--h:1.0"><span class="nolink" tabindex="0"><img src="/assets/books/01-a-city-is-not-a-tree.jpg" alt="A City is Not a Tree by Christopher Alexander" loading="lazy" decoding="async" style="aspect-ratio:0.669"/><span class="tip"><b>A City is Not a Tree</b><span>Christopher Alexander</span></span></span></li>
