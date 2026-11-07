@@ -36,12 +36,15 @@ a{color:var(--rose);text-decoration:none}
    two round cut-outs from the moodboard resting on its edge */
 .stage{position:relative;display:grid;place-items:center;min-height:880px;padding:40px 0;isolation:isolate}
 .ring{position:absolute;left:50%;top:50%;width:min(780px,112%);aspect-ratio:1;transform:translate(-50%,-50%);z-index:-1;pointer-events:none;overflow:visible}
-.ring circle.path{fill:none;stroke:#a9a3b8;stroke-width:.6}
-.ring .ph{fill:#f3f0f5;stroke:#8d869f;stroke-width:.6}
-.ring .dark{fill:#3a3746}
-.ring .turn{transform-origin:100px 100px;animation:orbit 60s linear infinite}
+.ring circle.path{fill:none;stroke:#aaa5b8;stroke-width:1;vector-effect:non-scaling-stroke}
+.ring .m-dark{fill:#7a7588}
+.ring .m-lit{fill:#fdfcfa}
+.ring .m-edge{fill:none;stroke:#7a7588;stroke-width:1;vector-effect:non-scaling-stroke}
+/* the ring turns once a minute; each moon turns back the other way so it stays upright, lit side true */
+.ring .turn{transform-origin:400px 400px;animation:orbit 60s linear infinite}
+.ring .moon{transform-box:fill-box;transform-origin:center;animation:orbit 60s linear infinite reverse}
 @keyframes orbit{to{transform:rotate(360deg)}}
-@media (prefers-reduced-motion:reduce){.ring .turn{animation:none}}
+@media (prefers-reduced-motion:reduce){.ring .turn,.ring .moon{animation:none}}
 .disc{position:absolute;z-index:1;border-radius:50%;object-fit:cover;pointer-events:none;
   box-shadow:0 14px 30px rgba(30,30,60,.22),0 2px 6px rgba(30,30,60,.1),0 0 0 4px #fff}
 .disc-a{width:128px;height:128px;left:calc(50% - 311px);top:121px}
@@ -100,14 +103,25 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
 <script>(function () { var n = document.querySelector(".nav"); function f() { n.classList.toggle("stuck", window.scrollY > 4); } f(); window.addEventListener("scroll", f, { passive: true }); })();</script>
 
 <main class="stage">
-  <svg class="ring" viewBox="0 0 200 200" aria-hidden="true">
-    <circle class="path" cx="100" cy="100" r="99"/>
+  <svg class="ring" viewBox="0 0 800 800" aria-hidden="true" shape-rendering="geometricPrecision">
+    <circle class="path" cx="400" cy="400" r="392"/>
     <g class="turn">
-    <g transform="translate(100 1)"><circle class="ph" r="2.6"/><path class="dark" d="M0,-2.6 A2.6,2.6 0 0,1 0,2.6 Z"/></g>
-    <g transform="translate(170 30) rotate(45)"><circle class="ph" r="2.6"/><path class="dark" d="M0,-2.6 A2.6,2.6 0 0,1 0,2.6 Z"/></g>
-    <g transform="translate(199 100) rotate(90)"><circle class="ph" r="2.6"/><path class="dark" d="M0,-2.6 A2.6,2.6 0 0,1 0,2.6 Z"/></g>
-    <g transform="translate(30 170) rotate(225)"><circle class="ph" r="2.6"/><path class="dark" d="M0,-2.6 A2.6,2.6 0 0,1 0,2.6 Z"/></g>
-    <g transform="translate(1 100) rotate(270)"><circle class="ph" r="2.6"/><path class="dark" d="M0,-2.6 A2.6,2.6 0 0,1 0,2.6 Z"/></g>
+      <g transform="translate(400.00 8.00)"><g class="moon"><circle class="m-dark" r="11"/><circle class="m-edge" r="11"/></g></g>
+      <g transform="translate(550.01 37.84)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 1 0,11 A10.16,11 0 0 0 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
+      <g transform="translate(677.19 122.81)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 1 0,11 A7.78,11 0 0 0 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
+      <g transform="translate(762.16 249.99)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 1 0,11 A4.21,11 0 0 0 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
+      <g transform="translate(792.00 400.00)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 1 0,11 A0.00,11 0 0 0 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
+      <g transform="translate(762.16 550.01)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 1 0,11 A4.21,11 0 0 1 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
+      <g transform="translate(677.19 677.19)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 1 0,11 A7.78,11 0 0 1 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
+      <g transform="translate(550.01 762.16)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 1 0,11 A10.16,11 0 0 1 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
+      <g transform="translate(400.00 792.00)"><g class="moon"><circle class="m-lit" r="11"/><circle class="m-edge" r="11"/></g></g>
+      <g transform="translate(249.99 762.16)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 0 0,11 A10.16,11 0 0 0 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
+      <g transform="translate(122.81 677.19)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 0 0,11 A7.78,11 0 0 0 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
+      <g transform="translate(37.84 550.01)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 0 0,11 A4.21,11 0 0 0 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
+      <g transform="translate(8.00 400.00)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 0 0,11 A0.00,11 0 0 0 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
+      <g transform="translate(37.84 249.99)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 0 0,11 A4.21,11 0 0 1 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
+      <g transform="translate(122.81 122.81)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 0 0,11 A7.78,11 0 0 1 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
+      <g transform="translate(249.99 37.84)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 0 0,11 A10.16,11 0 0 1 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
     </g>
   </svg>
   <img class="disc disc-a" src="/assets/collage/connect-shell.jpg" alt="" aria-hidden="true"/>
