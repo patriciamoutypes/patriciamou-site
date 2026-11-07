@@ -36,13 +36,13 @@ a{color:var(--rose);text-decoration:none}
    two round cut-outs from the moodboard resting on its edge */
 .stage{position:relative;display:grid;place-items:center;min-height:880px;padding:40px 0;isolation:isolate}
 .ring{position:absolute;left:50%;top:50%;width:min(780px,112%);aspect-ratio:1;transform:translate(-50%,-50%);z-index:-1;pointer-events:none;overflow:visible}
-.ring circle.path{fill:none;stroke:#aaa5b8;stroke-width:1;vector-effect:non-scaling-stroke}
-.ring .m-dark{fill:#7a7588}
+.ring circle.path{fill:none;stroke:#bfbcca;stroke-width:1;vector-effect:non-scaling-stroke}
+.ring .m-dark{fill:#9b98a6}
 .ring .m-lit{fill:#fff}
-.ring .m-edge{fill:none;stroke:#7a7588;stroke-width:1.8}
-/* the ring turns once every 90 seconds; each moon turns back the other way so it stays upright, lit side true */
-.ring .turn{transform-origin:400px 400px;animation:orbit 90s linear infinite}
-.ring .moon{transform-box:fill-box;transform-origin:center;animation:orbit 90s linear infinite reverse}
+.ring .m-edge{fill:none;stroke:#9b98a6;stroke-width:1.8}
+/* the ring turns once every 112.5 seconds; each moon turns back the other way so it stays upright, lit side true */
+.ring .turn{transform-origin:400px 400px;animation:orbit 112.5s linear infinite}
+.ring .moon{transform-box:fill-box;transform-origin:center;animation:orbit 112.5s linear infinite reverse}
 @keyframes orbit{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.ring .turn,.ring .moon{animation:none}}
 .disc{position:absolute;z-index:1;border-radius:50%;object-fit:cover;pointer-events:none;
