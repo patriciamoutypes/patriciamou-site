@@ -91,7 +91,7 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
 
 /* the bookcase: white wall, a wooden plank under every row of books */
 .case{{position:relative;padding:24px 0 0;background:#fff}}
-.shelf{{list-style:none;margin:0;padding:0 0 var(--gap);display:flex;flex-wrap:wrap;align-items:flex-end;gap:var(--gap) 14px;
+.shelf{{list-style:none;margin:0;padding:0 0 var(--gap);display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-end;gap:var(--gap) 14px;
   background:repeating-linear-gradient(180deg,
     transparent 0 var(--bh),
     #dcc7a6 var(--bh) calc(var(--bh) + 3px),
