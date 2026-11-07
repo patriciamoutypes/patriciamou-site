@@ -60,6 +60,15 @@ img{display:block;max-width:100%}
 .nav .nav-name{margin-left:auto;font:400 20px/1 var(--serif);color:var(--ink);opacity:0;visibility:hidden;transform:translateY(3px);
   transition:opacity .3s,transform .3s,visibility .3s}
 .nav .nav-name::after{display:none}
+/* phone menu: the links fold behind a two-line button; on desktop the wrapper disappears and nothing changes */
+.nav-links{display:contents}
+.nav-toggle{display:none;margin-left:auto;width:42px;height:42px;place-items:center;padding:0;border:0;background:none;color:var(--ink);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.nav-toggle span{grid-area:1/1;display:block;width:22px;height:1.5px;border-radius:1px;background:currentColor;transition:transform .3s ease}
+.nav-toggle span:first-child{transform:translateY(-4px)}
+.nav-toggle span:last-child{transform:translateY(4px)}
+.nav.open .nav-toggle span:first-child{transform:rotate(45deg)}
+.nav.open .nav-toggle span:last-child{transform:rotate(-45deg)}
+.nav-toggle:focus-visible{outline:2px solid var(--rose);outline-offset:2px;border-radius:50%}
 .nav.named .nav-name{opacity:1;visibility:visible;transform:none}
 
 /* intro: the part that stays put */
@@ -299,10 +308,15 @@ h2{font:400 27px/1.2 var(--serif);margin:0 0 10px}
 @media (max-width:860px){
   .wrap{padding:0 24px;margin:0 auto;border-radius:0;box-shadow:none}
   :root{--navh:50px}
-  .nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:22px;margin:0 -24px;padding:16px 24px 12px;white-space:nowrap}
-  .nav::-webkit-scrollbar{display:none}
-  .nav .nav-name{display:none}
-  .nav a::after{bottom:-3px}
+  .nav{flex-wrap:nowrap;align-items:center;gap:0;margin:0 -24px;padding:8px 14px 8px 24px;white-space:normal}
+  .nav .nav-name{display:block;margin-left:0;font-size:22px}
+  .nav-toggle{display:grid}
+  .nav-links{position:absolute;left:0;right:0;top:100%;display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:6px 24px 22px;
+    background:#fffdfb;box-shadow:0 1px 0 var(--line),0 22px 30px -22px rgba(30,30,60,.3);
+    opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .25s,transform .25s,visibility .25s}
+  .nav.open .nav-links{opacity:1;visibility:visible;transform:none}
+  .nav-links a{font-size:19px;padding:8px 0}
+  .nav a::after{bottom:5px}
   .intro{grid-template-columns:minmax(0,1fr);gap:20px;padding-top:40px;position:relative}
   /* the sigil sits beside the photo, the contact links drop below the newsletter box */
   .aside{display:contents}
@@ -377,14 +391,33 @@ h2{font:400 27px/1.2 var(--serif);margin:0 0 10px}
 <div class="collage" aria-hidden="true"><figure class="cut r" style="top:2.5%;--w:250px;--r:2deg"><img src="/assets/collage/sun-rays.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut l" style="top:8%;--w:220px;--r:-3deg"><img src="/assets/collage/nautilus.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut r" style="top:19%;--w:215px;--r:1.5deg"><img src="/assets/collage/orchid.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut l" style="top:30%;--w:250px;--r:2.5deg"><img src="/assets/collage/lens-flare.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut r" style="top:40%;--w:270px;--r:-1.5deg"><img src="/assets/collage/flow-swirl.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut l" style="top:49%;--w:210px;--r:-2deg"><img src="/assets/collage/moon-phases.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut r" style="top:60%;--w:185px;--r:3deg"><img src="/assets/collage/water-light.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut l" style="top:69%;--w:240px;--r:1.5deg"><img src="/assets/collage/fireworks.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut r" style="top:79%;--w:245px;--r:-2.5deg"><img src="/assets/collage/spiral-light.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut l" style="top:88%;--w:215px;--r:2deg"><img src="/assets/collage/moon-pine.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure></div>
 <div class="wrap">
 <nav class="nav" aria-label="site">
-  <a href="/" aria-current="page" class="on" data-spy="top">home</a>
-  <a href="#writing" data-spy="writing">writing</a>
-  <a href="#projects" data-spy="projects">projects</a>
-  <a href="/bookshelf/">bookshelf</a>
-  <a href="https://www.therabbitholes.xyz/" target="_blank" rel="noopener">curations</a>
-  <a href="/connect/">connect</a>
+  <div class="nav-links" id="nav-links">
+    <a href="/" aria-current="page" class="on" data-spy="top">home</a>
+    <a href="#writing" data-spy="writing">writing</a>
+    <a href="#projects" data-spy="projects">projects</a>
+    <a href="/bookshelf/">bookshelf</a>
+    <a href="https://www.therabbitholes.xyz/" target="_blank" rel="noopener">curations</a>
+    <a href="/connect/">connect</a>
+  </div>
   <a class="nav-name" href="/" tabindex="-1" aria-hidden="true">patricia mou</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="menu"><span></span><span></span></button>
 </nav>
+<script>
+(function () {
+  var n = document.querySelector(".nav"), b = n && n.querySelector(".nav-toggle"); if (!b) return;
+  function set(open) {
+    n.classList.toggle("open", open);
+    b.setAttribute("aria-expanded", open ? "true" : "false");
+    b.setAttribute("aria-label", open ? "close menu" : "menu");
+  }
+  b.addEventListener("click", function (e) { e.stopPropagation(); set(!n.classList.contains("open")); });
+  n.querySelectorAll(".nav-links a").forEach(function (a) { a.addEventListener("click", function () { set(false); }); });
+  document.addEventListener("click", function (e) { if (!n.contains(e.target)) set(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && n.classList.contains("open")) { set(false); b.focus(); } });
+  var wide = matchMedia("(min-width: 861px)"); (wide.addEventListener ? wide.addEventListener("change", f) : wide.addListener(f));
+  function f(m) { if (m.matches) set(false); }
+})();
+</script>
 
 <header class="intro">
   <div class="intro-main">
@@ -415,8 +448,11 @@ h2{font:400 27px/1.2 var(--serif);margin:0 0 10px}
   <div class="aside">
     <div class="pm-sigil" aria-label="Patricia Mou's sigil" role="img"></div>
     <p class="contact">
-      <a href="/connect/">connect</a><br/>
-      <a class="ext" href="https://buymeacoffee.com/patriciamou" target="_blank" rel="noopener">buy me a coffee</a>
+      <a class="ext" href="https://twitter.com/patriciamou_" target="_blank" rel="noopener">twitter</a><br/>
+      <a class="ext" href="mailto:hi@patriciamou.com" aria-label="email hi@patriciamou.com">email</a><br/>
+      <a class="ext" href="https://www.instagram.com/patriciaxmou/" target="_blank" rel="noopener">instagram</a><br/>
+      <a class="ext" href="https://buymeacoffee.com/patriciamou" target="_blank" rel="noopener">buy me a coffee</a><br/>
+      <a href="/connect/">send me a note</a>
     </p>
   </div>
 </header>

@@ -31,6 +31,15 @@ a{color:var(--rose);text-decoration:none}
 .nav a:hover{color:var(--ink)}
 .nav .nav-name{margin-left:auto;font:400 20px/1 var(--serif);color:var(--ink)}
 .nav .nav-name::after{display:none}
+/* phone menu: the links fold behind a two-line button; on desktop the wrapper disappears and nothing changes */
+.nav-links{display:contents}
+.nav-toggle{display:none;margin-left:auto;width:42px;height:42px;place-items:center;padding:0;border:0;background:none;color:var(--ink);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.nav-toggle span{grid-area:1/1;display:block;width:22px;height:1.5px;border-radius:1px;background:currentColor;transition:transform .3s ease}
+.nav-toggle span:first-child{transform:translateY(-4px)}
+.nav-toggle span:last-child{transform:translateY(4px)}
+.nav.open .nav-toggle span:first-child{transform:rotate(45deg)}
+.nav.open .nav-toggle span:last-child{transform:rotate(-45deg)}
+.nav-toggle:focus-visible{outline:2px solid var(--rose);outline-offset:2px;border-radius:50%}
 
 /* the stage: a hairline moon orbit turning slowly around the form,
    two round cut-outs from the moodboard resting on its edge */
@@ -87,10 +96,15 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
 
 @media (max-width:860px){
   .wrap{padding:0 20px 40px}
-  .nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:22px;margin:4px -20px 0;padding:14px 20px 12px;white-space:nowrap}
-  .nav::-webkit-scrollbar{display:none}
-  .nav .nav-name{display:none}
-  .nav a::after{bottom:-3px}
+  .nav{flex-wrap:nowrap;align-items:center;gap:0;margin:0 -20px;padding:8px 10px 8px 20px;white-space:normal}
+  .nav .nav-name{display:block;margin-left:0;font-size:22px}
+  .nav-toggle{display:grid}
+  .nav-links{position:absolute;left:0;right:0;top:100%;display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:6px 20px 22px;
+    background:#fff;box-shadow:0 1px 0 var(--line),0 22px 30px -22px rgba(30,30,60,.3);
+    opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .25s,transform .25s,visibility .25s}
+  .nav.open .nav-links{opacity:1;visibility:visible;transform:none}
+  .nav-links a{font-size:19px;padding:8px 0}
+  .nav a::after{bottom:5px}
   .stage{min-height:0;padding:190px 0 210px}
   .ring{width:218vw}
   h1{font-size:52px}
@@ -103,14 +117,33 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
 <body>
 <div class="wrap">
 <nav class="nav" aria-label="site">
-  <a href="/">home</a>
-  <a href="/#writing">writing</a>
-  <a href="/#projects">projects</a>
-  <a href="/bookshelf/">bookshelf</a>
-  <a href="https://www.therabbitholes.xyz/" target="_blank" rel="noopener">curations</a>
-  <a href="/connect/" aria-current="page">connect</a>
+  <div class="nav-links" id="nav-links">
+    <a href="/">home</a>
+    <a href="/#writing">writing</a>
+    <a href="/#projects">projects</a>
+    <a href="/bookshelf/">bookshelf</a>
+    <a href="https://www.therabbitholes.xyz/" target="_blank" rel="noopener">curations</a>
+    <a href="/connect/" aria-current="page">connect</a>
+  </div>
   <a class="nav-name" href="/">patricia mou</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="menu"><span></span><span></span></button>
 </nav>
+<script>
+(function () {
+  var n = document.querySelector(".nav"), b = n && n.querySelector(".nav-toggle"); if (!b) return;
+  function set(open) {
+    n.classList.toggle("open", open);
+    b.setAttribute("aria-expanded", open ? "true" : "false");
+    b.setAttribute("aria-label", open ? "close menu" : "menu");
+  }
+  b.addEventListener("click", function (e) { e.stopPropagation(); set(!n.classList.contains("open")); });
+  n.querySelectorAll(".nav-links a").forEach(function (a) { a.addEventListener("click", function () { set(false); }); });
+  document.addEventListener("click", function (e) { if (!n.contains(e.target)) set(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && n.classList.contains("open")) { set(false); b.focus(); } });
+  var wide = matchMedia("(min-width: 861px)"); (wide.addEventListener ? wide.addEventListener("change", f) : wide.addListener(f));
+  function f(m) { if (m.matches) set(false); }
+})();
+</script>
 <script>(function () { var n = document.querySelector(".nav"); function f() { n.classList.toggle("stuck", window.scrollY > 4); } f(); window.addEventListener("scroll", f, { passive: true }); })();</script>
 
 <main class="stage">
