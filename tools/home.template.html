@@ -18,7 +18,7 @@
 <link href="/assets/5eab87ea46d66a3036bdc28e_Screen-Shot-2020-04-30-at-7.18.48-PM.png" rel="apple-touch-icon"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cormorant:ital,wght@0,500;1,500&family=Inter:wght@400;500&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;1,500&family=Inter:wght@400;500&display=swap"/>
 <style>
 :root{--ink:#1f1f1f;--muted:#6b6b6b;--faint:#9a9a9a;--rose:#816061;--line:#ece6e6;--wash:#faf7f6;--serif:Cormorant,Georgia,serif;--sans:Inter,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
 *{box-sizing:border-box}
@@ -268,25 +268,8 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 .project-phases li{padding:8px 0 8px 14px;border-left:2px solid var(--line);font-size:15px;line-height:1.6}
 .project-phases b{font-weight:500;color:var(--rose)}
 
-/* the commons: story timeline */
-.cs-title em{font-style:italic;color:#3f7a70}
-.cs-hand{font:500 21px/1.1 Caveat,cursive;color:#3f7a70;white-space:nowrap}
-.cs-line{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;position:relative}
-.cs-line::before{content:"";position:absolute;left:0;right:0;top:5px;height:1px;background:#cfc8c4}
-.cs-line li{position:relative;padding-top:24px;min-width:0}
-.cs-line li::before{content:"";position:absolute;left:0;top:0;width:11px;height:11px;border-radius:50%;background:var(--ink)}
-.cs-line li.cs-now::before{background:#3f7a70}
-.cs-date{margin:0 0 4px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#3f7a70}
-.cs-text{margin:0 0 14px;font-size:14px;line-height:1.55}
-.cs-text em{font-family:var(--serif);font-size:16px}
-.cs-text .cs-hand{display:block;margin-top:6px}
-.cs-pics{position:relative;padding-bottom:28px}
-.cs-pics img{display:block;width:100%;height:auto;border-radius:2px;box-shadow:0 6px 18px rgba(30,30,40,.16)}
-.cs-pics .cs-b,.cs-pics .cs-c{position:relative;width:62%;margin-top:-22%;margin-left:auto;transform:rotate(1.5deg)}
-.cs-pics .cs-c{margin-left:0;margin-top:-10%;transform:rotate(-2deg)}
 
 /* the commons: programming */
-.cp-note{display:inline-block;margin-left:10px;font-size:22px;transform:rotate(-3deg)}
 .cp{display:grid;grid-template-columns:minmax(0,1fr) 200px minmax(0,1fr);gap:28px;align-items:center;margin-top:8px}
 .cp-col{display:flex;flex-direction:column;gap:28px}
 .cp-col:last-child{text-align:right}
@@ -335,16 +318,11 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
   .cx-photos img{height:200px}
   .cx-guilds,.cx-journey,.cx-cycle ol,.cx-rooms{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cx-explorer{padding:16px}
-  .cs-line{grid-template-columns:minmax(0,1fr);gap:28px}
-  .cs-line::before{left:5px;right:auto;top:0;bottom:0;width:1px;height:auto}
-  .cs-line li{padding:0 0 0 26px}
-  .cs-pics{max-width:240px}
   .cp{grid-template-columns:minmax(0,1fr)}
   .cp-polaroid{width:62%;max-width:240px;margin:0 auto;order:-1}
   .cp-col:last-child{text-align:left}
   .cp-col:last-child .cp-tags{justify-content:flex-start}
   .cp-name{font-size:34px}
-  .cp-note{display:block;margin:6px 0 0}
   .cr-themes{grid-template-columns:minmax(0,1fr)}
   .cr-week{grid-template-columns:minmax(0,1fr)}
   .cr-week li{display:grid;grid-template-columns:44px minmax(0,1fr);align-items:start;gap:6px 10px}
