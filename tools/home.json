@@ -467,6 +467,38 @@
    ]
   },
   {
+   "id": "cohere",
+   "name": "cohere magazine",
+   "role": "a magazine from the commons",
+   "desc": "Theme: What does it mean to flourish? Individually, in community, and systemically (political, social, economic systems)?",
+   "images": [
+    [
+     "proj-cohere-cover.jpg",
+     "the wraparound cover of Cohere, a magazine from The Commons"
+    ],
+    [
+     "proj-cohere-sabbatical.jpg",
+     "a spread: reflections on my sabbatical"
+    ],
+    [
+     "proj-cohere-self-trust.jpg",
+     "a spread: choose self trust over authenticity"
+    ],
+    [
+     "proj-cohere-coming-of-age.jpg",
+     "a spread: coming of age"
+    ],
+    [
+     "proj-cohere-ambition.jpg",
+     "a spread: what fuels your ambition?"
+    ],
+    [
+     "proj-cohere-somatic.jpg",
+     "a spread: releasing a somatic restriction with massage"
+    ]
+   ]
+  },
+  {
    "id": "hearth",
    "name": "the mystical hearth",
    "role": "sunday service",
@@ -499,6 +531,127 @@
      "a sunday gathering at The Commons"
     ]
    ]
+  },
+  {
+   "id": "hot-takes",
+   "tab": "a container for hot takes",
+   "name": "a container to share opinions that will get you cancelled",
+   "role": "workshop",
+   "desc": [
+    "The purpose of the workshop was to create a field where people could share charged truths and stay in embodied presence with difference. We wove music, meditation, and somatic grounding throughout the night - not as performative breaks, but as anchoring technologies to drop us beneath the mind and into the body.",
+    "Participants anonymously offered their most controversial or tender “hot takes,” things they rarely say aloud. The group then voted on which specific topics would be worth diving deep into and small discussion groups were formed. In these groups, the invitation was not to convince or negate others, but to share the life experiences, ancestral threads, and cultural conditioning that gave rise to each person's view."
+   ],
+   "video": {
+    "id": "1UhCqUR1Tqc",
+    "title": "a container for hot takes @ harvard"
+   },
+   "program": {
+    "title": "ritual progression",
+    "steps": [
+     {
+      "time": "6:00",
+      "title": "Potluck 🥘",
+      "text": "Everyone contributes one dish"
+     },
+     {
+      "time": "6:10",
+      "title": "Musical intro 🎵🎻",
+      "text": "Gather in circle for a cello performance"
+     },
+     {
+      "time": "6:16",
+      "title": "Introduction",
+      "text": "Orientation to intention",
+      "items": [
+       "Why we’re here: to be seen, and share without judgement",
+       {
+        "text": "Guidelines for group",
+        "items": [
+         "Confidentiality",
+         "Talk less about your opinion, but the specific life experiences you had that led to that opinion",
+         "Listen to understand, not judge"
+        ]
+       }
+      ]
+     },
+     {
+      "time": "6:25",
+      "title": "Meditation 🧘",
+      "text": "Meditation, embodiment, or loving-kindness"
+     },
+     {
+      "time": "6:35",
+      "title": "Participatory co-creation of controversial themes we’d want to discuss",
+      "text": "“What’s an issue you sometimes struggle to share in public or what’s one of your most controversial takes that would be unpopular?” i.e. I have certain anti-capitalist views like limits on wealth,",
+      "items": [
+       "Everybody writes down their opinion and puts it in a hat",
+       "Hat gets handed around and each person reads themes out loud",
+       "Theme gets put into WhatsApp for crowd voting",
+       "Top 2 voted on topics are subsequent discussion topics"
+      ]
+     },
+     {
+      "time": "6:47",
+      "title": "Round #1: Forming Triads",
+      "text": "Randomly assign people into groups of three."
+     },
+     {
+      "time": "6:50",
+      "title": "Round #1",
+      "text": "Talk about the 1st issue.",
+      "items": [
+       {
+        "q": "What are your perspectives on this topic?"
+       },
+       {
+        "q": "What has shaped your perspective to be as it is today?"
+       }
+      ]
+     },
+     {
+      "time": "7:15",
+      "title": "BREAK",
+      "text": "Change groups",
+      "pause": true
+     },
+     {
+      "time": "7:25",
+      "title": "Round #2",
+      "text": "Talk about the 2nd issue.",
+      "items": [
+       {
+        "q": "What are your perspectives on this topic?"
+       },
+       {
+        "q": "What has shaped your perspective to be as it is today?"
+       }
+      ]
+     },
+     {
+      "time": "7:50",
+      "title": "Somatic movement 💃",
+      "items": [
+       "Dance, move, loosen up energy"
+      ]
+     },
+     {
+      "time": "7:55",
+      "title": "Full-Group Reflections",
+      "text": "Regroup in the circle.",
+      "items": [
+       "What surprised you? What did you enjoy? What was challenging",
+       "What shifted in your understanding?"
+      ]
+     },
+     {
+      "time": "8:30",
+      "title": "Closing checkout",
+      "items": [
+       "1 word/sentence on emotion/learning"
+      ]
+     }
+    ]
+   }
   },
   {
    "id": "haumbody",

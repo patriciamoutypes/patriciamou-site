@@ -60,15 +60,47 @@ pubs = ''.join(f'<p class="pub"><a class="ext" href="{e(pb["url"])}" target="_bl
 writing = shelf('writing', 'writing', f'<div class="pubs">{pubs}</div>', items, panels)
 
 # projects
+def ritual_items(items):
+    """A list item is a string, {"q": "..."} for a question in italics,
+    or {"text": "...", "items": [...]} for a line with its own sub-list."""
+    lis = []
+    for it in items:
+        if isinstance(it, str):
+            lis.append(f'<li>{e(it)}</li>')
+        elif 'q' in it:
+            lis.append(f'<li class="ask">{e(it["q"])}</li>')
+        else:
+            lis.append(f'<li>{e(it["text"])}{ritual_items(it.get("items", []))}</li>')
+    return f'<ul>{"".join(lis)}</ul>' if lis else ''
+
+def ritual(steps):
+    out = []
+    for st in steps:
+        cls = 'step pause' if st.get('pause') else 'step'
+        text = f'<p>{e(st["text"])}</p>' if st.get('text') else ''
+        out.append(f'<li class="{cls}"><span class="step-time">{e(st["time"])}</span><div class="step-body">'
+                   f'<p class="step-title">{e(st["title"])}</p>{text}{ritual_items(st.get("items", []))}</div></li>')
+    return f'<ol class="ritual">{"".join(out)}</ol>'
+
 items, panels = [], []
 for pr in data['projects']:
-    items.append((pr['id'], pr['name'], None))
-    links = ''.join(f'<a class="ext" href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a>' for t, u in pr['links'])
-    imgs = ''.join(f'<img src="/assets/{e(f)}" alt="{e(a)}" loading="lazy" decoding="async"/>' for f, a in pr['images'])
-    body = (f'<div class="panel-head"><h3>{e(pr["name"])}</h3><span class="meta">{e(pr["role"])}</span></div>'
-            f'<p class="project-desc">{e(pr["desc"])}</p><p class="project-links">{links}</p>'
-            f'<div class="gallery">{imgs}</div>')
-    panels.append((pr['id'], body))
+    items.append((pr['id'], pr.get('tab', pr['name']), None))
+    desc = pr['desc'] if isinstance(pr['desc'], list) else [pr['desc']]
+    parts = [f'<div class="panel-head"><h3>{e(pr["name"])}</h3><span class="meta">{e(pr["role"])}</span></div>']
+    parts += [f'<p class="project-desc">{e(d)}</p>' for d in desc]
+    links = ''.join(f'<a class="ext" href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a>' for t, u in pr.get('links', []))
+    parts.append(f'<p class="project-links">{links}</p>' if links else '<div class="project-gap"></div>')
+    if pr.get('video'):
+        v = pr['video']
+        parts.append(f'<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{e(v["id"])}" title="{e(v["title"])}" '
+                     'loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" '
+                     'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>')
+    if pr.get('images'):
+        imgs = ''.join(f'<img src="/assets/{e(f)}" alt="{e(a)}" loading="lazy" decoding="async"/>' for f, a in pr['images'])
+        parts.append(f'<div class="gallery">{imgs}</div>')
+    if pr.get('program'):
+        parts.append(f'<h4 class="program-head">{e(pr["program"]["title"])}</h4>{ritual(pr["program"]["steps"])}')
+    panels.append((pr['id'], ''.join(parts)))
 projects = shelf('projects', 'projects', '<p class="shelf-note">things I steward</p>', items, panels)
 
 # elsewhere: a short list of what others have written, no tabs
