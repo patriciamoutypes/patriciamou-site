@@ -1,7 +1,8 @@
 /*!
- * Spiral trail: hovering a link or button leaves a trail of tiny hairline
- * spirals behind the cursor. Each one furls itself in, curling in turn to the
- * left, back behind the motion, then to the right, holds, and fades.
+ * Spiral trail: as the cursor moves, a guide point follows about half an inch
+ * behind it and leaves tiny hairline spirals that furl in, curling in turn to
+ * the left, back and right, then fade. When the cursor stops, the guide glides
+ * back into it and the trail settles; a still cursor makes nothing.
  * Pearly pastel with a faint iridescent shift along the stroke.
  * Mouse and trackpad only; off for touch screens and reduced motion.
  */
@@ -11,13 +12,12 @@
   var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (!fine || still) return;
 
-  var SEL = "a, button, [role=button], [role=tab]";
   var TAU = Math.PI * 2, SEG = 30;
   var cv = document.createElement("canvas"), ctx = cv.getContext("2d");
   cv.setAttribute("aria-hidden", "true");
   cv.style.cssText = "position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:900";
   var dpr = 1, W = 0, H = 0, coils = [], raf = 0, last = 0;
-  var hot = null, px = 0, py = 0, mx = 1, my = 0, travel = 0, turn = 0;
+  var cx = -1, cy = -1, gx = -1, gy = -1, mx = 1, my = 0, travel = 0, turn = 0, LAG = 48;
 
   function size() {
     dpr = Math.min(2, window.devicePixelRatio || 1);
@@ -41,8 +41,7 @@
       life: 0, furl: 0.42 + Math.random() * 0.18, max: 1.15 + Math.random() * 0.45,
       hue: Math.random() * 360
     });
-    if (coils.length > 70) coils.splice(0, coils.length - 70);
-    if (!raf) { last = performance.now(); raf = requestAnimationFrame(tick); }
+    if (coils.length > 60) coils.splice(0, coils.length - 60);
   }
 
   function point(c, s) {                                 // s: 0 outer end (at the cursor) .. 1 centre
@@ -55,6 +54,20 @@
     var dt = Math.min(0.05, (now - last) / 1000); last = now;
     ctx.clearRect(0, 0, W, H);
     ctx.lineCap = "round"; ctx.lineJoin = "round";
+    // the guide eases toward the cursor, never more than about half an inch behind
+    var settling = false;
+    if (gx >= 0) {
+      var ox = gx, oy = gy, k = 1 - Math.pow(0.0009, dt);          // ~6.9/s ease
+      gx += (cx - gx) * k; gy += (cy - gy) * k;
+      var bx = cx - gx, by = cy - gy, bd = Math.hypot(bx, by);
+      if (bd > LAG) { gx = cx - bx / bd * LAG; gy = cy - by / bd * LAG; bd = LAG; }
+      var step = Math.hypot(gx - ox, gy - oy);
+      if (step > 0.05) { mx = mx * 0.7 + (gx - ox) * 0.3; my = my * 0.7 + (gy - oy) * 0.3; }
+      travel += step;
+      if (travel > 15) { travel = 0; spawn(gx, gy); }
+      settling = bd > 0.6;
+      if (!settling) { gx = cx; gy = cy; }
+    }
     for (var i = coils.length - 1; i >= 0; i--) {
       var c = coils[i];
       c.life += dt;
@@ -86,27 +99,17 @@
       ctx.fillStyle = "rgba(255,255,253," + (0.9 * a).toFixed(3) + ")";
       ctx.beginPath(); ctx.arc(prev[0], prev[1], 0.7, 0, TAU); ctx.fill();
     }
-    raf = coils.length ? requestAnimationFrame(tick) : 0;
+    raf = (coils.length || settling) ? requestAnimationFrame(tick) : 0;
     if (!raf) ctx.clearRect(0, 0, W, H);
   }
 
-  document.addEventListener("pointerover", function (e) {
-    var el = e.target.closest && e.target.closest(SEL);
-    if (!el || el === hot) return;
-    hot = el; px = e.clientX; py = e.clientY; travel = 0;
-    spawn(px, py); spawn(px, py); spawn(px, py);          // left, back, right on arrival
-  }, { passive: true });
-  document.addEventListener("pointerout", function (e) {
-    if (hot && !(e.relatedTarget && hot.contains(e.relatedTarget))) hot = null;
-  }, { passive: true });
   document.addEventListener("pointermove", function (e) {
-    var x = e.clientX, y = e.clientY, d = Math.hypot(x - px, y - py);
-    if (d > 0.5) { mx = mx * 0.6 + (x - px) * 0.4; my = my * 0.6 + (y - py) * 0.4; }
-    px = x; py = y;
-    if (!hot) return;
-    travel += d;
-    if (travel > 13) { travel = 0; spawn(x, y); }        // one coil every ~13px of travel
+    if (e.pointerType && e.pointerType !== "mouse" && e.pointerType !== "pen") return;
+    cx = e.clientX; cy = e.clientY;
+    if (gx < 0) { gx = cx; gy = cy; return; }             // first sighting: no trail yet
+    if (!raf) { last = performance.now(); raf = requestAnimationFrame(tick); }
   }, { passive: true });
+  document.addEventListener("pointerleave", function () { gx = gy = -1; }, { passive: true });
 
   function init() { document.body.appendChild(cv); size(); addEventListener("resize", size); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
