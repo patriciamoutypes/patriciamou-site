@@ -856,24 +856,6 @@
      "a spread from the book"
     ]
    ]
-  },
-  {
-   "id": "calm",
-   "tab": "calm",
-   "name": "calm meditation app",
-   "role": "sr. product manager, community",
-   "blocks": [
-    "calm.html"
-   ]
-  },
-  {
-   "id": "mindstreaks",
-   "tab": "mindstreaks",
-   "name": "mindstreaks",
-   "role": "a community social meditation app",
-   "blocks": [
-    "mindstreaks.html"
-   ]
   }
  ],
  "press": [
