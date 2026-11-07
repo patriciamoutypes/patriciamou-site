@@ -405,56 +405,6 @@
  ],
  "projects": [
   {
-   "id": "commons",
-   "name": "the commons",
-   "role": "co-founder",
-   "desc": "a community and third space rekindling intellectual curiosity, co-created play, & inner-exploration, in the heart of San Francisco.",
-   "links": [
-    [
-     "thesfcommons.com",
-     "https://www.thesfcommons.com"
-    ]
-   ],
-   "images": [
-    [
-     "proj-commons-gathering.jpg",
-     "a candlelit evening gathering in a circle at The Commons"
-    ],
-    [
-     "proj-commons-2.jpg",
-     "a lounge lit by string lights and tapestries"
-    ],
-    [
-     "proj-commons-3.jpg",
-     "a long community dinner"
-    ],
-    [
-     "proj-commons-cowork.jpg",
-     "people reading and working on laptops in the lounge at The Commons"
-    ],
-    [
-     "proj-commons-5.jpg",
-     "a group meditation"
-    ],
-    [
-     "proj-commons-6.jpg",
-     "the long study table"
-    ]
-   ],
-   "blocks": [
-    "commons-space.html"
-   ]
-  },
-  {
-   "id": "curriculum",
-   "tab": "commons community design",
-   "name": "designing a curriculum for the commons",
-   "role": "curriculum design",
-   "blocks": [
-    "curriculum.html"
-   ]
-  },
-  {
    "id": "rabbit-holes",
    "name": "rabbit holes",
    "role": "a newsletter & a coffee table book",
@@ -516,6 +466,56 @@
    "figure": [
     "proj-rabbitholes-newsletter.jpg",
     "the Rabbit Holes newsletter header: a line-drawn rabbit circled by photographs of faces, a train at dusk, a flower seller, and a painted cosmos"
+   ]
+  },
+  {
+   "id": "commons",
+   "name": "the commons",
+   "role": "co-founder",
+   "desc": "a community and third space rekindling intellectual curiosity, co-created play, & inner-exploration, in the heart of San Francisco.",
+   "links": [
+    [
+     "thesfcommons.com",
+     "https://www.thesfcommons.com"
+    ]
+   ],
+   "images": [
+    [
+     "proj-commons-gathering.jpg",
+     "a candlelit evening gathering in a circle at The Commons"
+    ],
+    [
+     "proj-commons-2.jpg",
+     "a lounge lit by string lights and tapestries"
+    ],
+    [
+     "proj-commons-3.jpg",
+     "a long community dinner"
+    ],
+    [
+     "proj-commons-cowork.jpg",
+     "people reading and working on laptops in the lounge at The Commons"
+    ],
+    [
+     "proj-commons-5.jpg",
+     "a group meditation"
+    ],
+    [
+     "proj-commons-6.jpg",
+     "the long study table"
+    ]
+   ],
+   "blocks": [
+    "commons-space.html"
+   ]
+  },
+  {
+   "id": "curriculum",
+   "tab": "commons community design",
+   "name": "designing a curriculum for the commons",
+   "role": "curriculum design",
+   "blocks": [
+    "curriculum.html"
    ]
   },
   {
