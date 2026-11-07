@@ -38,19 +38,6 @@ for i, b in enumerate(books):
 
 SCRIPT = '''<script>
 (function () {
-  var f = document.getElementById("rec-form"); if (!f) return;
-  f.addEventListener("submit", function (ev) {
-    ev.preventDefault();
-    var v = function (n) { return (f.elements[n].value || "").trim(); };
-    var t = v("title"), a = v("author"), w = v("why"), who = v("from");
-    var body = t + (a ? " by " + a : "") + (w ? "\\n\\n" + w : "") + (who ? "\\n\\n" + who : "");
-    location.href = "mailto:impatriciamou@gmail.com?subject=" + encodeURIComponent("a book for your shelf: " + t) +
-      "&body=" + encodeURIComponent(body);
-  });
-})();
-</script>
-<script>
-(function () {
   var shelf = document.querySelector(".shelf"), layer = document.querySelector(".planks");
   if (!shelf || !layer) return;
   shelf.classList.add("js-planks");
@@ -142,37 +129,6 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
 .tip b{{display:block;font:500 18px/1.2 var(--serif)}}
 .tip span{{display:block;margin-top:3px;font-size:12px;letter-spacing:.03em;color:#7a7272}}
 .book a:hover .tip,.book a:focus-visible .tip,.book .nolink:hover .tip,.book .nolink:focus-visible .tip{{opacity:1;transform:translate(-50%,0)}}
-/* recommend a book: a lavender-linen card from the moodboard: a moon-phase orbit turning slowly,
-   moon phases and a water swirl hanging off its corners; the button matches the home page */
-.rec{{position:relative;max-width:580px;margin:110px auto 40px;padding:40px 44px 34px;border-radius:4px;text-align:center;isolation:isolate;
-  background:
-    repeating-linear-gradient(90deg,rgba(255,255,255,.14) 0 1px,transparent 1px 3px),
-    repeating-linear-gradient(0deg,rgba(90,80,120,.018) 0 1px,transparent 1px 5px),
-    radial-gradient(120% 70% at 50% 108%,#cbd5df 0%,rgba(203,213,223,0) 62%),
-    linear-gradient(180deg,#ebe6ef,#e3dfea);
-  box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 22px 50px -26px rgba(40,40,80,.45),0 2px 6px rgba(40,40,80,.08)}}
-.rec-orbit{{display:block;width:96px;height:96px;margin:0 auto 12px}}
-.rec-orbit .ring{{fill:none;stroke:#6f6884;stroke-width:.7}}
-.rec-orbit .turn{{transform-origin:60px 60px;animation:orbit 80s linear infinite}}
-.rec-orbit .ph{{fill:#f3f0f5;stroke:#6f6884;stroke-width:.5}}
-.rec-orbit .dark{{fill:#3a3746}}
-@keyframes orbit{{to{{transform:rotate(360deg)}}}}
-.rec .cut{{position:absolute;z-index:2;pointer-events:none;border-radius:1px;box-shadow:0 12px 26px rgba(25,25,50,.28),0 2px 6px rgba(25,25,50,.12)}}
-.rec .cut-a{{width:104px;left:-58px;top:-54px;transform:rotate(-6deg)}}
-.rec .cut-b{{width:160px;right:-104px;bottom:-56px;transform:rotate(4deg)}}
-.rec h2{{font:500 34px/1.1 var(--serif);margin:0 0 8px;color:#24222c}}
-.rec p{{margin:0 0 24px;color:#5f5a6b;font-size:15px}}
-.rec form{{display:grid;gap:10px;text-align:left}}
-.rec .row{{display:grid;grid-template-columns:1fr 1fr;gap:10px}}
-.rec input,.rec textarea{{font:400 15px/1.5 var(--sans);color:var(--ink);background:rgba(255,255,255,.62);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
-  border:1px solid rgba(95,90,130,.16);border-radius:8px;padding:10px 12px;width:100%;outline:none;transition:border-color .2s,box-shadow .2s,background-color .2s}}
-.rec textarea{{min-height:84px;resize:vertical}}
-.rec input:focus,.rec textarea:focus{{background:rgba(255,255,255,.85);border-color:#aab2c3;box-shadow:0 0 0 3px rgba(188,194,207,.4)}}
-.rec ::placeholder{{color:#9a94a6}}
-.rec button{{justify-self:center;margin-top:8px;display:inline-block;padding:8px 16px;border:1px solid var(--rose);border-radius:999px;background:none;color:var(--rose);font:400 14px/1.5 var(--sans);white-space:nowrap;cursor:pointer;transition:background-color .2s,color .2s}}
-.rec button:hover{{background:var(--rose);color:#fff}}
-.rec button:focus-visible{{outline:2px solid var(--rose);outline-offset:3px}}
-@media (prefers-reduced-motion:reduce){{.rec-orbit .turn{{animation:none}}}}
 @media (prefers-reduced-motion:reduce){{.book a,.book .nolink,.tip{{transition:none}}}}
 @media (max-width:860px){{
   :root{{--bh:120px;--gap:34px;--plank:10px}}
@@ -187,11 +143,6 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
   .faux{{padding:8px 7px}}
   .faux-title{{font-size:12px}}
   .faux-author{{font-size:8px}}
-  .rec{{margin:84px 4px 70px;padding:34px 20px 34px}}
-  .rec .row{{grid-template-columns:1fr}}
-  .rec h2{{font-size:30px}}
-  .rec .cut-a{{width:66px;left:-18px;top:-50px}}
-  .rec .cut-b{{width:112px;right:-16px;bottom:-50px}}
 }}
 </style>
 </head>
@@ -202,6 +153,7 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
   <a href="/#writing">writing</a>
   <a href="/#projects">projects</a>
   <a href="/bookshelf/" aria-current="page">bookshelf</a>
+  <a href="/connect/">connect</a>
   <a href="https://www.therabbitholes.xyz/" target="_blank" rel="noopener">curations</a>
   <a class="nav-name" href="/">patricia mou</a>
 </nav>
@@ -213,22 +165,6 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
 </ul>
 <div class="planks" aria-hidden="true"></div>
 </div>
-<section class="rec" aria-labelledby="rec-h">
-  
-  <img class="cut cut-a" src="/assets/collage/moon-phases.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" data-no-zoom/><img class="cut cut-b" src="/assets/collage/flow-swirl.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" data-no-zoom/>
-  <svg class="rec-orbit" viewBox="0 0 120 120" aria-hidden="true"><circle class="ring" cx="60" cy="60" r="44"/><g class="turn"><g transform="translate(60.0 16.0) rotate(0)"><circle class="ph" r="6"/><path class="dark" d="M0,-6 A6,6 0 0,1 0,6 Z"/></g><g transform="translate(91.1 28.9) rotate(45)"><circle class="ph" r="6"/><path class="dark" d="M0,-6 A6,6 0 0,1 0,6 Z"/></g><g transform="translate(104.0 60.0) rotate(90)"><circle class="ph" r="6"/><path class="dark" d="M0,-6 A6,6 0 0,1 0,6 Z"/></g><g transform="translate(91.1 91.1) rotate(135)"><circle class="ph" r="6"/><path class="dark" d="M0,-6 A6,6 0 0,1 0,6 Z"/></g><g transform="translate(60.0 104.0) rotate(180)"><circle class="ph" r="6"/><path class="dark" d="M0,-6 A6,6 0 0,1 0,6 Z"/></g><g transform="translate(28.9 91.1) rotate(225)"><circle class="ph" r="6"/><path class="dark" d="M0,-6 A6,6 0 0,1 0,6 Z"/></g><g transform="translate(16.0 60.0) rotate(270)"><circle class="ph" r="6"/><path class="dark" d="M0,-6 A6,6 0 0,1 0,6 Z"/></g><g transform="translate(28.9 28.9) rotate(315)"><circle class="ph" r="6"/><path class="dark" d="M0,-6 A6,6 0 0,1 0,6 Z"/></g></g><circle cx="60" cy="60" r="13" class="ph"/><path class="dark" d="M47,60 A13,13 0 0,0 73,60 Z"/></svg>
-  <h2 id="rec-h">recommend me a book</h2>
-  <p>a book that cracked you open? i'd love to read it.</p>
-  <form id="rec-form">
-    <div class="row">
-      <input name="title" placeholder="title" aria-label="book title" required/>
-      <input name="author" placeholder="author" aria-label="author"/>
-    </div>
-    <textarea name="why" placeholder="why it moved you (optional)" aria-label="why it moved you"></textarea>
-    <input name="from" placeholder="your name (optional)" aria-label="your name"/>
-    <button type="submit">send 💌</button>
-  </form>
-</section>
 </div>
 {SCRIPT}
 </body>
