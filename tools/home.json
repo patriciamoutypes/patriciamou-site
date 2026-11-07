@@ -544,7 +544,10 @@
    "id": "hearth",
    "name": "the mystical hearth",
    "role": "sunday service",
-   "desc": "a sunday service for seekers of the sacred across every path.",
+   "desc": [
+    "a sunday service for seekers of the sacred across every path.",
+    "The Hearth is the simplest sacred technology: a living center we tend to together. It belongs to no one, yet it warms everyone."
+   ],
    "links": [
     [
      "themysticalhearth.com",
@@ -572,7 +575,17 @@
      "proj-hearth-6.jpg",
      "a sunday gathering at The Commons"
     ]
-   ]
+   ],
+   "list": {
+    "intro": "We tend to this center at each service through different portals:",
+    "items": [
+     "co-creation of a collective altar",
+     "communal meditation",
+     "a sacred passage and sermon offered by a teacher from rotating wisdom lineages",
+     "45 mins of deep reading of a sacred text of one's choosing (however you define sacred; whether that's a textbook, poetry book, or 1,000 year old text)",
+     "sharing aloud the passages or poems that moved us in our reading"
+    ]
+   }
   },
   {
    "id": "hot-takes",

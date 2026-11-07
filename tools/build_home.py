@@ -91,6 +91,10 @@ for pr in data['projects']:
     if pr.get('tagline'):
         parts.append(f'<p class="project-tagline">{e(pr["tagline"])}</p>')
     parts += [f'<p class="project-desc">{e(d)}</p>' for d in desc]
+    if pr.get('list'):
+        L = pr['list']
+        parts.append(f'<p class="project-desc">{e(L["intro"])}</p>' if L.get('intro') else '')
+        parts.append('<ul class="project-list">' + ''.join(f'<li>{e(i)}</li>' for i in L['items']) + '</ul>')
     if pr.get('phases'):
         parts.append('<ol class="project-phases">' + ''.join(f'<li><b>{e(l)}</b> {e(t)}</li>' for l, t in pr['phases']) + '</ol>')
     parts += [f'<p class="project-desc">{e(d)}</p>' for d in pr.get('desc_after', [])]
