@@ -334,6 +334,25 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
   .step-body .step-title{font-size:19px}
   .pubs{margin-bottom:18px}
 }
+
+/* phones only: the sheet is inset so the palette frames it, a few cut-outs hang off
+   the sheet's edges at the section breaks, and the page ends on night teal */
+.mband,.mend{display:none}
+@media (max-width:860px){
+  html,body{overflow-x:clip}
+  .wrap{margin:10px 10px 10px;border-radius:6px;box-shadow:0 0 0 1px rgba(60,50,70,.05),0 18px 40px -18px rgba(25,30,45,.3)}
+  .nav{border-radius:6px 6px 0 0}
+  .mband{display:block;position:relative;height:0;z-index:2;pointer-events:none;--hang:36px}
+  .mband + .shelf{padding-top:158px}
+  .mband img{position:absolute;width:var(--w);height:auto;transform:rotate(var(--r));border-radius:1px;
+    box-shadow:0 10px 22px rgba(20,22,40,.22),0 2px 5px rgba(20,22,40,.1)}
+  .mband .l{left:calc(-1 * var(--hang))}
+  .mband .r{right:calc(-1 * var(--hang))}
+  .mend{display:block;position:relative;height:230px;pointer-events:none}
+  .mend img{position:absolute;left:50%;top:50%;width:var(--w);height:auto;
+    transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y))) rotate(var(--r));border-radius:1px;
+    box-shadow:0 12px 28px rgba(0,0,0,.35),0 2px 6px rgba(0,0,0,.18)}
+}
 </style>
 <noscript><style>[role=tabpanel][hidden]{display:block!important;margin-bottom:48px}</style></noscript>
 </head>
@@ -386,13 +405,17 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 </header>
 
 <main>
+<div class="mband" aria-hidden="true"><img class="l" src="/assets/collage/nautilus.jpg" alt="" loading="lazy" decoding="async" data-no-zoom style="--w:92px;top:14px;--r:-4deg"/><img class="r" src="/assets/collage/sun-rays.jpg" alt="" loading="lazy" decoding="async" data-no-zoom style="--w:112px;top:-6px;--r:3deg"/></div>
 {{WRITING}}
+<div class="mband" aria-hidden="true"><img class="l" src="/assets/collage/orchid.jpg" alt="" loading="lazy" decoding="async" data-no-zoom style="--w:84px;top:18px;--r:3deg"/><img class="r" src="/assets/collage/moon-phases.jpg" alt="" loading="lazy" decoding="async" data-no-zoom style="--w:78px;top:-10px;--r:-2.5deg"/></div>
 {{PROJECTS}}
+<div class="mband" aria-hidden="true"><img class="l" src="/assets/collage/flow-swirl.jpg" alt="" loading="lazy" decoding="async" data-no-zoom style="--w:118px;top:10px;--r:-2deg"/><img class="r" src="/assets/collage/water-light.jpg" alt="" loading="lazy" decoding="async" data-no-zoom style="--w:80px;top:-8px;--r:3.5deg"/></div>
 {{PRESS}}
 </main>
 
 <footer class="foot">© patricia mou</footer>
 </div>
+<div class="mend" aria-hidden="true"><img src="/assets/collage/spiral-light.jpg" alt="" loading="lazy" decoding="async" data-no-zoom style="--w:118px;--r:-5deg;--x:-62px;--y:34px"/><img src="/assets/collage/moon-pine.jpg" alt="" loading="lazy" decoding="async" data-no-zoom style="--w:140px;--r:3deg;--x:46px;--y:0px"/></div>
 
 <script src="/assets/sigil.v8.js" defer></script>
 <script src="/assets/zoom.v1.js" defer></script>
