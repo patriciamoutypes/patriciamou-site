@@ -24,12 +24,24 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:#fff;color:var(--ink);font:400 16px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+body{margin:0;position:relative;background:var(--bg,#f3f0ea);color:var(--ink);font:400 16px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+html{background:var(--bg,#f3f0ea)}
 a{color:var(--rose);text-decoration:none}
 a:hover{color:#000;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 a.ext::after{content:"\2197";font-size:.85em;margin-left:1px}
 img{display:block;max-width:100%}
 .wrap{max-width:1080px;margin:0 auto;padding:0 40px}
+
+/* collage: the page is a paper sheet laid over cut-outs, on a palette that deepens as you scroll */
+.wrap{position:relative;z-index:1;background:#fffdfb;margin:28px auto 72px;border-radius:2px;
+  box-shadow:0 0 0 1px rgba(60,50,70,.05),0 30px 80px -24px rgba(25,30,45,.28)}
+.collage{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.cut{position:absolute;margin:0;width:var(--w);transform:translateY(var(--py,0px)) rotate(var(--r));
+  box-shadow:0 12px 28px rgba(20,22,40,.24),0 2px 6px rgba(20,22,40,.12);will-change:transform}
+.cut img{display:block;width:100%;height:auto}
+.cut.l{right:calc(50% + 540px - var(--tuck,44px))}
+.cut.r{left:calc(50% + 540px - var(--tuck,44px))}
+@media (max-width:1239px){.collage{display:none}}
 
 /* nav */
 /* the nav stays pinned at the top while the page scrolls */
@@ -254,9 +266,9 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 .project-phases b{font-weight:500;color:var(--rose)}
 
 @media (max-width:860px){
-  .wrap{padding:0 24px}
+  .wrap{padding:0 24px;margin:0 auto;border-radius:0;box-shadow:none}
   :root{--navh:50px}
-  .nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:22px;margin:4px -24px 0;padding:14px 24px 12px;white-space:nowrap}
+  .nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:22px;margin:0 -24px;padding:16px 24px 12px;white-space:nowrap}
   .nav::-webkit-scrollbar{display:none}
   .intro{grid-template-columns:minmax(0,1fr);gap:20px;padding-top:40px;position:relative}
   /* the sigil sits beside the photo, the contact links drop below the newsletter box */
@@ -303,6 +315,7 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 <noscript><style>[role=tabpanel][hidden]{display:block!important;margin-bottom:48px}</style></noscript>
 </head>
 <body>
+<div class="collage" aria-hidden="true"><figure class="cut r" style="top:2.5%;--w:250px;--r:2deg"><img src="/assets/collage/sun-rays.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut l" style="top:8%;--w:220px;--r:-3deg"><img src="/assets/collage/nautilus.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut r" style="top:19%;--w:215px;--r:1.5deg"><img src="/assets/collage/orchid.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut l" style="top:30%;--w:250px;--r:2.5deg"><img src="/assets/collage/lens-flare.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut r" style="top:40%;--w:270px;--r:-1.5deg"><img src="/assets/collage/flow-swirl.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut l" style="top:50%;--w:260px;--r:-2deg"><img src="/assets/collage/ripples.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut r" style="top:60%;--w:185px;--r:3deg"><img src="/assets/collage/water-light.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut l" style="top:69%;--w:240px;--r:1.5deg"><img src="/assets/collage/fireworks.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut r" style="top:79%;--w:245px;--r:-2.5deg"><img src="/assets/collage/spiral-light.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure><figure class="cut l" style="top:88%;--w:215px;--r:2deg"><img src="/assets/collage/moon-pine.jpg" alt="" loading="lazy" decoding="async" data-no-zoom/></figure></div>
 <div class="wrap">
 <nav class="nav" aria-label="site">
   <a href="/" aria-current="page">home</a>
@@ -360,6 +373,32 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 
 <script src="/assets/sigil.v5.js" defer></script>
 <script src="/assets/zoom.v1.js" defer></script>
+<script>
+// palette: pearl and moonlit grey at the top, dusk blue and night teal at the bottom; cut-outs drift a little slower than the page
+(function () {
+  var stops = [[0, [243, 240, 234]], [0.22, [234, 230, 228]], [0.42, [214, 216, 222]], [0.62, [168, 179, 188]], [0.82, [80, 99, 110]], [1, [29, 43, 49]]];
+  var root = document.documentElement, cuts = document.querySelectorAll(".cut");
+  var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches, ticking = false;
+  function mix(p) {
+    for (var i = 1; i < stops.length; i++) if (p <= stops[i][0]) {
+      var a = stops[i - 1], b = stops[i], t = (p - a[0]) / (b[0] - a[0]);
+      return "rgb(" + a[1].map(function (v, k) { return Math.round(v + (b[1][k] - v) * t); }).join(",") + ")";
+    }
+    return "rgb(" + stops[stops.length - 1][1].join(",") + ")";
+  }
+  function paint() {
+    ticking = false;
+    var max = Math.max(1, document.documentElement.scrollHeight - innerHeight), y = window.scrollY;
+    root.style.setProperty("--bg", mix(Math.min(1, Math.max(0, y / max))));
+    if (!still) for (var i = 0; i < cuts.length; i++) {
+      var c = cuts[i], mid = c.offsetTop + c.offsetHeight / 2 - y - innerHeight / 2;
+      c.style.setProperty("--py", (mid * -0.06).toFixed(1) + "px");
+    }
+  }
+  function ask() { if (!ticking) { ticking = true; requestAnimationFrame(paint); } }
+  paint(); addEventListener("scroll", ask, { passive: true }); addEventListener("resize", ask);
+})();
+</script>
 <script>
 (function () { var n = document.querySelector(".nav"); if (!n) return; function f() { n.classList.toggle("stuck", window.scrollY > 4); } f(); window.addEventListener("scroll", f, { passive: true }); })();
 </script>
