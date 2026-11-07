@@ -29,8 +29,9 @@ for i, b in enumerate(books):
                 f'<span class="faux-title">{e(b["title"])}</span>'
                 + (f'<span class="faux-author">{e(b["author"])}</span>' if b['author'] else '') + '</span>')
     inner = f'{face}{tip}'
-    if b.get('url'):
-        inner = f'<a href="{e(b["url"])}" target="_blank" rel="noopener">{inner}</a>'
+    link = b.get('amazon') or b.get('url')   # Amazon with the patriciamou-20 associate tag
+    if link:
+        inner = f'<a href="{e(link)}" target="_blank" rel="sponsored noopener">{inner}</a>'
     else:
         inner = f'<span class="nolink" tabindex="0">{inner}</span>'
     items.append(f'<li class="book" style="--h:{h}">{inner}</li>')
@@ -117,6 +118,7 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
 .faux-author{{font-size:9px;letter-spacing:.06em;text-transform:uppercase;opacity:.8}}
 .tip{{position:absolute;left:50%;bottom:calc(100% + 10px);transform:translate(-50%,4px);width:max-content;max-width:220px;padding:7px 10px;border-radius:5px;
   background:#1f1f1f;color:#fff;font-size:12px;line-height:1.35;text-align:center;opacity:0;pointer-events:none;transition:opacity .15s,transform .15s;z-index:2}}
+.note{{margin:40px 0 0;font-size:12px;color:var(--faint)}}
 .tip b{{display:block;font-weight:500}}
 .tip span{{color:#c9c9c9}}
 .book a:hover .tip,.book a:focus-visible .tip,.book .nolink:hover .tip,.book .nolink:focus-visible .tip{{opacity:1;transform:translate(-50%,0)}}
@@ -150,6 +152,7 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
 </ul>
 <div class="planks" aria-hidden="true"></div>
 </div>
+<p class="note">As an Amazon Associate I earn from qualifying purchases.</p>
 </div>
 {SCRIPT}
 </body>

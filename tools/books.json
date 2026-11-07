@@ -4,382 +4,496 @@
   "author": "Christopher Alexander",
   "url": null,
   "cover": "01-a-city-is-not-a-tree.jpg",
-  "ratio": 0.669
+  "ratio": 0.669,
+  "asin": "9463864814",
+  "amazon": "https://www.amazon.com/dp/9463864814?tag=patriciamou-20"
  },
  {
   "title": "The Systems View of Life",
   "author": "Fritjof Capra & Pier Luigi Luisi",
   "url": "https://www.amazon.com/Systems-View-Life-Unifying-Vision/dp/1316616436",
   "cover": "02-the-systems-view-of-life.jpg",
-  "ratio": 0.697
+  "ratio": 0.697,
+  "asin": "1316616436",
+  "amazon": "https://www.amazon.com/dp/1316616436?tag=patriciamou-20"
  },
  {
   "title": "The History and Ethics of Authenticity",
   "author": "Kyle Michael James Shuttleworth",
-  "url": "https://www.amazon.com/History-Ethics-Authenticity-Meaning-Modernity/dp/1350163422"
+  "url": "https://www.amazon.com/History-Ethics-Authenticity-Meaning-Modernity/dp/1350163422",
+  "asin": "1350163422",
+  "amazon": "https://www.amazon.com/dp/1350163422?tag=patriciamou-20"
  },
  {
   "title": "Playing and Reality",
   "author": "D.W. Winnicott",
   "url": "https://www.amazon.com/Playing-Reality-Routledge-Classics-86/dp/0415345464",
   "cover": "04-playing-and-reality.jpg",
-  "ratio": 0.65
+  "ratio": 0.65,
+  "asin": "0415345464",
+  "amazon": "https://www.amazon.com/dp/0415345464?tag=patriciamou-20"
  },
  {
   "title": "The Religion of Tomorrow",
   "author": "Ken Wilber",
   "url": "https://www.amazon.com/The-Religion-of-Tomorrow-audiobook/dp/B071H78HZ7/?_encoding=UTF8&amp;pd_rd_w=MqzJI&amp;content-id=amzn1.sym.cf86ec3a-68a6-43e9-8115-04171136930a&amp;pf_rd_p=cf86ec3a-68a6-43e9-8115-04171136930a&amp;pf_rd_r=138-5713690-1018006&amp;pd_rd_wg=ovjiv&amp;pd_rd_r=d2ac6019-03f9-44eb-9271-312c638dc111&amp;ref_=aufs_ap_sc_dsk",
   "cover": "05-the-religion-of-tomorrow.jpg",
-  "ratio": 0.633
+  "ratio": 0.633,
+  "asin": "B071H78HZ7",
+  "amazon": "https://www.amazon.com/dp/B071H78HZ7?tag=patriciamou-20"
  },
  {
   "title": "One Taste",
   "author": "Ken Wilber",
   "url": "https://www.shambhala.com/one-taste-1119.html",
   "cover": "06-one-taste.jpg",
-  "ratio": 0.669
+  "ratio": 0.669,
+  "asin": "1570625476",
+  "amazon": "https://www.amazon.com/dp/1570625476?tag=patriciamou-20"
  },
  {
   "title": "Facets of Unity: The Enneagram of Holy Ideas",
   "author": "A. H. Almaas",
   "url": "https://www.amazon.com/Facets-Unity-Enneagram-Holy-Ideas/dp/0936713143",
   "cover": "07-facets-of-unity-the-enneagram-of-holy-id.jpg",
-  "ratio": 0.675
+  "ratio": 0.675,
+  "asin": "0936713143",
+  "amazon": "https://www.amazon.com/dp/0936713143?tag=patriciamou-20"
  },
  {
   "title": "Devotional Nonduality",
   "author": "David R. Hawkins",
   "url": "https://www.amazon.com/Discovery-Presence-God-Devotional-NonDuality/dp/0971500762",
   "cover": "08-devotional-nonduality.jpg",
-  "ratio": 0.625
+  "ratio": 0.625,
+  "asin": "0971500762",
+  "amazon": "https://www.amazon.com/dp/0971500762?tag=patriciamou-20"
  },
  {
   "title": "What It Means to Be Moral",
   "author": "Phil Zuckerman",
   "url": "https://www.amazon.com/What-Means-Be-Moral-Necessary/dp/1640092749",
   "cover": "09-what-it-means-to-be-moral.jpg",
-  "ratio": 0.661
+  "ratio": 0.661,
+  "asin": "1640092749",
+  "amazon": "https://www.amazon.com/dp/1640092749?tag=patriciamou-20"
  },
  {
   "title": "The World of Yesterday",
   "author": "Stefan Zweig",
   "url": "https://www.amazon.com/World-Yesterday-Stefan-Zweig/dp/0803226616",
   "cover": "10-the-world-of-yesterday.jpg",
-  "ratio": 0.658
+  "ratio": 0.658,
+  "asin": "0803226616",
+  "amazon": "https://www.amazon.com/dp/0803226616?tag=patriciamou-20"
  },
  {
   "title": "Progressive Stages of Meditation on Emptiness",
   "author": "Khenpo Tsultrim Gyamtso Rinpoche",
   "url": "https://www.amazon.com/Progressive-Meditation-Emptiness-Tsultrim-Rinpoche/dp/153740900X",
   "cover": "11-progressive-stages-of-meditation-on-empt.jpg",
-  "ratio": 0.703
+  "ratio": 0.703,
+  "asin": "153740900X",
+  "amazon": "https://www.amazon.com/dp/153740900X?tag=patriciamou-20"
  },
  {
   "title": "A Room of One's Own",
   "author": "Virginia Woolf",
   "url": "https://www.amazon.com/Room-Ones-Own-Virginia-Woolf/dp/0156787334",
   "cover": "12-a-room-of-one-s-own.jpg",
-  "ratio": 0.661
+  "ratio": 0.661,
+  "asin": "0156787334",
+  "amazon": "https://www.amazon.com/dp/0156787334?tag=patriciamou-20"
  },
  {
   "title": "Letters to a Young Poet",
   "author": "Rainer Maria Rilke",
   "url": "https://www.amazon.com/Letters-Young-Rainer-Maria-Rilke/dp/0393310396",
   "cover": "13-letters-to-a-young-poet.jpg",
-  "ratio": 0.667
+  "ratio": 0.667,
+  "asin": "0393310396",
+  "amazon": "https://www.amazon.com/dp/0393310396?tag=patriciamou-20"
  },
  {
   "title": "The Golden Notebook",
   "author": "Doris Lessing",
   "url": "https://www.amazon.com/Golden-Notebook-Novel-Doris-Lessing/dp/0061582484",
   "cover": "14-the-golden-notebook.jpg",
-  "ratio": 0.65
+  "ratio": 0.65,
+  "asin": "0061582484",
+  "amazon": "https://www.amazon.com/dp/0061582484?tag=patriciamou-20"
  },
  {
   "title": "In Praise of Shadows",
   "author": "Jun’ichirō Tanizaki",
   "url": "https://www.amazon.com/Praise-Shadows-Junichiro-Tanizaki/dp/0918172020",
   "cover": "15-in-praise-of-shadows.jpg",
-  "ratio": 0.639
+  "ratio": 0.639,
+  "asin": "0918172020",
+  "amazon": "https://www.amazon.com/dp/0918172020?tag=patriciamou-20"
  },
  {
   "title": "The Death and Life of Great American Cities",
   "author": "Jane Jacobs",
   "url": "https://www.amazon.com/Death-Life-Great-American-Cities/dp/067974195X",
   "cover": "16-the-death-and-life-of-great-american-cit.jpg",
-  "ratio": 0.642
+  "ratio": 0.642,
+  "asin": "067974195X",
+  "amazon": "https://www.amazon.com/dp/067974195X?tag=patriciamou-20"
  },
  {
   "title": "Synthesis of Yoga",
   "author": "Sri Aurobindo",
   "url": "https://www.amazon.com/Synthesis-Yoga-Sri-Aurobindo/dp/8170586151",
   "cover": "17-synthesis-of-yoga.jpg",
-  "ratio": 0.645
+  "ratio": 0.645,
+  "asin": "8170586151",
+  "amazon": "https://www.amazon.com/dp/8170586151?tag=patriciamou-20"
  },
  {
   "title": "The Denial of Death",
   "author": "Ernest Becker",
   "url": "https://www.amazon.com/Denial-Death-Ernest-Becker/dp/0684832402",
   "cover": "18-the-denial-of-death.jpg",
-  "ratio": 0.658
+  "ratio": 0.658,
+  "asin": "0684832402",
+  "amazon": "https://www.amazon.com/dp/0684832402?tag=patriciamou-20"
  },
  {
   "title": "The War of Art",
   "author": "Steven Pressfield",
   "url": "https://www.amazon.com/War-Art-Through-Creative-Battles/dp/1936891026",
   "cover": "19-the-war-of-art.jpg",
-  "ratio": 0.628
+  "ratio": 0.628,
+  "asin": "1936891026",
+  "amazon": "https://www.amazon.com/dp/1936891026?tag=patriciamou-20"
  },
  {
   "title": "The Matter With Things",
   "author": "Iain McGilchrist",
   "url": "https://www.amazon.com/Matter-Things-Brains-Delusions-Unmaking/dp/1914568060",
   "cover": "20-the-matter-with-things.jpg",
-  "ratio": 1.404
+  "ratio": 1.404,
+  "asin": "1914568060",
+  "amazon": "https://www.amazon.com/dp/1914568060?tag=patriciamou-20"
  },
  {
   "title": "Bhagavad Gita",
   "author": "Swami Dayananda Saraswati",
   "url": "https://www.amazon.com/Bhagavad-Gita-Study-Course-volumes/dp/9380049390",
   "cover": "21-bhagavad-gita.jpg",
-  "ratio": 0.656
+  "ratio": 0.656,
+  "asin": "9380049390",
+  "amazon": "https://www.amazon.com/dp/9380049390?tag=patriciamou-20"
  },
  {
   "title": "The Writing Life",
   "author": "Annie Dillard",
   "url": "https://www.amazon.com/Writing-Life-Annie-Dillard/dp/0060919884",
   "cover": "22-the-writing-life.jpg",
-  "ratio": 0.656
+  "ratio": 0.656,
+  "asin": "0060919884",
+  "amazon": "https://www.amazon.com/dp/0060919884?tag=patriciamou-20"
  },
  {
   "title": "The Timeless Way of Building",
   "author": "Christopher Alexander",
   "url": "https://www.amazon.com/Timeless-Way-Building-Christopher-Alexander/dp/0195024028",
   "cover": "23-the-timeless-way-of-building.jpg",
-  "ratio": 0.633
+  "ratio": 0.633,
+  "asin": "0195024028",
+  "amazon": "https://www.amazon.com/dp/0195024028?tag=patriciamou-20"
  },
  {
   "title": "The Value of Values",
   "author": "Swami Dayananda Saraswati",
   "url": "https://www.amazon.com/Value-Values-Swami-Dayananda-Saraswati/dp/8190363670",
   "cover": "24-the-value-of-values.jpg",
-  "ratio": 0.625
+  "ratio": 0.625,
+  "asin": "8190363670",
+  "amazon": "https://www.amazon.com/dp/8190363670?tag=patriciamou-20"
  },
  {
   "title": "Constructing the Ineffable",
   "author": "Karla Britton",
-  "url": "https://www.amazon.com/Constructing-Ineffable-Contemporary-Sacred-Architecture/dp/0300170378"
+  "url": "https://www.amazon.com/Constructing-Ineffable-Contemporary-Sacred-Architecture/dp/0300170378",
+  "asin": "0300170378",
+  "amazon": "https://www.amazon.com/dp/0300170378?tag=patriciamou-20"
  },
  {
   "title": "The Art of Loving",
   "author": "Erich Fromm",
   "url": "https://www.amazon.com/Art-Loving-Erich-Fromm/dp/0061129739",
   "cover": "26-the-art-of-loving.jpg",
-  "ratio": 0.667
+  "ratio": 0.667,
+  "asin": "0061129739",
+  "amazon": "https://www.amazon.com/dp/0061129739?tag=patriciamou-20"
  },
  {
   "title": "The Portrait of a Lady",
   "author": "Henry James",
   "url": "https://www.amazon.com/Portrait-Lady-Penguin-Classics/dp/0141439637",
   "cover": "27-the-portrait-of-a-lady.jpg",
-  "ratio": 0.647
+  "ratio": 0.647,
+  "asin": "0141439637",
+  "amazon": "https://www.amazon.com/dp/0141439637?tag=patriciamou-20"
  },
  {
   "title": "Trying Not to Try",
   "author": "Edward Slingerland",
   "url": "https://www.amazon.com/Trying-Not-Try-Ancient-Spontaneity/dp/077043763X/ref=pd_lpo_sccl_1/138-5713690-1018006?pd_rd_w=Un8A3&amp;content-id=amzn1.sym.1ad2066f-97d2-4731-9356-36b3edf1ae04&amp;pf_rd_p=1ad2066f-97d2-4731-9356-36b3edf1ae04&amp;pf_rd_r=GEA3VATJCYS4E45ZY7HX&amp;pd_rd_wg=gKGaf&amp;pd_rd_r=4dbaee4e-b45c-4570-94fd-bc24ba1c2e7a&amp;pd_rd_i=077043763X&amp;psc=1",
   "cover": "28-trying-not-to-try.jpg",
-  "ratio": 0.647
+  "ratio": 0.647,
+  "asin": "077043763X",
+  "amazon": "https://www.amazon.com/dp/077043763X?tag=patriciamou-20"
  },
  {
   "title": "Karma Yoga: The Yoga Of Action",
   "author": "Swami Vivekananda",
   "url": "https://www.amazon.com/Karma-Yoga-Action-Swami-Vivekananda/dp/8185301891",
   "cover": "29-karma-yoga-the-yoga-of-action.jpg",
-  "ratio": 0.611
+  "ratio": 0.611,
+  "asin": "8185301891",
+  "amazon": "https://www.amazon.com/dp/8185301891?tag=patriciamou-20"
  },
  {
   "title": "Already Free",
   "author": "Bruce Tift",
   "url": "https://www.amazon.com/Already-Free-Buddhism-Psychotherapy-Liberation/dp/1622034112",
   "cover": "30-already-free.jpg",
-  "ratio": 0.656
+  "ratio": 0.656,
+  "asin": "1622034112",
+  "amazon": "https://www.amazon.com/dp/1622034112?tag=patriciamou-20"
  },
  {
   "title": "Rethinking Third Places",
   "author": "Joanne Dolley",
-  "url": "https://www.amazon.com/Rethinking-Third-Places-Informal-Community/dp/1786433907"
+  "url": "https://www.amazon.com/Rethinking-Third-Places-Informal-Community/dp/1786433907",
+  "asin": "1786433907",
+  "amazon": "https://www.amazon.com/dp/1786433907?tag=patriciamou-20"
  },
  {
   "title": "Thinking in Systems",
   "author": "Donella H. Meadows",
   "url": "https://www.amazon.com/Thinking-Systems-Donella-H-Meadows/dp/1603580557",
   "cover": "32-thinking-in-systems.jpg",
-  "ratio": 0.667
+  "ratio": 0.667,
+  "asin": "1603580557",
+  "amazon": "https://www.amazon.com/dp/1603580557?tag=patriciamou-20"
  },
  {
   "title": "Zhuangzi: The Complete Writings",
   "author": "Zhuangzi",
-  "url": "https://www.amazon.com/Zhuangzi-Complete-Writings-English/dp/1624668550"
+  "url": "https://www.amazon.com/Zhuangzi-Complete-Writings-English/dp/1624668550",
+  "asin": "1624668550",
+  "amazon": "https://www.amazon.com/dp/1624668550?tag=patriciamou-20"
  },
  {
   "title": "Spiritual Enlightenment, the Damnedest Thing",
   "author": "Jed McKenna",
   "url": "https://www.amazon.com/Spiritual-Enlightenment-Damnedest-Thing-Trilogy/dp/0980184843",
   "cover": "34-spiritual-enlightenment-the-damnedest-th.jpg",
-  "ratio": 0.644
+  "ratio": 0.644,
+  "asin": "0980184843",
+  "amazon": "https://www.amazon.com/dp/0980184843?tag=patriciamou-20"
  },
  {
   "title": "Tao Te Ching",
   "author": "Lao Tzu",
   "url": "https://www.amazon.com/Tao-Te-Ching-Perennial-Classics/dp/0061142662",
   "cover": "35-tao-te-ching.jpg",
-  "ratio": 0.644
+  "ratio": 0.644,
+  "asin": "0061142662",
+  "amazon": "https://www.amazon.com/dp/0061142662?tag=patriciamou-20"
  },
  {
   "title": "Streams of Wisdom",
   "author": "Dustin DiPerna",
-  "url": "https://www.amazon.com/Streams-Wisdom-Dustin-DiPerna/dp/0989228932"
+  "url": "https://www.amazon.com/Streams-Wisdom-Dustin-DiPerna/dp/0989228932",
+  "asin": "0989228932",
+  "amazon": "https://www.amazon.com/dp/0989228932?tag=patriciamou-20"
  },
  {
   "title": "Complete Works of Swami Vivekananda",
   "author": "Swami Vivekananda",
   "url": "https://www.amazon.com/Complete-Works-Swami-Vivekananda-ebook/dp/B004NIFSQ6",
   "cover": "37-complete-works-of-swami-vivekananda.jpg",
-  "ratio": 0.733
+  "ratio": 0.733,
+  "asin": "B004NIFSQ6",
+  "amazon": "https://www.amazon.com/dp/B004NIFSQ6?tag=patriciamou-20"
  },
  {
   "title": "Meditations",
   "author": "Marcus Aurelius",
   "url": "https://www.goodreads.com/book/show/30659.Meditations",
   "cover": "38-meditations.jpg",
-  "ratio": 0.608
+  "ratio": 0.608,
+  "asin": null,
+  "amazon": "https://www.amazon.com/s?k=Meditations+Marcus+Aurelius&i=stripbooks&tag=patriciamou-20"
  },
  {
   "title": "The Secret History",
   "author": "Donna Tartt",
   "url": "https://www.goodreads.com/en/book/show/29044",
   "cover": "39-the-secret-history.jpg",
-  "ratio": 0.647
+  "ratio": 0.647,
+  "asin": "0141035218",
+  "amazon": "https://www.amazon.com/dp/0141035218?tag=patriciamou-20"
  },
  {
   "title": "Ground, Path, Fruition",
   "author": "",
-  "url": "https://www.amazon.com/-/he/Ground-Path-Fruition-Teachings-Rinpoche/dp/9937572266"
+  "url": "https://www.amazon.com/-/he/Ground-Path-Fruition-Teachings-Rinpoche/dp/9937572266",
+  "asin": "9937572266",
+  "amazon": "https://www.amazon.com/dp/9937572266?tag=patriciamou-20"
  },
  {
   "title": "Womb Awakening",
   "author": "Azra Bertrand & Seren Bertrand",
   "url": "https://www.amazon.com/Womb-Awakening-Initiatory-Wisdom-Creatrix/dp/1591432790",
   "cover": "41-womb-awakening.jpg",
-  "ratio": 0.7
+  "ratio": 0.7,
+  "asin": "1591432790",
+  "amazon": "https://www.amazon.com/dp/1591432790?tag=patriciamou-20"
  },
  {
   "title": "The Ancient Secret of the Flower of Life",
   "author": "Drunvalo Melchizedek",
   "url": "https://openlibrary.org/works/OL8910407W",
   "cover": "42-the-ancient-secret-of-the-flower-of-life.jpg",
-  "ratio": 0.836
+  "ratio": 0.836,
+  "asin": "189182421X",
+  "amazon": "https://www.amazon.com/dp/189182421X?tag=patriciamou-20"
  },
  {
   "title": "A Republic of Mind and Spirit",
   "author": "Catherine L. Albanese",
   "url": "https://openlibrary.org/works/OL2756244W",
   "cover": "43-a-republic-of-mind-and-spirit.jpg",
-  "ratio": 0.658
+  "ratio": 0.658,
+  "asin": "0300136153",
+  "amazon": "https://www.amazon.com/dp/0300136153?tag=patriciamou-20"
  },
  {
   "title": "Hagia Sophia",
   "author": "Bissera V. Pentcheva",
   "url": "https://openlibrary.org/works/OL20190336W",
   "cover": "44-hagia-sophia.jpg",
-  "ratio": 0.7
+  "ratio": 0.7,
+  "asin": "0271077255",
+  "amazon": "https://www.amazon.com/dp/0271077255?tag=patriciamou-20"
  },
  {
   "title": "Participation and the Mystery",
   "author": "Jorge N. Ferrer",
   "url": "https://openlibrary.org/works/OL20975080W",
   "cover": "45-participation-and-the-mystery.jpg",
-  "ratio": 0.661
+  "ratio": 0.661,
+  "asin": "1438464878",
+  "amazon": "https://www.amazon.com/dp/1438464878?tag=patriciamou-20"
  },
  {
   "title": "Invisible Cities",
   "author": "Italo Calvino",
-  "url": "https://openlibrary.org/works/OL15297W"
+  "url": "https://openlibrary.org/works/OL15297W",
+  "asin": "0749397640",
+  "amazon": "https://www.amazon.com/dp/0749397640?tag=patriciamou-20"
  },
  {
   "title": "Women Who Run with the Wolves",
   "author": "Clarissa Pinkola Estés",
   "url": "https://openlibrary.org/works/OL2960639W",
   "cover": "47-women-who-run-with-the-wolves.jpg",
-  "ratio": 0.658
+  "ratio": 0.658,
+  "asin": "1564550826",
+  "amazon": "https://www.amazon.com/dp/1564550826?tag=patriciamou-20"
  },
  {
   "title": "Initiation, Human and Solar",
   "author": "Alice A. Bailey",
   "url": "https://openlibrary.org/works/OL2465759W",
   "cover": "48-initiation-human-and-solar.jpg",
-  "ratio": 0.633
+  "ratio": 0.633,
+  "asin": null,
+  "amazon": "https://www.amazon.com/s?k=Initiation%2C+Human+and+Solar+Alice+A.+Bailey&i=stripbooks&tag=patriciamou-20"
  },
  {
   "title": "Meditations on the Tarot",
   "author": "Valentin Tomberg",
   "url": "https://openlibrary.org/works/OL264533W",
   "cover": "49-meditations-on-the-tarot.jpg",
-  "ratio": 0.628
+  "ratio": 0.628,
+  "asin": "1852302224",
+  "amazon": "https://www.amazon.com/dp/1852302224?tag=patriciamou-20"
  },
  {
   "title": "The Kybalion",
   "author": "Three Initiates",
   "url": "https://openlibrary.org/works/OL20156281W",
   "cover": "50-the-kybalion.jpg",
-  "ratio": 0.625
+  "ratio": 0.625,
+  "asin": "1603865373",
+  "amazon": "https://www.amazon.com/dp/1603865373?tag=patriciamou-20"
  },
  {
   "title": "Hermetica",
   "author": "Brian P. Copenhaver",
   "url": "https://openlibrary.org/works/OL4116262W",
   "cover": "51-hermetica.jpg",
-  "ratio": 0.647
+  "ratio": 0.647,
+  "asin": "0521425433",
+  "amazon": "https://www.amazon.com/dp/0521425433?tag=patriciamou-20"
  },
  {
   "title": "A Pattern Language",
   "author": "Christopher Alexander",
   "url": "https://openlibrary.org/works/OL3923600W",
   "cover": "52-a-pattern-language.jpg",
-  "ratio": 0.653
+  "ratio": 0.653,
+  "asin": "0195019199",
+  "amazon": "https://www.amazon.com/dp/0195019199?tag=patriciamou-20"
  },
  {
   "title": "The Nature of Order",
   "author": "Christopher Alexander",
   "url": "https://openlibrary.org/works/OL8641458W",
   "cover": "53-the-nature-of-order.jpg",
-  "ratio": 0.7
+  "ratio": 0.7,
+  "asin": "0972652914",
+  "amazon": "https://www.amazon.com/dp/0972652914?tag=patriciamou-20"
  },
  {
   "title": "The Luminous Ground",
   "author": "Christopher Alexander",
   "url": "https://openlibrary.org/works/OL3923598W",
   "cover": "54-the-luminous-ground.jpg",
-  "ratio": 0.7
+  "ratio": 0.7,
+  "asin": "0972652949",
+  "amazon": "https://www.amazon.com/dp/0972652949?tag=patriciamou-20"
  },
  {
   "title": "The Royal Seal of Mahamudra",
   "author": "Khamtrul Rinpoche III",
   "url": "https://openlibrary.org/works/OL20860765W",
   "cover": "55-the-royal-seal-of-mahamudra.jpg",
-  "ratio": 0.728
+  "ratio": 0.728,
+  "asin": "1559394374",
+  "amazon": "https://www.amazon.com/dp/1559394374?tag=patriciamou-20"
  },
  {
   "title": "Faust",
   "author": "Johann Wolfgang von Goethe",
   "url": "https://openlibrary.org/works/OL52456W",
   "cover": "56-faust.jpg",
-  "ratio": 0.617
+  "ratio": 0.617,
+  "asin": "0847707237",
+  "amazon": "https://www.amazon.com/dp/0847707237?tag=patriciamou-20"
  },
  {
   "title": "Cross-Tradition Engagement in Philosophy",
   "author": "Bo Mou",
-  "url": "https://openlibrary.org/works/OL20752295W"
+  "url": "https://openlibrary.org/works/OL20752295W",
+  "asin": null,
+  "amazon": "https://www.amazon.com/s?k=Cross-Tradition+Engagement+in+Philosophy+Bo+Mou&i=stripbooks&tag=patriciamou-20"
  }
 ]
