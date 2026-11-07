@@ -157,7 +157,6 @@ h1{{font:500 38px/1.1 var(--serif);margin:56px 0 30px}}
 </div>
 </div>
 {SCRIPT}
-<script src="/assets/spirals.v2.js" defer></script>
 </body>
 </html>
 '''
