@@ -36,10 +36,10 @@ a{color:var(--rose);text-decoration:none}
    two round cut-outs from the moodboard resting on its edge */
 .stage{position:relative;display:grid;place-items:center;min-height:880px;padding:40px 0;isolation:isolate}
 .ring{position:absolute;left:50%;top:50%;width:min(780px,112%);aspect-ratio:1;transform:translate(-50%,-50%);z-index:-1;pointer-events:none;overflow:visible}
-.ring circle.path{fill:none;stroke:#bfbcca;stroke-width:1;vector-effect:non-scaling-stroke}
-.ring .m-dark{fill:#9b98a6}
+.ring circle.path{fill:none;stroke:#c9c6d2;stroke-width:1;vector-effect:non-scaling-stroke}
+.ring .m-dark{fill:#aaa7b3}
 .ring .m-lit{fill:#fff}
-.ring .m-edge{fill:none;stroke:#9b98a6;stroke-width:1.8}
+.ring .m-edge{fill:none;stroke:#aaa7b3;stroke-width:1.8}
 /* the ring turns once every 112.5 seconds; each moon turns back the other way so it stays upright, lit side true */
 .ring .turn{transform-origin:400px 400px;animation:orbit 112.5s linear infinite}
 .ring .moon{transform-box:fill-box;transform-origin:center;animation:orbit 112.5s linear infinite reverse}
@@ -82,7 +82,7 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
 .elsewhere{display:flex;justify-content:center;align-items:center;gap:14px;margin:0;font-size:16px}
 .elsewhere a:hover{color:#000;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .sep{width:9px;height:9px;flex:none}
-.sep .sd{fill:#9b98a6}.sep .sl{fill:#fff}.sep .se{fill:none;stroke:#9b98a6;stroke-width:1.1}
+.sep .sd{fill:#aaa7b3}.sep .sl{fill:#fff}.sep .se{fill:none;stroke:#aaa7b3;stroke-width:1.1}
 .ext::after{content:"\2197";font-size:.85em;margin-left:1px}
 
 @media (max-width:860px){
