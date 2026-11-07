@@ -85,7 +85,8 @@ def ritual(steps):
 items, panels = [], []
 for pr in data['projects']:
     items.append((pr['id'], pr.get('tab', pr['name']), None))
-    desc = pr['desc'] if isinstance(pr['desc'], list) else [pr['desc']]
+    desc = pr.get('desc', [])
+    desc = desc if isinstance(desc, list) else [desc]
     parts = [f'<div class="panel-head"><h3>{e(pr["name"])}</h3><span class="meta">{e(pr["role"])}</span></div>']
     if pr.get('tagline'):
         parts.append(f'<p class="project-tagline">{e(pr["tagline"])}</p>')
@@ -107,6 +108,8 @@ for pr in data['projects']:
                 tiles.append(f'<img src="/assets/{e(it[0])}" alt="{e(it[1])}" loading="lazy" decoding="async"/>')
         imgs = ''.join(tiles)
         parts.append(f'<div class="gallery">{imgs}</div>')
+    for b in pr.get('blocks', []):  # hand-written sections in tools/partials/
+        parts.append(open(os.path.join(HERE, 'partials', b), encoding='utf-8').read())
     if pr.get('slides'):
         sl = pr['slides']; n = len(sl['images'])
         frames = ''.join(f'<li><img src="/assets/{e(f)}" alt="{e(a)}" width="1280" height="720" loading="lazy" decoding="async"/></li>'

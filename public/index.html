@@ -154,6 +154,138 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 
 .foot{padding:120px 0 48px;font-size:14px;color:var(--faint)}
 
+/* designed sections inside a project (tools/partials) */
+.cx-part{margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
+.cx-eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin:0 0 6px}
+.cx-title{font:500 27px/1.25 var(--serif);margin:0 0 10px}
+.cx-lead{margin:0 0 18px;max-width:600px}
+.cx-sub{font:500 21px/1.3 var(--serif);margin:36px 0 12px}
+.tag{display:inline-block;font:500 10.5px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:5px 8px 4px;border-radius:3px;color:#fff;background:var(--muted);white-space:nowrap}
+.t-salon{background:#87a083}.t-junto{background:#7a5a44}.t-circle{background:#2f4b52}.t-play{background:#efc8c2;color:#5b3b39}.t-prom{background:#3f7a70}
+.t-soft{background:var(--wash);color:var(--muted);box-shadow:inset 0 0 0 1px var(--line)}
+.cx-formats{list-style:none;padding:0;margin:0 0 26px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+.cx-formats p{margin:10px 0 0;font-size:13.5px;line-height:1.5;color:var(--muted)}
+.cx-photos{display:grid;grid-template-columns:2fr 3fr;gap:10px;margin:0 0 8px}
+.cx-photos img{width:100%;height:280px;object-fit:cover;border-radius:4px;background:var(--wash)}
+.cx-evenings{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.cx-sched{list-style:none;margin:0;padding:0}
+.cx-sched li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:14px;line-height:1.45}
+.cx-sched .when{color:var(--faint);font-size:12.5px;font-variant-numeric:tabular-nums;padding-top:3px}
+.cx-sched .what{display:flex;flex-direction:column;gap:3px;align-items:flex-start}
+.cx-sched .what .tag{margin-bottom:4px}
+.cx-sched em{font-style:normal;color:var(--faint)}
+.cx-offerings{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.cx-offerings li{padding:16px 16px 14px;border:1px solid var(--line);border-radius:6px}
+.o-title{font:500 20px/1.25 var(--serif);margin:10px 0 2px}
+.o-meta{font-size:12.5px;color:var(--faint);margin:0 0 8px}
+.o-desc{font-size:13.5px;line-height:1.55;color:var(--muted);margin:0}
+.cx-mech{display:flex;align-items:baseline;gap:12px;margin:40px 0 6px}
+.cx-mech h5{font:500 27px/1.1 var(--serif);margin:0}
+.cx-mech span{font-size:12px;letter-spacing:.06em;color:var(--faint)}
+.cx-banners{display:block;width:100%;max-width:560px;height:auto;margin:8px 0 14px}
+.cx-guilds{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.cx-guilds p{margin:0;font-size:13.5px;line-height:1.5;color:var(--muted)}
+.cx-guilds .g-name{font:500 23px/1.2 var(--serif);margin-bottom:4px}
+.g-builders .g-name{color:#7d9479}.g-mystics .g-name{color:#7a5a44}.g-artists .g-name{color:#c98a82}.g-explorers .g-name{color:#3f7a70}
+.cx-guilds .g-if{margin-top:8px;font-style:italic;font-size:12.5px;color:var(--faint)}
+.cx-compare{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.cx-compare>div{padding:18px;border-radius:6px;background:var(--wash);border:1px solid var(--line)}
+.cx-compare p{font-size:14px;line-height:1.55;margin:0 0 8px}
+.cx-compare .c-level{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:0}
+.cx-compare .c-name{font:500 23px/1.2 var(--serif);margin:4px 0 8px}
+.cx-compare .c-att{margin:0}
+.c-att b{font-weight:500}.c-att .closed{color:#b5483d}.c-att .open{color:#3f7a70}
+.cx-explorer{margin-top:40px;padding:24px;border-radius:8px;border:1px solid var(--line)}
+.cx-explorer .cx-sub{margin-top:0}
+.cx-journey{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;counter-reset:j}
+.cx-journey li{padding:12px;border-radius:6px;background:var(--wash);font-size:13px;line-height:1.45;counter-increment:j}
+.cx-journey li::before{content:counter(j,decimal-leading-zero);display:block;font-size:11px;letter-spacing:.1em;color:var(--faint);margin-bottom:4px;font-variant-numeric:tabular-nums}
+.cx-journey p{margin:0 0 3px;color:var(--muted)}
+.cx-journey .j-title{font-weight:500;color:var(--ink);margin-bottom:6px}
+.cx-journey b{font-weight:500;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);margin-right:5px}
+.cx-cycle{margin-top:22px;display:grid;grid-template-columns:190px minmax(0,1fr);gap:20px;align-items:start}
+.cx-cycle .cy-head{font:500 23px/1.2 var(--serif);color:#3f7a70;margin:0}
+.cy-head span{display:block;font:400 13px/1.5 var(--sans);color:var(--muted);margin-top:6px}
+.cx-cycle ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.cx-cycle li{position:relative;font-size:12.5px;line-height:1.45;color:var(--muted);padding:10px 12px 0;border-top:2px solid #9cc2bb}
+.cx-cycle li b{display:block;font-weight:500;color:var(--ink);font-size:13.5px;margin-bottom:3px}
+.cx-cycle li:not(:last-child)::after{content:"→";position:absolute;top:-12px;right:-9px;font-size:12px;color:#3f7a70;background:#fff;padding:0 2px}
+.cx-cycle li:last-child::after{content:"↺";position:absolute;top:-12px;right:-4px;font-size:13px;color:#3f7a70;background:#fff;padding:0 2px}
+.cx-practicums{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.cx-practicums li{text-align:center;font-size:12.5px;color:var(--muted);line-height:1.4}
+.p-icon{display:block;font-size:30px;line-height:1;margin-bottom:8px}
+.cx-practicums b{display:block;font:500 17px/1.2 var(--serif);color:var(--ink);margin-bottom:2px}
+.cx-week{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 22px}
+.cx-week .d{font:500 18px/1.2 var(--serif);margin:0 0 4px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.cx-week ul{list-style:none;margin:0;padding:0}
+.cx-week li{font-size:13px;line-height:1.4;padding:5px 0}
+.cx-week i{display:block;font-style:normal;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:1px}
+.cx-week .k-artist{color:#c98a82}.cx-week .k-mystic{color:#7a5a44}.cx-week .k-explorer{color:#3f7a70}.cx-week .k-builder{color:#7d9479}
+.cx mark{color:inherit;padding:0 .12em;border-radius:2px}
+.hl-a{background:#f4d6d1}.hl-b{background:#c6e3df}.hl-c{background:#dcebd8}
+.cx-rooms{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.cx-rooms img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;background:var(--wash)}
+.cx-rooms span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.cx-quote{font:500 24px/1.35 var(--serif);margin:0 0 20px;max-width:640px}
+.cx-chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.cx-chips li{font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--wash)}
+.cx-note{margin:20px 0 0;font-size:14px;color:var(--muted);max-width:560px;padding-left:14px;border-left:2px solid var(--rose)}
+
+.cx-first{margin-top:8px;padding-top:0;border-top:0}
+.cm-features{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cm-features>div{padding:20px;border-radius:8px;background:linear-gradient(160deg,#f3eef8,#eef1fa);border:1px solid #e6e2f0}
+.cm-features p{margin:0;font-size:14px;line-height:1.6;color:var(--ink)}
+.cm-features .cm-name{font:500 23px/1.2 var(--serif);margin-bottom:8px;color:#4b4a7a}
+.cm-arch{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 92px 1fr 92px 1fr;gap:10px;align-items:start;text-align:center}
+.cm-arch p{margin:0;font-size:13px;line-height:1.5;color:var(--muted)}
+.cm-arch .a-name{font:500 21px/1.2 var(--serif);margin-bottom:6px}
+.a1 .a-name{color:#d9785f}.a2 .a-name{color:#b07c96}.a3 .a-name{color:#7d74c9}
+.cm-arch .a-mode{margin-top:12px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.cm-arch .a-pole{margin-top:2px;font:500 16px/1.3 var(--serif);color:var(--ink)}
+.cm-bridge{padding-top:22px}
+.cm-bridge .tag{background:#e9876f}.cm-arch .cm-bridge:nth-child(4) .tag{background:#8f96d8}
+.cm-bridge p{margin-top:8px;font-size:12.5px}
+.cm-spectrum{margin:22px 0 0;padding-top:16px;border-top:1px solid var(--line)}
+.cm-spectrum p{display:flex;align-items:center;gap:12px;margin:6px 0;font-size:14px;color:var(--muted)}
+.cm-spectrum i{flex:1;height:1px;background:linear-gradient(90deg,#e9876f,#b07c96,#8f96d8)}
+.cm-two{display:grid;grid-template-columns:1.3fr 1fr;gap:28px}
+.cm-jobs{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.cm-jobs li{font-size:13px;padding:6px 12px;border-radius:6px;background:linear-gradient(160deg,#f3eef8,#eef1fa);border:1px solid #e6e2f0;color:#4b4a7a}
+.cm-needs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cm-needs ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;align-items:center;gap:0}
+.cm-needs li{font-size:12.5px;color:var(--muted);padding:4px 10px;border-radius:999px;background:var(--wash);text-align:center}
+.cm-needs li+li{margin-top:22px;position:relative}
+.cm-needs li+li::before{content:"↓";position:absolute;top:-20px;left:50%;transform:translateX(-50%);color:var(--faint);font-size:13px;background:none}
+.cm-needs .n-head{background:#8b7fd1;color:#fff;font-weight:500;border-radius:5px}
+.cm-needs .n-b{background:#7d95dc}
+.cm-needs .n-quote{background:none;font-style:italic;color:var(--ink)}
+
+.ms-screens{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding:18px;border-radius:10px;background:#fbe3e1}
+.ms-card{background:#fbf9f9;border-radius:22px;padding:18px 16px;box-shadow:0 1px 0 rgba(0,0,0,.04);display:flex;flex-direction:column;gap:10px;min-width:0}
+.ms-card p{margin:0}
+.ms-label{font:400 21px/1.2 var(--sans);color:#6f6363;letter-spacing:-.01em}
+.ms-post,.ms-sit{background:#fff;border-radius:12px;padding:12px;box-shadow:0 1px 3px rgba(130,90,90,.08);font-size:12.5px;color:#7a6c6c}
+.ms-who{display:flex;justify-content:space-between;gap:8px;color:#7a6c6c}
+.ms-who b,.ms-sit b{font-weight:500;color:#5f5353}
+.ms-who span,.ms-sit p span{color:#b49595;font-size:11.5px;white-space:nowrap}
+.ms-text{margin-top:8px!important;color:#5f5353}
+.ms-kudos{display:flex;justify-content:space-between;margin-top:10px!important;font-size:11.5px}
+.ms-kudos span{color:#b49595}
+.ms-faint{opacity:.55}
+.ms-streak{font-size:14px;color:#7a6c6c;line-height:1.4}
+.ms-streak b{font-weight:500;color:#c48f8f}
+.ms-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;text-align:center}
+.ms-stats p{font-size:16px;color:#a88585}
+.ms-stats span{display:block;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#9a8c8c;margin-bottom:2px}
+.ms-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.ms-grid i{aspect-ratio:1;border-radius:4px;background:#f2eded}
+.ms-grid .l1{background:#e3d3d3}.ms-grid .l2{background:#cdb3b3}.ms-grid .l3{background:#b38f90}
+.ms-grid .now{box-shadow:0 0 0 2px #9cc2d6}
+.ms-sit p{display:flex;justify-content:space-between;gap:8px}
+.ms-sit p+p{margin-top:4px!important;font-size:11.5px}
+.ms-live{color:#5f9a6a!important}
+.ms-cap{margin-top:auto!important;padding-top:6px;font-size:12.5px;line-height:1.5;color:var(--muted)}
+
 @media (max-width:860px){
   .wrap{padding:0 24px}
   .nav{flex-wrap:wrap;gap:6px 20px}
@@ -178,6 +310,21 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
   .gallery > *,.gallery > *:nth-child(4):nth-last-child(2),.gallery > *:nth-child(5):nth-last-child(1){grid-column:span 1}
   .gallery > *:first-child{grid-column:span 2}
   .gallery > *:nth-child(6){display:none}
+  .cx-formats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cx-photos,.cx-evenings,.cx-offerings,.cx-compare,.cx-cycle{grid-template-columns:minmax(0,1fr)}
+  .cx-photos img{height:200px}
+  .cx-guilds,.cx-journey,.cx-cycle ol,.cx-rooms{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cx-practicums{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:18px}
+  .cx-week{grid-template-columns:minmax(0,1fr)}
+  .cx-explorer{padding:16px}
+  .cx-cycle li::after{display:none}
+  .cx-quote{font-size:21px}
+  .cm-features,.cm-two{grid-template-columns:minmax(0,1fr)}
+  .cm-arch{grid-template-columns:minmax(0,1fr);text-align:left;gap:14px}
+  .cm-bridge{padding:0 0 0 14px;border-left:2px solid #f0c7bc;display:flex;align-items:center;gap:10px}
+  .cm-arch .cm-bridge:nth-child(4){border-left-color:#c9cdee}
+  .cm-bridge p{margin:0}
+  .ms-screens{grid-template-columns:minmax(0,1fr);padding:12px}
   .step{grid-template-columns:38px minmax(0,1fr);gap:0 12px}
   .step-body{padding-left:16px}
   .step-body .step-title{font-size:19px}
@@ -259,21 +406,268 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 <p class="shelf-note">communities, rituals, books, and physical place-making</p>
 <div class="tabs" role="tablist" aria-label="projects" aria-orientation="vertical">
 <button class="tab" role="tab" id="tab-projects-commons" aria-controls="panel-projects-commons" aria-selected="true" tabindex="0"><span>the commons</span><span class="leader"></span></button>
+<button class="tab" role="tab" id="tab-projects-curriculum" aria-controls="panel-projects-curriculum" aria-selected="false" tabindex="-1"><span>commons curriculum</span><span class="leader"></span></button>
 <button class="tab" role="tab" id="tab-projects-cohere" aria-controls="panel-projects-cohere" aria-selected="false" tabindex="-1"><span>cohere magazine</span><span class="leader"></span></button>
 <button class="tab" role="tab" id="tab-projects-hearth" aria-controls="panel-projects-hearth" aria-selected="false" tabindex="-1"><span>the mystical hearth</span><span class="leader"></span></button>
 <button class="tab" role="tab" id="tab-projects-hot-takes" aria-controls="panel-projects-hot-takes" aria-selected="false" tabindex="-1"><span>a container for hot takes</span><span class="leader"></span></button>
 <button class="tab" role="tab" id="tab-projects-council" aria-controls="panel-projects-council" aria-selected="false" tabindex="-1"><span>council of the cosmos</span><span class="leader"></span></button>
 <button class="tab" role="tab" id="tab-projects-haumbody" aria-controls="panel-projects-haumbody" aria-selected="false" tabindex="-1"><span>the haumbody</span><span class="leader"></span></button>
 <button class="tab" role="tab" id="tab-projects-rabbit-holes" aria-controls="panel-projects-rabbit-holes" aria-selected="false" tabindex="-1"><span>rabbit holes</span><span class="leader"></span></button>
+<button class="tab" role="tab" id="tab-projects-calm" aria-controls="panel-projects-calm" aria-selected="false" tabindex="-1"><span>calm</span><span class="leader"></span></button>
+<button class="tab" role="tab" id="tab-projects-mindstreaks" aria-controls="panel-projects-mindstreaks" aria-selected="false" tabindex="-1"><span>mindstreaks</span><span class="leader"></span></button>
 </div></div>
 <div class="shelf-panels">
-<div class="panel" role="tabpanel" id="panel-projects-commons" aria-labelledby="tab-projects-commons" tabindex="0"><div class="panel-head"><h3>the commons</h3><span class="meta">co-founder</span></div><p class="project-desc">a community and third space rekindling intellectual curiosity, co-created play, &amp; inner-exploration, in the heart of San Francisco.</p><p class="project-links"><a class="ext" href="https://www.thesfcommons.com" target="_blank" rel="noopener">thesfcommons.com</a></p><div class="gallery"><img src="/assets/proj-commons-gathering.jpg" alt="a candlelit evening gathering in a circle at The Commons" loading="lazy" decoding="async"/><img src="/assets/proj-commons-2.jpg" alt="a lounge lit by string lights and tapestries" loading="lazy" decoding="async"/><img src="/assets/proj-commons-3.jpg" alt="a long community dinner" loading="lazy" decoding="async"/><img src="/assets/proj-commons-cowork.jpg" alt="people reading and working on laptops in the lounge at The Commons" loading="lazy" decoding="async"/><img src="/assets/proj-commons-5.jpg" alt="a group meditation" loading="lazy" decoding="async"/><img src="/assets/proj-commons-6.jpg" alt="the long study table" loading="lazy" decoding="async"/></div></div>
+<div class="panel" role="tabpanel" id="panel-projects-commons" aria-labelledby="tab-projects-commons" tabindex="0"><div class="panel-head"><h3>the commons</h3><span class="meta">co-founder</span></div><p class="project-desc">a community and third space rekindling intellectual curiosity, co-created play, &amp; inner-exploration, in the heart of San Francisco.</p><p class="project-links"><a class="ext" href="https://www.thesfcommons.com" target="_blank" rel="noopener">thesfcommons.com</a></p><div class="gallery"><img src="/assets/proj-commons-gathering.jpg" alt="a candlelit evening gathering in a circle at The Commons" loading="lazy" decoding="async"/><img src="/assets/proj-commons-2.jpg" alt="a lounge lit by string lights and tapestries" loading="lazy" decoding="async"/><img src="/assets/proj-commons-3.jpg" alt="a long community dinner" loading="lazy" decoding="async"/><img src="/assets/proj-commons-cowork.jpg" alt="people reading and working on laptops in the lounge at The Commons" loading="lazy" decoding="async"/><img src="/assets/proj-commons-5.jpg" alt="a group meditation" loading="lazy" decoding="async"/><img src="/assets/proj-commons-6.jpg" alt="the long study table" loading="lazy" decoding="async"/></div><div class="cx">
+
+<section class="cx-part">
+  <p class="cx-eyebrow">the space</p>
+  <h4 class="cx-title">designing a multi-purpose public space for <mark class="hl-a">connection</mark>, <mark class="hl-b">creativity</mark>, &amp; <mark class="hl-c">contemplation</mark></h4>
+  <ul class="cx-rooms">
+    <li><img src="/assets/space-event.jpg" alt="" loading="lazy" decoding="async"/><span>modular event space</span></li>
+    <li><img src="/assets/space-alive-wall.jpg" alt="" loading="lazy" decoding="async"/><span>“I feel alive” wall</span></li>
+    <li><img src="/assets/space-help-board.jpg" alt="" loading="lazy" decoding="async"/><span>community help board</span></li>
+    <li><img src="/assets/space-cafe.jpg" alt="" loading="lazy" decoding="async"/><span>cafe space</span></li>
+    <li><img src="/assets/space-library.jpg" alt="" loading="lazy" decoding="async"/><span>community library</span></li>
+    <li><img src="/assets/space-meditation.jpg" alt="" loading="lazy" decoding="async"/><span>meditation lounge</span></li>
+    <li><img src="/assets/space-zen-nook.jpg" alt="" loading="lazy" decoding="async"/><span>zen connection nook</span></li>
+    <li><img src="/assets/space-study-hall.jpg" alt="" loading="lazy" decoding="async"/><span>“Hogwarts” study hall</span></li>
+  </ul>
+</section>
+
+<section class="cx-part">
+  <p class="cx-eyebrow">the agora</p>
+  <p class="cx-quote">Inspired by the Athenian Agora and School of Athens, multiple modalities of discussion, play, creation, and exploration enliven the space simultaneously.</p>
+  <ul class="cx-chips">
+    <li>authentic relating games</li><li>casual lounging &amp; vibing</li><li>music jam</li><li>technical paper discussion</li>
+    <li>book club on Aristotle’s Nicomachean Ethics</li><li>silent writing / journaling club</li><li>serendipitous conversation on SF civics</li>
+    <li>collective flourishing salon</li><li>civics discussion on the abundance agenda</li><li>robotics demo</li><li>Pomodoro deep work session</li><li>navigating life transitions support circle</li>
+  </ul>
+  <p class="cx-note">20 minute gaps are placed between events so that participants can serendipitously mingle with those exploring different topics.</p>
+</section>
+
+</div>
+</div>
+<div class="panel" role="tabpanel" id="panel-projects-curriculum" aria-labelledby="tab-projects-curriculum" tabindex="0" hidden><div class="panel-head"><h3>designing a curriculum for the commons</h3><span class="meta">curriculum design</span></div><div class="project-gap"></div><div class="cx">
+
+<section class="cx-part cx-first">
+  <p class="cx-eyebrow">version 01</p>
+  <h4 class="cx-title">the commons campus 🏛️</h4>
+  <p class="cx-lead">Our first attempt at programming was 8 weeks of community-created curriculum comprised of 60+ salons, circles, juntos, and containers for play.</p>
+
+  <ul class="cx-formats">
+    <li><span class="tag t-salon">salons</span><p>Topical deep-dive within a field, research question, interest, problem, or curiosity</p></li>
+    <li><span class="tag t-junto">juntos</span><p>Single-threaded conversations with the same people week over week</p></li>
+    <li><span class="tag t-circle">circles</span><p>Loose support groups for social accountability, and/or feedback &amp; discussion</p></li>
+    <li><span class="tag t-play">play</span><p>Lighter ways to connect, jam, play, &amp; connect to our inner-child</p></li>
+    <li><span class="tag t-prom">nerd prom</span><p>End of quarter learning retreat to reflect, share, and connect</p></li>
+  </ul>
+
+  <div class="cx-photos">
+    <img src="/assets/proj-curriculum-lounge.jpg" alt="members reading and talking on the couches in the lounge at The Commons" loading="lazy" decoding="async"/>
+    <img src="/assets/proj-curriculum-library.jpg" alt="an evening gathering in the library lounge at The Commons" loading="lazy" decoding="async"/>
+  </div>
+
+  <div class="cx-evenings">
+    <div>
+      <h5 class="cx-sub">thursday eve</h5>
+      <ol class="cx-sched">
+        <li><span class="when">5 pm</span><span class="what"><span class="tag t-soft">hot cocoa &amp; vibe</span></span></li>
+        <li><span class="when">6–7</span><span class="what"><span class="tag t-salon">salon</span><span>Collective flourishing <em>@ Moroccan lounge</em></span><span>Transcending identity <em>@ Wabi Sabi lounge</em></span></span></li>
+        <li><span class="when">7–8</span><span class="what"><span class="tag t-junto">junto</span><span>Personal ethics <em>@ Solarpunk Library</em></span><span>Physics discussion <em>@ Cafe</em></span></span></li>
+        <li><span class="when">8–9</span><span class="what"><span class="tag t-circle">circle</span><span>Writing circle <em>@ Studio</em></span><span>Founder support circle <em>@ Hogwarts Study</em></span></span></li>
+        <li><span class="when">10+</span><span class="what"><span class="tag t-play">play</span><span>Music open mic <em>@ Philosophy Salon</em></span><span>Board games <em>@ Philosophy Salon</em></span></span></li>
+      </ol>
+    </div>
+    <div>
+      <h5 class="cx-sub">friday eve</h5>
+      <ol class="cx-sched">
+        <li><span class="when">5 pm</span><span class="what"><span class="tag t-soft">community potluck</span></span></li>
+        <li><span class="when">6–7</span><span class="what"><span class="tag t-salon">salon</span><span>Spirituality &amp; self <em>@ Moroccan lounge</em></span><span>Metascience <em>@ Wabi Sabi lounge</em></span></span></li>
+        <li><span class="when">7–8</span><span class="what"><span class="tag t-junto">junto</span><span>SF civics <em>@ Solarpunk Library</em></span><span>Novel user interfaces <em>@ Cafe</em></span></span></li>
+        <li><span class="when">8–9</span><span class="what"><span class="tag t-circle">circle</span><span>Wayfinding circle <em>@ Studio</em></span><span>Grief circle <em>@ Hogwarts Study</em></span></span></li>
+        <li><span class="when">10+</span><span class="what"><span class="tag t-play">play</span><span>Poker night <em>@ Philosophy Salon</em></span><span>Sketching &amp; painting <em>@ Philosophy Salon</em></span></span></li>
+      </ol>
+    </div>
+  </div>
+
+  <h5 class="cx-sub">a sample of the offerings</h5>
+  <ul class="cx-offerings">
+    <li><span class="tag t-salon">salon</span><p class="o-title">Opening the American Mind</p><p class="o-meta">with Karthik Bala · 6 weeks</p><p class="o-desc">Stepping out of the present to empathize with classical and traditionalist cultures on their ideas about art, politics, happiness, education, and metaphysics. Can we learn something from the “primitive”?</p></li>
+    <li><span class="tag t-circle">circle</span><p class="o-title">Artist Sacred Circle</p><p class="o-meta">with Morgan Fabian · 8 weeks</p><p class="o-desc">This group will create a container where our craft takes center stage. We’ll show up for our art by letting our inner child play, forging creative alliances, identifying blockers, &amp; celebrating the gifts each of us bring to the world.</p></li>
+    <li><span class="tag t-circle">circle</span><p class="o-title">Novel User Interface Design</p><p class="o-meta">with Andy Matuschak · 4 weeks</p><p class="o-desc">A small group for designers inventing novel dynamic media or unusual user interfaces in any modality. We’ll dive deep on each other’s work, offer crit, and jam on ideas.</p></li>
+    <li><span class="tag t-salon">salon</span><p class="o-title">Metascience Salon Series</p><p class="o-meta">with Anna Wang &amp; Janelle Tam · 4 weeks</p><p class="o-desc">A salon series on utilizing the scientific methodology to study science itself and how the culture of funding science can evolve.</p></li>
+    <li><span class="tag t-junto">junto</span><p class="o-title">Meaning &amp; Belonging</p><p class="o-meta">with Adi Melamed · 8 weeks</p><p class="o-desc">A simple, single threaded conversation to explore what’s alive in us, our frameworks for meaning-making, and how we foster belonging within ourselves and in the world.</p></li>
+    <li><span class="tag t-salon">salon</span><p class="o-title">Forming your Inner Compass</p><p class="o-meta">with Logan Ford · 4 weeks</p><p class="o-desc">Helping people discover their true values &amp; beliefs for making decisions with confidence and conviction. We’ll go through well researched interactive exercises &amp; create concrete goals.</p></li>
+    <li><span class="tag t-junto">junto</span><p class="o-title">Timeless Way of Building</p><p class="o-meta">with Patricia Mou · 6 weeks</p><p class="o-desc">We’ll be reading Christopher Alexander’s “Timeless Way of Building” - philosophy of architecture and urban planning, exploring how people of a society have always pulled the order of their world from their own being.</p></li>
+    <li><span class="tag t-salon">salon</span><p class="o-title">The how of Why</p><p class="o-meta">with Naim Kabir · 3 weeks</p><p class="o-desc">What does “causation” even mean? Why do we tend to care about it? When we care about it, what do we need to figure out what causes what? A journey through philosophy to hardcore econometrics: the how &amp; why of… well, Why.</p></li>
+    <li><span class="tag t-circle">circle</span><p class="o-title">Form &amp; Feeling: Poetry Circle</p><p class="o-meta">with Jessica Zhou · 8 weeks</p><p class="o-desc">This is a poetry hangout - where we’ll meander through questions, conversations, and generative prompts focused on guiding people through different orientations to reading and writing poems.</p></li>
+    <li><span class="tag t-play">play</span><p class="o-title">Foreign Movie Club</p><p class="o-meta">with James Hennessy · monthly</p><p class="o-desc">We watch one foreign (non western) movie per month and have a discussion on it, while acknowledging cultural and time period context.</p></li>
+  </ul>
+</section>
+
+<section class="cx-part">
+  <p class="cx-eyebrow">version 02</p>
+  <h4 class="cx-title">guilds &amp; practicums</h4>
+
+  <div class="cx-mech"><h5>guilds</h5><span>mechanism: bonding</span></div>
+  <p class="cx-lead">Choose a guild for the quarter via the primary way you meaning-make &amp; express:</p>
+  <img class="cx-banners" src="/assets/proj-curriculum-guild-banners.png" alt="the four guild banners: builders, mystics, artists, explorers" width="620" height="312" loading="lazy" decoding="async"/>
+  <ul class="cx-guilds">
+    <li class="g-builders"><p class="g-name">builders</p><p>Builders see problems in the world and tackle them with patience, courage, and insight.</p><p class="g-if">…if you’re building or birthing something into the world</p></li>
+    <li class="g-mystics"><p class="g-name">mystics</p><p>Mystics desire to know &amp; experience the deepest wells of wisdom, liberation, and reality in the human condition.</p><p class="g-if">…if you’re exploring wisdom and spiritual traditions</p></li>
+    <li class="g-artists"><p class="g-name">artists</p><p>Artists embody creative energy as their medium of change, expression, and impact.</p><p class="g-if">…if you’re exploring creative mediums and expression</p></li>
+    <li class="g-explorers"><p class="g-name">explorers</p><p>Explorers are deeply focused on understanding their inner and outer worlds, in search of discovering something new.</p><p class="g-if">…if you’re exploring yourself and the world more broadly</p></li>
+  </ul>
+
+  <div class="cx-compare">
+    <div><p class="c-level">more commitment</p><p class="c-name">guild circles</p><p>The pulsing heart of a Guild. For those wanting to build deeper relationships with other Artists, Mystics, Builders, and Explorers.</p><p class="c-att"><b>attendance:</b> <span class="closed">closed.</span> Only those who can commit to 70%+ sessions can join.</p></div>
+    <div><p class="c-level">less commitment</p><p class="c-name">guild ecosystem</p><p>Wide-ranging Guild-themed events: classes, field trips, salons &amp; socials central to each Guild’s experience.</p><p class="c-att"><b>attendance:</b> <span class="open">open to all.</span> Anyone can join any guild’s events.</p></div>
+  </div>
+
+  <div class="cx-explorer">
+    <h5 class="cx-sub">🔭 explorer guild programming</h5>
+    <p class="cx-lead">The Explorer Guild is a playground to embark on our own Hero’s Journey together. Over 8 weeks, we do a weekly inner and outer challenge together and meet in circles to reflect and integrate.</p>
+    <ol class="cx-journey">
+      <li><p class="j-title">🗺️ The Ordinary World</p><p><b>inner</b> understand our conditioning</p><p><b>outer</b> go to a place that represents your past</p></li>
+      <li><p class="j-title">🔭 Call to Adventure</p><p><b>inner</b> journal your craziest dreams</p><p><b>outer</b> outdoor adventure and rituals</p></li>
+      <li><p class="j-title">🛑 Refusal of the Call</p><p><b>inner</b> exploring our self-limiting beliefs</p><p><b>outer</b> physically “smash” our resistances</p></li>
+      <li><p class="j-title">🎢 Trials &amp; Failure</p><p><b>inner</b> reflect on past fear and failures</p><p><b>outer</b> do a personal small challenge</p></li>
+      <li><p class="j-title">💪 Growth &amp; new skills</p><p><b>inner</b> inner growth exercises</p><p><b>outer</b> open mic night</p></li>
+      <li><p class="j-title">☠️ Death and Rebirth</p><p><b>inner</b> journal about a major challenge</p><p><b>outer</b> do a major challenge</p></li>
+      <li><p class="j-title">🙏 Atonement</p><p><b>inner</b> forgive past selves and others</p><p><b>outer</b> somatic release activity</p></li>
+      <li><p class="j-title">✨ Return with Elixir</p><p><b>inner</b> reflect on the future you post challenge</p><p><b>outer</b> create something from this new place</p></li>
+    </ol>
+    <div class="cx-cycle">
+      <p class="cy-head">explorers circle <span>come together to share reflections from challenges in community</span></p>
+      <ol>
+        <li><b>Pod check-ins</b>check-ins to bring us into the present moment</li>
+        <li><b>Debrief</b>sharing how our challenges went, giving &amp; receiving advice</li>
+        <li><b>Practice sessions</b>exploring together in community</li>
+        <li><b>Integration</b>sharing intentions for the coming week &amp; renew commitment to exploration</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="cx-mech"><h5>practicums</h5><span>mechanism: bridging</span></div>
+  <p class="cx-lead">In-depth and expert-led workshops dedicated to aspects of inner development, meaning-making, spirituality, or self-expression.</p>
+  <ul class="cx-practicums">
+    <li><span class="p-icon" aria-hidden="true">👨‍👨‍👦</span><b>Relationships</b>self to others</li>
+    <li><span class="p-icon" aria-hidden="true">👩‍🎤</span><b>Creativity</b>self-expression</li>
+    <li><span class="p-icon" aria-hidden="true">🧭</span><b>Inner World</b>self to self</li>
+    <li><span class="p-icon" aria-hidden="true">🌌</span><b>Outer World</b>self to world</li>
+    <li><span class="p-icon" aria-hidden="true">🧘</span><b>Holistic Wellness</b>self to physical self</li>
+    <li><span class="p-icon" aria-hidden="true">🦉</span><b>Wisdom</b>transcending self</li>
+  </ul>
+
+  <h5 class="cx-sub">…on a typical week</h5>
+  <div class="cx-week">
+    <div><p class="d">tues 10/24</p><ul>
+      <li><i>socials</i>Daily On-Site Hello / Lunch (mon-fri)</li><li><i class="k-artist">artist guild</i>Science Fiction Writing</li><li><i>holistic wellness</i>Commons Gym at Fitness SF Fillmore</li><li><i class="k-mystic">mystic guild</i>Exploring the subconscious thru dreams &amp; astral projections</li><li><i class="k-explorer">explorer guild</i>the elephant vanishes (murakami short stories)</li><li><i class="k-artist">artist guild</i>Weekly Artist Guild Circle</li><li><i class="k-explorer">explorer guild</i>Neuro &amp; Consciousness Circle</li><li><i>holistic wellness</i>Zen Center Outing</li><li><i class="k-mystic">mystic guild</i>Dharma Talk Watch Party</li><li><i>inner world</i>Role-Play based Growth Coaching</li></ul></div>
+    <div><p class="d">wed 10/25</p><ul>
+      <li><i>holistic wellness</i>Morning Zazen at Zen Center</li><li><i class="k-builder">builders guild</i>Builders Build (2hr work block)</li><li><i>socials</i>Daily Commons Lunches (mon-thurs)</li><li><i class="k-explorer">explorer guild</i>New Punk Positive Futures Discussion Group</li><li><i>creative expression</i>Discovering Your Style</li><li><i class="k-explorer">explorer guild</i>Interactive People Watching</li><li><i class="k-explorer">explorer guild</i>Resurrecting Ancient Wisdom</li><li><i>relationships</i>Relationship Practicum</li></ul></div>
+    <div><p class="d">thurs 10/26</p><ul>
+      <li><i>holistic wellness</i>Holistic Wellness Opening Circle</li><li><i class="k-artist">artist guild</i>Weekly Artist Co-Creation Session</li><li><i class="k-mystic">mystic guild</i>Weekly Accountability Circle</li><li><i>socials</i>KARAOKE</li><li><i class="k-builder">builder guild</i>Hack Night</li></ul></div>
+    <div><p class="d">fri 10/27</p><ul>
+      <li><i class="k-builder">builder guild</i>Side Builder Circle</li><li><i>socials</i>Nomz &amp; Hangz</li><li><i>onboarding</i>Onboarding Makeup Session</li></ul></div>
+    <div><p class="d">sat 10/28</p><ul>
+      <li><i>relationships</i>Authentic Relating Circle</li><li><i>outer world</i>Design Your Life by Understanding Your Energy</li><li><i>wisdom</i>Retreat: Harmony Within and Beyond w Dr Lucy Xiao</li><li><i>onboarding</i>New Cohort Get To Know You</li><li><i>socials</i>Trippy Movie Night</li></ul></div>
+    <div><p class="d">sun 10/29</p><ul>
+      <li><i class="k-artist">artist guild</i>Writing Circle</li><li><i class="k-builder">builders guild</i>Builders Build (2x2hr work blocks)</li><li><i>holistic wellness</i>Sunday Meditation</li><li><i class="k-artist">artist guild</i>Create Together</li><li><i>wisdom</i>Bhakti SF field trip</li><li><i class="k-explorer">explorer guild</i>Call to adventure field trip</li><li><i class="k-builder">builder guild</i>Weekly Review</li></ul></div>
+  </div>
+</section>
+
+</div>
+</div>
 <div class="panel" role="tabpanel" id="panel-projects-cohere" aria-labelledby="tab-projects-cohere" tabindex="0" hidden><div class="panel-head"><h3>cohere magazine</h3><span class="meta">a magazine from the commons</span></div><p class="project-desc">Theme: What does it mean to flourish? Individually, in community, and systemically (political, social, economic systems)?</p><div class="project-gap"></div><div class="gallery"><img src="/assets/proj-cohere-cover.jpg" alt="the wraparound cover of Cohere, a magazine from The Commons" loading="lazy" decoding="async"/><img src="/assets/proj-cohere-sabbatical.jpg" alt="a spread: reflections on my sabbatical" loading="lazy" decoding="async"/><img src="/assets/proj-cohere-self-trust.jpg" alt="a spread: choose self trust over authenticity" loading="lazy" decoding="async"/><img src="/assets/proj-cohere-coming-of-age.jpg" alt="a spread: coming of age" loading="lazy" decoding="async"/><img src="/assets/proj-cohere-ambition.jpg" alt="a spread: what fuels your ambition?" loading="lazy" decoding="async"/><img src="/assets/proj-cohere-somatic.jpg" alt="a spread: releasing a somatic restriction with massage" loading="lazy" decoding="async"/></div></div>
 <div class="panel" role="tabpanel" id="panel-projects-hearth" aria-labelledby="tab-projects-hearth" tabindex="0" hidden><div class="panel-head"><h3>the mystical hearth</h3><span class="meta">sunday service</span></div><p class="project-desc">a sunday service for seekers of the sacred across every path.</p><p class="project-links"><a class="ext" href="https://themysticalhearth.com/" target="_blank" rel="noopener">themysticalhearth.com</a></p><div class="gallery"><img src="/assets/proj-hearth-1.jpg" alt="a circle gathered around candles" loading="lazy" decoding="async"/><img src="/assets/proj-hearth-2.jpg" alt="candles and cards on the floor" loading="lazy" decoding="async"/><img src="/assets/proj-hearth-4.jpg" alt="a circle and a smiling participant with a notebook" loading="lazy" decoding="async"/><img src="/assets/proj-hearth-5.jpg" alt="candles and a reading" loading="lazy" decoding="async"/><img src="/assets/proj-hearth-6.jpg" alt="a sunday gathering at The Commons" loading="lazy" decoding="async"/></div></div>
 <div class="panel" role="tabpanel" id="panel-projects-hot-takes" aria-labelledby="tab-projects-hot-takes" tabindex="0" hidden><div class="panel-head"><h3>a container to share opinions that will get you cancelled</h3><span class="meta">workshop</span></div><p class="project-desc">The purpose of the workshop was to create a field where people could share charged truths and stay in embodied presence with difference. We wove music, meditation, and somatic grounding throughout the night - not as performative breaks, but as anchoring technologies to drop us beneath the mind and into the body.</p><p class="project-desc">Participants anonymously offered their most controversial or tender “hot takes,” things they rarely say aloud. The group then voted on which specific topics would be worth diving deep into and small discussion groups were formed. In these groups, the invitation was not to convince or negate others, but to share the life experiences, ancestral threads, and cultural conditioning that gave rise to each person&#x27;s view.</p><div class="project-gap"></div><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/1UhCqUR1Tqc" title="a container for hot takes @ harvard" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><h4 class="program-head">ritual progression</h4><ol class="ritual"><li class="step"><span class="step-time">6:00</span><div class="step-body"><p class="step-title">Potluck 🥘</p><p>Everyone contributes one dish</p></div></li><li class="step"><span class="step-time">6:10</span><div class="step-body"><p class="step-title">Musical intro 🎵🎻</p><p>Gather in circle for a cello performance</p></div></li><li class="step"><span class="step-time">6:16</span><div class="step-body"><p class="step-title">Introduction</p><p>Orientation to intention</p><ul><li>Why we’re here: to be seen, and share without judgement</li><li>Guidelines for group<ul><li>Confidentiality</li><li>Talk less about your opinion, but the specific life experiences you had that led to that opinion</li><li>Listen to understand, not judge</li></ul></li></ul></div></li><li class="step"><span class="step-time">6:25</span><div class="step-body"><p class="step-title">Meditation 🧘</p><p>Meditation, embodiment, or loving-kindness</p></div></li><li class="step"><span class="step-time">6:35</span><div class="step-body"><p class="step-title">Participatory co-creation of controversial themes we’d want to discuss</p><p>“What’s an issue you sometimes struggle to share in public or what’s one of your most controversial takes that would be unpopular?” i.e. I have certain anti-capitalist views like limits on wealth,</p><ul><li>Everybody writes down their opinion and puts it in a hat</li><li>Hat gets handed around and each person reads themes out loud</li><li>Theme gets put into WhatsApp for crowd voting</li><li>Top 2 voted on topics are subsequent discussion topics</li></ul></div></li><li class="step"><span class="step-time">6:47</span><div class="step-body"><p class="step-title">Round #1: Forming Triads</p><p>Randomly assign people into groups of three.</p></div></li><li class="step"><span class="step-time">6:50</span><div class="step-body"><p class="step-title">Round #1</p><p>Talk about the 1st issue.</p><ul><li class="ask">What are your perspectives on this topic?</li><li class="ask">What has shaped your perspective to be as it is today?</li></ul></div></li><li class="step pause"><span class="step-time">7:15</span><div class="step-body"><p class="step-title">BREAK</p><p>Change groups</p></div></li><li class="step"><span class="step-time">7:25</span><div class="step-body"><p class="step-title">Round #2</p><p>Talk about the 2nd issue.</p><ul><li class="ask">What are your perspectives on this topic?</li><li class="ask">What has shaped your perspective to be as it is today?</li></ul></div></li><li class="step"><span class="step-time">7:50</span><div class="step-body"><p class="step-title">Somatic movement 💃</p><ul><li>Dance, move, loosen up energy</li></ul></div></li><li class="step"><span class="step-time">7:55</span><div class="step-body"><p class="step-title">Full-Group Reflections</p><p>Regroup in the circle.</p><ul><li>What surprised you? What did you enjoy? What was challenging</li><li>What shifted in your understanding?</li></ul></div></li><li class="step"><span class="step-time">8:30</span><div class="step-body"><p class="step-title">Closing checkout</p><ul><li>1 word/sentence on emotion/learning</li></ul></div></li></ol></div>
 <div class="panel" role="tabpanel" id="panel-projects-council" aria-labelledby="tab-projects-council" tabindex="0" hidden><div class="panel-head"><h3>council of the cosmos</h3><span class="meta">workshop</span></div><p class="project-tagline">re-enchanting the pursuit of multiple truths</p><p class="project-desc">Council of the Cosmos is a structured role-play workshop designed to help participants explore multiple, often conflicting, ways of knowing through embodied perspective-taking.</p><p class="project-desc">Each participant was assigned an archetype - such as the Scientist, Mystic, Artist, or Elder - and began by listening to a short audio meditation specific to their role (recorded by yours truly), accessed through QR codes and headphones. These archetypes were drawn from a custom deck that included guiding values, strengths, and blind spots.</p><div class="project-gap"></div><div class="gallery"><img src="/assets/proj-council-logo.jpg" alt="Council of the Cosmos: re-enchanting the pursuit of multiple truths" loading="lazy" decoding="async"/><img src="/assets/proj-council-cards.jpg" alt="the archetype cards (the politician, the elder, the priestess, the philosopher, the scientist, the mystic, the artist, the farmer, the revolutionary) beside a phenomenon card and a candle" loading="lazy" decoding="async"/><img src="/assets/proj-council-booklets.jpg" alt="Council of the Cosmos booklets fanned out beside a candle and incense" loading="lazy" decoding="async"/><img src="/assets/proj-council-writing.jpg" alt="a participant writing in her council booklet" loading="lazy" decoding="async"/><video muted loop playsinline preload="none" poster="/assets/proj-council-video-poster.jpg" data-src="/assets/proj-council-cards.mp4" aria-label="a short clip moving over the archetype cards, candle and incense"></video></div><div class="slides" data-slides><div class="slides-head"><h4 class="program-head">the slides that guided the council</h4><div class="slides-nav"><button type="button" data-dir="-1" aria-label="previous slide">←</button><span class="slides-count" aria-live="polite">1 / 19</span><button type="button" data-dir="1" aria-label="next slide">→</button></div></div><ol class="slides-track" tabindex="0" aria-label="the slides that guided the council"><li><img src="/assets/council-slide-01.jpg" alt="Council of the Cosmos Re-enchanting the Pursuit of Multiple Truths" width="1280" height="720" loading="lazy" decoding="async"/></li><li><img src="/assets/council-slide-02.jpg" alt="In the near future... In times of need, a council is called to discussed earthly and cosmological matters" width="1280" height="720" loading="lazy" decoding="async"/></li><li><img src="/assets/council-slide-03.jpg" alt="Representatives from all walks of life are invited to share their perspectives and discuss ways to move forward" width="1280" height="720" loading="lazy" decoding="async"/></li><li><img src="/assets/council-slide-04.jpg" alt="Phase 1 Convening" width="1280" height="720" loading="lazy" decoding="async"/></li><li><img src="/assets/council-slide-05.jpg" alt="As a member of the council, you represent an archetype, a particular way of knowing and living To find your archetype, draw three cards and select one to represent throughout this workshopand meditate if you wish Setting the stage" width="1280" height="720" loading="lazy" decoding="async"/></li><li><img src="/assets/council-slide-06.jpg" alt="A moment to step into your archetype’s shoes • Scan the QR code on your chosen card to listen to stories about your archetype • Take a moment to close your and meditate if you wish Getting into character (7 min)" width="1280" height="720" loading="lazy" decoding="async"/></li><li><img src="/assets/council-slide-07.jpg" alt="Based on the stories, the information on the card, and your extrapolations think of where this archetype might inhabit, what they might be called • Draw or write a description of where your archetype might inhabit • What meaning do the tools on your card reveal to you? Share out (10 min)" width="1280" height="720" loading="lazy" decoding="async"/></li><li><img src="/assets/council-slide-08.jpg" alt="• Share one thing you have discovered about your character with the group Share out (10 min)" width="1280" height="720" loading="lazy" decoding="async"/></li><li><img src="/assets/council-slide-09.jpg" alt="Phase 2 A strange phenomenon..." width="1280" height="720" loading="lazy" decoding="async"/></li><li><img src="/assets/council-slide-10.jpg" alt="The oldest participant of the council draws a card from the Phenomenon card deck and reads it out loud to the group A strange phenomenon occurs" width="1280" height="720" loading="lazy" decoding="async"/></li><li><img src="/assets/council-slide-11.jpg" alt="From your archetype’s perspective, elaborate a possible explanation for this phenomenon • What might have caused it? • Does it pose a risk? • Should anything be done about it? Explanation (5 min)" width="1280" height="720" loading="lazy" decoding="async"/></li><li><img src="/assets/council-slide-12.jpg" alt="The Council convenes... • Share your explanation with the group and how you came to it • Engage with other participants to understand their perspectives Discussion (10 min)" width="1280" height="720" loading="lazy" decoding="async"/></li><li><img src="/assets/council-slide-13.jpg" alt="Having listened to the different perspectives on the phenomenon at hand, Council members determine whether any interference is necessary • Did the discusison shift your perspective or has it reinforced your original point of view? • Are there value systems of others that are particularly complementary or averse to the ones you hold? Next Steps (10 min)" width="1280" height="720" loading="lazy" decoding="async"/></li><li><img src="/assets/council-slide-14.jpg" alt="Phase 3 The aggravation..." width="1280" height="720" loading="lazy" decoding="async"/></li><li><img src="/assets/council-slide-15.jpg" alt="The youngest member of the council reads the backside of the phenomenon card in play to the group The strange phenomenon intensifies..." width="1280" height="720" loading="lazy" decoding="async"/></li><li><img src="/assets/council-slide-16.jpg" alt="Response (10min) Using the unique mediums at the disposal of each archetype, council members asses how to move forward given the recent aggravation • How do you move forward from here now that it’s a crisis from your point of view? (use your objects) • Write the explanation out in your book" width="1280" height="720" loading="lazy" decoding="async"/></li><li><img src="/assets/council-slide-17.jpg" alt="Discussion (10min) The Council convenes again... • Share your explanation with the group and how you came to it • Engage with other participants to understand their perspectives" width="1280" height="720" loading="lazy" decoding="async"/></li><li><img src="/assets/council-slide-18.jpg" alt="Conclusion" width="1280" height="720" loading="lazy" decoding="async"/></li><li><img src="/assets/council-slide-19.jpg" alt="Conclusion (10min) As you let go of your archetype, reflect on and share what you might have learned through this experience “What treasure from your archetype other archetypes do you want to keep alive in your own life?”" width="1280" height="720" loading="lazy" decoding="async"/></li></ol></div></div>
 <div class="panel" role="tabpanel" id="panel-projects-haumbody" aria-labelledby="tab-projects-haumbody" tabindex="0" hidden><div class="panel-head"><h3>the haumbody</h3><span class="meta">interior design studio</span></div><p class="project-desc">an interior design studio creating environments for slow routines around self-connection, creativity, and mindfulness.</p><p class="project-links"><a class="ext" href="https://thehaumbody.com/" target="_blank" rel="noopener">thehaumbody.com</a></p><div class="gallery"><img src="/assets/proj-haumbody-tarot-lounge.jpg" alt="a floor lounge under sun and moon tarot tapestries" loading="lazy" decoding="async"/><img src="/assets/proj-haumbody-2.jpg" alt="a bedroom with a tower of books" loading="lazy" decoding="async"/><img src="/assets/proj-haumbody-3.jpg" alt="a bay window reading nook" loading="lazy" decoding="async"/><img src="/assets/proj-haumbody-4.jpg" alt="two armchairs and a knot pouf" loading="lazy" decoding="async"/><img src="/assets/proj-haumbody-brick-nook.jpg" alt="a brick-walled sitting nook with a round wooden table" loading="lazy" decoding="async"/></div></div>
 <div class="panel" role="tabpanel" id="panel-projects-rabbit-holes" aria-labelledby="tab-projects-rabbit-holes" tabindex="0" hidden><div class="panel-head"><h3>rabbit holes</h3><span class="meta">curations &amp; a coffee table book</span></div><p class="project-desc">a newsletter for the soul. weekly curation of the most psychoactive rabbit holes on the edges of the internet.</p><p class="project-links"><a class="ext" href="https://www.therabbitholes.xyz/" target="_blank" rel="noopener">therabbitholes.xyz</a><a class="ext" href="https://www.therabbitholes.xyz/book" target="_blank" rel="noopener">the coffee table book</a></p><div class="gallery"><img src="/assets/proj-rabbitholes-1.jpg" alt="the Rabbit Holes coffee table book" loading="lazy" decoding="async"/><img src="/assets/proj-rabbitholes-2.jpg" alt="a spread from the book" loading="lazy" decoding="async"/><img src="/assets/proj-rabbitholes-3.jpg" alt="a spread from the book" loading="lazy" decoding="async"/><img src="/assets/proj-rabbitholes-4.jpg" alt="a spread from the book" loading="lazy" decoding="async"/><img src="/assets/proj-rabbitholes-5.jpg" alt="a spread from the book" loading="lazy" decoding="async"/><img src="/assets/proj-rabbitholes-6.jpg" alt="a spread from the book" loading="lazy" decoding="async"/></div></div>
+<div class="panel" role="tabpanel" id="panel-projects-calm" aria-labelledby="tab-projects-calm" tabindex="0" hidden><div class="panel-head"><h3>calm meditation app</h3><span class="meta">sr. product manager, community</span></div><div class="project-gap"></div><div class="cx">
+
+<section class="cx-part cx-first">
+  <p class="cx-eyebrow">finding pause in community</p>
+  <p class="cx-lead">I was the Sr. Product Manager overseeing community product strategy at Calm. 2 selected projects:</p>
+  <div class="cm-features">
+    <div><p class="cm-name">Calm Connect</p><p>Calm Connect allows you to start a live session and share it with your friends. Choose any piece of content, and a time you’d like to start. You’ll get a link to share with your friends so you can meditate, relax, or fall asleep together. Afterwards you can reflect with friends on the session.</p></div>
+    <div><p class="cm-name">Calm Groups</p><p>Calm Groups enable you to go on a meditation journey with friends over a 1-week or 1-month duration. The feature engenders strong social accountability via sharing progress, reflections, and encouragement along the way.</p></div>
+  </div>
+</section>
+
+<section class="cx-part">
+  <p class="cx-eyebrow">finding pause by oneself</p>
+  <p class="cx-lead">Led 15+ user research studies via qualitative interviews to understand needs for Calm users. This infographic was the culmination of multiple studies and was used across the company to inform product strategy.</p>
+
+  <h5 class="cx-sub">user archetypes</h5>
+  <ol class="cm-arch">
+    <li class="a1"><p class="a-name">The Reactionist</p><p>Uses Calm to manage acute stresses that pop up during their day</p><p class="a-mode">contemplates</p><p class="a-pole">reactive</p></li>
+    <li class="cm-bridge"><span class="tag">bridge</span><p>Education</p></li>
+    <li class="a2"><p class="a-name">The Course Corrector</p><p>Problems come in waves that last for periods of time, Calm helps them return to normal</p><p class="a-mode">oscillates</p><p class="a-pole">life gets in the way</p></li>
+    <li class="cm-bridge"><span class="tag">bridge</span><p>Behavior Strategies</p></li>
+    <li class="a3"><p class="a-name">The Practitioner</p><p>They’ve established a habit to prevent and manage long term problems</p><p class="a-mode">habit</p><p class="a-pole">proactive</p></li>
+  </ol>
+  <div class="cm-spectrum" aria-label="from reactive to proactive">
+    <p><span>Painkiller</span><i></i><span>Vitamin</span></p>
+    <p><span>Ad hoc</span><i></i><span>Habit</span></p>
+    <p><span>Sleeping Pill</span><i></i><span>Sleep Hygiene</span></p>
+  </div>
+
+  <div class="cm-two">
+    <div>
+      <h5 class="cx-sub">user jobs</h5>
+      <ul class="cm-jobs">
+        <li>Reduce Stress</li><li>Reduce Anxiety</li><li>Improve Sleep</li><li>Invest in Mental Health</li><li>Create or Maintain Routine</li><li>Focus</li><li>Relax</li><li>Grow</li><li>Be Mindful</li><li>Productivity</li><li>Manage Condition</li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="cx-sub">universal needs</h5>
+      <div class="cm-needs">
+        <ol><li class="n-head">Guidance</li><li>Starting Point</li><li>Path</li><li>In the Moment</li><li class="n-quote">“Carry me through”</li></ol>
+        <ol><li class="n-head n-b">Progress</li><li>This will work</li><li>This is working</li><li>This works</li><li class="n-quote">“You should try Calm”</li></ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+</div>
+<div class="panel" role="tabpanel" id="panel-projects-mindstreaks" aria-labelledby="tab-projects-mindstreaks" tabindex="0" hidden><div class="panel-head"><h3>mindstreaks</h3><span class="meta">a community social meditation app</span></div><div class="project-gap"></div><div class="cx">
+<section class="cx-part cx-first">
+  <div class="ms-screens">
+    <div class="ms-card">
+      <p class="ms-label">the zen feed</p>
+      <div class="ms-post">
+        <p class="ms-who"><b>Patricia ☕</b><span>20 min</span></p>
+        <p class="ms-text">2 big reflections…</p>
+        <p class="ms-kudos">9 kudos <span>🙏 kudos</span></p>
+      </div>
+      <div class="ms-post ms-faint"><p class="ms-who"><b>Parthi</b><span>10 min</span></p></div>
+      <p class="ms-cap">After each sit, members share a reflection to the feed and friends send kudos.</p>
+    </div>
+    <div class="ms-card">
+      <p class="ms-label">your streak</p>
+      <p class="ms-streak">Patricia, you’re on a <b>17</b> day streak ✨</p>
+      <div class="ms-stats"><p><span>mindful time</span>6h 59m</p><p><span>total sessions</span>34</p><p><span>longest streak</span>17 d</p></div>
+      <div class="ms-grid" aria-hidden="true">
+        <i class="l3"></i><i></i><i class="l1"></i><i class="l1"></i><i></i><i></i><i></i>
+        <i></i><i></i><i class="l3"></i><i></i><i class="l3"></i><i class="l3"></i><i class="l3"></i>
+        <i class="l2"></i><i class="l1"></i><i class="l3"></i><i class="l1"></i><i class="l3"></i><i class="l3"></i><i class="l3"></i>
+        <i class="l2"></i><i class="l3"></i><i class="l2"></i><i class="l3"></i><i class="l3"></i><i class="l3"></i><i class="l3 now"></i>
+      </div>
+      <p class="ms-cap">A profile tracks mindful time, sessions and streaks on a calendar of practice.</p>
+    </div>
+    <div class="ms-card">
+      <p class="ms-label">meditate with friends</p>
+      <div class="ms-sit"><p><b>60 min Sunday Sits</b><span>Dec 11 · 5pm</span></p><p class="ms-live">live · join now 👉</p></div>
+      <div class="ms-sit"><p><b>30 min Monday Risers ☀️</b><span>Dec 11 · 5am</span></p><p>you’re confirmed ✨ along with 52 others</p></div>
+      <div class="ms-sit ms-faint"><p><b>30 min Monday Risers ☀️</b><span>Dec 21 · 5am</span></p><p>confirm your attendance ✋</p></div>
+      <p class="ms-cap">Sit solo, or join scheduled group sits with friends.</p>
+    </div>
+  </div>
+</section>
+</div>
+</div>
 </div></section>
 <section class="elsewhere" id="elsewhere" aria-labelledby="h-elsewhere"><h2 id="h-elsewhere">elsewhere</h2><ul class="press"><li><a href="https://www.tabletmag.com/sections/community/articles/salon-nones-commons-san-francisco" target="_blank" rel="noopener"><span class="press-type" aria-hidden="true">tablet</span><span><span class="press-source">tablet magazine</span><span class="press-title">a salon for nones</span></span></a></li><li><a href="https://www.workspaces.xyz/p/368-patricia-mou" target="_blank" rel="noopener"><img src="/assets/press-workspaces.jpg" alt="" width="80" height="50" loading="lazy" decoding="async"/><span><span class="press-source">workspaces #368</span><span class="press-title">patricia mou&#x27;s desk setup and home workspace</span></span></a></li><li><a href="https://words.getmatter.com/p/words-that-matter-issue-16-feat-patricia" target="_blank" rel="noopener"><img src="/assets/press-words-that-matter.jpg" alt="" width="80" height="50" loading="lazy" decoding="async"/><span><span class="press-source">words that matter, issue 16</span><span class="press-title">self-respect, living like weasels, ideas are alive, in praise of shadows</span></span></a></li></ul></section>
 </main>

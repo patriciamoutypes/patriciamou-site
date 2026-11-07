@@ -464,6 +464,18 @@
      "proj-commons-6.jpg",
      "the long study table"
     ]
+   ],
+   "blocks": [
+    "commons-space.html"
+   ]
+  },
+  {
+   "id": "curriculum",
+   "tab": "commons curriculum",
+   "name": "designing a curriculum for the commons",
+   "role": "curriculum design",
+   "blocks": [
+    "curriculum.html"
    ]
   },
   {
@@ -841,6 +853,24 @@
      "proj-rabbitholes-6.jpg",
      "a spread from the book"
     ]
+   ]
+  },
+  {
+   "id": "calm",
+   "tab": "calm",
+   "name": "calm meditation app",
+   "role": "sr. product manager, community",
+   "blocks": [
+    "calm.html"
+   ]
+  },
+  {
+   "id": "mindstreaks",
+   "tab": "mindstreaks",
+   "name": "mindstreaks",
+   "role": "a community social meditation app",
+   "blocks": [
+    "mindstreaks.html"
    ]
   }
  ],
