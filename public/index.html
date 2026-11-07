@@ -66,8 +66,8 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 .pm-sigil{width:160px}
 .contact{text-align:right;font-size:15px;line-height:1.9}
 .contact span{color:var(--muted)}
-.listen{width:250px;margin-top:-12px}
-.listen-label{margin:0 0 6px;text-align:right;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.listen{width:100%;max-width:360px;margin:0 0 28px}
+.listen-label{margin:0 0 6px;text-align:left;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
 .listen iframe{display:block;border:0;border-radius:12px;background:#f2eeeb}
 .subscribe{margin-top:32px;padding:18px 20px;background:var(--wash);border:1px solid var(--line);border-radius:6px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .subscribe p{font-size:15px}
@@ -166,6 +166,7 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 
 
 .foot{padding:120px 0 48px;font-size:14px;color:var(--faint)}
+.foot-copy{margin:0}
 
 /* designed sections inside a project (tools/partials) */
 .cx-figure{display:block}
@@ -298,8 +299,6 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
   .contact{order:1;text-align:left;font-size:15px;margin:0}
   .contact br{display:none}
   .contact a{margin-right:16px}
-  .listen{order:2;width:100%;max-width:340px;margin:0}
-  .listen-label{text-align:left}
   .shelf{grid-template-columns:minmax(0,1fr);gap:18px;padding-top:80px}
   .shelf-index{position:static}
   .tabs{flex-direction:row;overflow-x:auto;gap:8px;padding-bottom:6px;scrollbar-width:none}
@@ -387,10 +386,6 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
       <a class="ext" href="https://www.instagram.com/patriciaxmou/" target="_blank" rel="noopener">instagram</a><br/>
       <a class="ext" href="https://buymeacoffee.com/patriciamou" target="_blank" rel="noopener">buy me a coffee</a>
     </p>
-    <div class="listen">
-      <p class="listen-label">♪ now playing</p>
-      <iframe src="https://open.spotify.com/embed/track/0AzC5yi44IeDKcHObw9S7J?utm_source=generator&amp;theme=0" title="A Message from the Stars (1111 Hz) by Malte Marten on Spotify" width="100%" height="80" frameborder="0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-    </div>
   </div>
 </header>
 
@@ -625,7 +620,13 @@ h2{font:500 27px/1.2 var(--serif);margin:0 0 10px}
 </div></section>
 </main>
 
-<footer class="foot">© patricia mou</footer>
+<footer class="foot">
+  <div class="listen">
+    <p class="listen-label">♪ press play</p>
+    <iframe src="https://open.spotify.com/embed/track/0yCpyL8UB6OmGlJAfqrqwI?utm_source=generator&amp;theme=0" title="741 Hz Clear Negative Energy on Spotify" width="100%" height="80" frameborder="0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+  </div>
+  <p class="foot-copy">© patricia mou</p>
+</footer>
 </div>
 
 <script src="/assets/sigil.v6.js" defer></script>
