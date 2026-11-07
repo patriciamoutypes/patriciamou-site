@@ -28,6 +28,21 @@ from their own CDNs, which is fine: none of them is Webflow.
 - The old Google Analytics (UA) tag is left in place but its loader was
   removed; UA stopped collecting data in 2023.
 
+## Homepage (built from tools/)
+
+`public/index.html` is generated. Edit the bio, "currently" list, subscribe
+box or styles in `tools/home.template.html`; edit writing themes, posts,
+projects and press in `tools/home.json`. Then run:
+
+```bash
+python3 tools/build_home.py
+```
+
+To add a new Temple Upon a Hill post, append it to `posts` in `home.json`
+with one of the theme ids (`sacred`, `fourth-places`, `cities`, `notes`,
+`rabbit-holes`). Post thumbnails load from Substack's image CDN; project and
+press photos live in `public/assets/` (`proj-*.jpg`, `press-*.jpg`).
+
 ## Preview locally
 
 From the `Vibe Coding` folder the `patriciamou-site` entry in

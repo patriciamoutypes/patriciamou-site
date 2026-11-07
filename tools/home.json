@@ -1,0 +1,640 @@
+{
+ "writing_themes": [
+  {
+   "id": "sacred",
+   "name": "the sacred"
+  },
+  {
+   "id": "fourth-places",
+   "name": "fourth places"
+  },
+  {
+   "id": "cities",
+   "name": "cities & space"
+  },
+  {
+   "id": "notes",
+   "name": "notes to self"
+  },
+  {
+   "id": "rabbit-holes",
+   "name": "rabbit holes",
+   "more": {
+    "label": "every curated rabbit holes issue",
+    "url": "https://curatedrabbitholes.substack.com/archive"
+   }
+  }
+ ],
+ "posts": [
+  {
+   "theme": "sacred",
+   "title": "the future of spirituality is polyphonic",
+   "subtitle": "The Temple after Babel, why the age of the single prophet is ending, and what is possible in its place",
+   "date": "2026-08-05",
+   "url": "https://templeuponahill.substack.com/p/the-future-of-spirituality-is-polyphonic",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F59eb4bb6-b0cc-4014-b8fe-75419dea19e9_3840x2810.jpeg"
+  },
+  {
+   "theme": "sacred",
+   "title": "all of creation is striving towards reunion",
+   "subtitle": "the hieros gamos",
+   "date": "2026-07-23",
+   "url": "https://templeuponahill.substack.com/p/all-of-creation-is-striving-towards",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F66b34c74-0a38-4985-b220-2e5f649bc273_1698x1320.png"
+  },
+  {
+   "theme": "sacred",
+   "title": "the temple upon a hill",
+   "subtitle": "in the middle of the world, on top of a hill, there rises a temple",
+   "date": "2026-07-06",
+   "url": "https://templeuponahill.substack.com/p/the-temple-on-a-hill",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb0f9867f-7e8c-462d-a48f-548e02c1ef3d_2014x1338.jpeg"
+  },
+  {
+   "theme": "fourth-places",
+   "title": "🕯️ Rituals at The Commons",
+   "subtitle": "the steady heartbeat of life in community",
+   "date": "2026-03-24",
+   "url": "https://templeuponahill.substack.com/p/rituals-at-the-commons",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4bae2b9c-bbf4-4791-9da5-63caa0758461_1920x1128.png"
+  },
+  {
+   "theme": "fourth-places",
+   "title": "23 learnings on building community and holding space",
+   "subtitle": "re-composting learnings from failure, utopia, and everything in between",
+   "date": "2026-03-05",
+   "url": "https://templeuponahill.substack.com/p/20-learnings-on-building-community",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcd7591ce-3837-40a4-9d47-9fb08b30fb7b_4032x3024.jpeg"
+  },
+  {
+   "theme": "notes",
+   "title": "40(ish) pieces of \"advice\" from 2025",
+   "subtitle": "a constellation of insights, provocations, and downloads",
+   "date": "2025-12-29",
+   "url": "https://templeuponahill.substack.com/p/40ish-pieces-of-advice-from-2025",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F44031eca-af5c-46bb-9237-8eea623e21a6_640x413.png"
+  },
+  {
+   "theme": "sacred",
+   "title": "a civic hearth for dharma",
+   "subtitle": "many paths to self-actualization, with a center that holds",
+   "date": "2025-12-19",
+   "url": "https://templeuponahill.substack.com/p/a-civic-hearth-for-dharma",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F39bbc81d-6deb-4b41-8954-a79f66693519_2178x1670.png"
+  },
+  {
+   "theme": "fourth-places",
+   "title": "containers for emergence & pluralism",
+   "subtitle": "holding complexity without collapse & 2 experiments",
+   "date": "2025-06-26",
+   "url": "https://templeuponahill.substack.com/p/containers-for-emergence-and-pluralism",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F408518fb-2a45-4c41-9cec-7247cde53444_1080x1350.jpeg"
+  },
+  {
+   "theme": "sacred",
+   "title": "mystical experience in a secular age",
+   "subtitle": "and the infrastructure that supports it",
+   "date": "2025-06-17",
+   "url": "https://templeuponahill.substack.com/p/mystical-experience-in-a-secular",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F81820d82-9f16-40ca-9f62-b4209c468e80_1582x900.png"
+  },
+  {
+   "theme": "sacred",
+   "title": "thresholds of the sacred",
+   "subtitle": "buddhist interfaces between worlds",
+   "date": "2025-06-02",
+   "url": "https://templeuponahill.substack.com/p/thresholds-of-the-sacred",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7aa7ef8d-d206-46db-ad8f-0de3f5bcad4f_1251x888.jpeg"
+  },
+  {
+   "theme": "rabbit-holes",
+   "title": "welcome down the rabbit hole",
+   "subtitle": "if you're new around here, read me 👋",
+   "date": "2025-04-22",
+   "url": "https://templeuponahill.substack.com/p/welcome-down-the-rabbit-hole",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9d0dbe8e-c7db-4c9f-9516-72c708493737_2218x1364.png"
+  },
+  {
+   "theme": "sacred",
+   "title": "the future will be mystical",
+   "subtitle": "designing the social architecture for post-religious spirituality",
+   "date": "2025-04-06",
+   "url": "https://templeuponahill.substack.com/p/the-future-will-be-mystical",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F711ff190-637e-4140-a16d-43d3e4455468_966x586.png"
+  },
+  {
+   "theme": "rabbit-holes",
+   "title": "vol 11. monthly recs & rabbit holes",
+   "subtitle": "a hundred roots silently drinking, blind date with a book, perfect days",
+   "date": "2025-02-02",
+   "url": "https://templeuponahill.substack.com/p/vol-11-monthly-recs-and-rabbit-holes",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F039c2714-4c6f-473b-ab26-e3897e7a2167_1080x1080.jpeg"
+  },
+  {
+   "theme": "fourth-places",
+   "title": "the next evolution of The Commons",
+   "subtitle": "opening our doors to playful co-working by day & community meeting house by night",
+   "date": "2025-01-19",
+   "url": "https://templeuponahill.substack.com/p/the-next-evolution-of-the-commons",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1c56caf6-976b-434f-a650-9cae69f39e60_2370x1534.png"
+  },
+  {
+   "theme": "notes",
+   "title": "40 pieces of \"advice\"",
+   "subtitle": "a smattering of insights, provocations, and downloads from 2024",
+   "date": "2025-01-17",
+   "url": "https://templeuponahill.substack.com/p/40-pieces-of-advice",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe826af7f-8a81-4e45-a8c1-89a7579abf84_1552x1212.png"
+  },
+  {
+   "theme": "cities",
+   "title": "reclaiming the utopian vision",
+   "subtitle": "toward a new synthesis in urban planning",
+   "date": "2024-12-27",
+   "url": "https://templeuponahill.substack.com/p/reclaiming-the-utopian-vision",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdbec4f5c-ecbf-4ef4-a06d-96042dc59154_960x540.jpeg"
+  },
+  {
+   "theme": "rabbit-holes",
+   "title": "vol 10. monthly recs & rabbit holes",
+   "subtitle": "re-enchantment, murmurations, cosmic consciousness",
+   "date": "2024-11-28",
+   "url": "https://templeuponahill.substack.com/p/vol-10-monthly-recs-and-rabbit-holes",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7371a0c8-0d54-4c4c-b152-e993e05a76eb_640x640.jpeg"
+  },
+  {
+   "theme": "rabbit-holes",
+   "title": "vol 9. monthly recs & rabbit holes",
+   "subtitle": "wind phones, coming home, [un] doing philosophy",
+   "date": "2024-11-11",
+   "url": "https://templeuponahill.substack.com/p/vol-9-monthly-recs-and-rabbit-holes",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9f338c5e-e8ad-46e0-aa51-c20028c0073b_1200x798.png"
+  },
+  {
+   "theme": "fourth-places",
+   "title": "a publics for being",
+   "subtitle": "not doing",
+   "date": "2024-10-07",
+   "url": "https://templeuponahill.substack.com/p/a-publics-for-being",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa73ec5ea-2a70-4ac1-8105-59f91fc8a060_1750x1308.png"
+  },
+  {
+   "theme": "notes",
+   "title": "why everything feels off",
+   "subtitle": "evolving past individualism",
+   "date": "2024-07-26",
+   "url": "https://templeuponahill.substack.com/p/why-everything-feels-off",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcec1a334-1370-4b85-ae1a-5768a87c12b9_2250x1395.png"
+  },
+  {
+   "theme": "rabbit-holes",
+   "title": "self-publishing a coffee table book for catharsis, yours & mine",
+   "subtitle": "The Rabbit Holes Coffee Table Book",
+   "date": "2024-07-21",
+   "url": "https://templeuponahill.substack.com/p/self-publishing-a-coffee-table-book",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe7e527da-4ea2-4a8e-9997-753c387d7ea2_4576x2854.png"
+  },
+  {
+   "theme": "rabbit-holes",
+   "title": "vol 8. monthly recs & rabbit holes",
+   "subtitle": "soft-geometry, anatomy of a hug, the numinous",
+   "date": "2024-06-09",
+   "url": "https://templeuponahill.substack.com/p/vol-8-monthly-recs-and-rabbit-holes",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcae5b250-9a16-4da0-bc51-263aed5ca0ba_1440x1800.png"
+  },
+  {
+   "theme": "fourth-places",
+   "title": "what is a fourth place?",
+   "subtitle": "neither 3rd space nor social club but another secret third thing",
+   "date": "2024-05-26",
+   "url": "https://templeuponahill.substack.com/p/what-is-a-forth-place",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F24021d09-11dd-4190-9980-29e03894e3b5_1256x958.png"
+  },
+  {
+   "theme": "rabbit-holes",
+   "title": "vol 7. monthly recs & rabbit holes",
+   "subtitle": "perfect days, sci-fi bookstores, speed of the soul",
+   "date": "2024-05-07",
+   "url": "https://templeuponahill.substack.com/p/vol-7-monthly-recs-and-rabbit-holes",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2cc5ccc6-991f-4d64-81a2-ddde35a96229_1280x960.png"
+  },
+  {
+   "theme": "rabbit-holes",
+   "title": "vol 6. monthly recs & rabbit holes",
+   "subtitle": "kissa bars, community magic, soulmaking",
+   "date": "2024-04-03",
+   "url": "https://templeuponahill.substack.com/p/vol-6-monthly-recs-and-rabbit-holes",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3ecee2a0-1b5f-46b6-86a3-b6bbe77ca4f9_1024x572.png"
+  },
+  {
+   "theme": "notes",
+   "title": "choose self-trust over authenticity",
+   "subtitle": "what hinders us & rethinking our institutions",
+   "date": "2024-03-28",
+   "url": "https://templeuponahill.substack.com/p/choose-self-trust-over-authenticity",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd5a520ef-ee88-4181-a597-1b1143f69137_588x602.png"
+  },
+  {
+   "theme": "notes",
+   "title": "musings on the point of life",
+   "subtitle": "in 2 ways",
+   "date": "2024-03-19",
+   "url": "https://templeuponahill.substack.com/p/musings-on-the-point-of-life",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd7838842-8afd-466e-917d-23326c0064c6_1150x630.png"
+  },
+  {
+   "theme": "rabbit-holes",
+   "title": "vol 5. monthly recs & rabbit holes",
+   "subtitle": "kalediscope light, folding laundry, zen poetry",
+   "date": "2024-03-03",
+   "url": "https://templeuponahill.substack.com/p/vol-5-monthly-recs-and-rabbit-holes",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa9491c13-c9e6-45c0-952a-0efee3c63080_736x566.png"
+  },
+  {
+   "theme": "rabbit-holes",
+   "title": "vol 4. monthly recs & rabbit holes",
+   "subtitle": "self-respect, living like weasels, pilgrimage, shadows",
+   "date": "2024-02-04",
+   "url": "https://templeuponahill.substack.com/p/vol-4-monthly-recs-and-rabbit-holes",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2b0a199c-be6c-4b43-98be-5bc72838490d_758x505.png"
+  },
+  {
+   "theme": "rabbit-holes",
+   "title": "vol 3. monthly recs & rabbit holes",
+   "subtitle": "resting into winter, death dreams, virtue of being boring",
+   "date": "2024-01-21",
+   "url": "https://templeuponahill.substack.com/p/vol-3-monthly-recs-and-rabbit-holes",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5a17ec3c-3758-46a7-ac3a-d4ddb5e34fd0_599x992.png"
+  },
+  {
+   "theme": "sacred",
+   "title": "a spirituality that transforms",
+   "subtitle": "a journal entry from Ken Wilber",
+   "date": "2024-01-14",
+   "url": "https://templeuponahill.substack.com/p/a-spirituality-that-transforms",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3b1b7c5c-3b66-46f6-ae88-730bad1abab0_500x328.webp"
+  },
+  {
+   "theme": "cities",
+   "title": "cities and purpose",
+   "subtitle": "building cities around purpose, not ambition",
+   "date": "2024-01-07",
+   "url": "https://templeuponahill.substack.com/p/cities-and-purpose",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5b9de96b-25f6-41ff-9db4-aa832711fbea_1792x1024.webp"
+  },
+  {
+   "theme": "rabbit-holes",
+   "title": "vol 2. monthly recs & rabbit holes",
+   "subtitle": "new wellness wisdom offering",
+   "date": "2023-12-24",
+   "url": "https://templeuponahill.substack.com/p/vol-2-monthly-recs-and-rabbit-holes",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F81721f59-9f6c-4348-bfe0-1cfa7a869867_1146x858.png"
+  },
+  {
+   "theme": "notes",
+   "title": "50 pieces of advice",
+   "subtitle": "notes to self from self",
+   "date": "2023-12-19",
+   "url": "https://templeuponahill.substack.com/p/50-pieces-of-advice",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F804cd568-d22a-48f7-83e4-6a13e35f8e98_781x960.png"
+  },
+  {
+   "theme": "fourth-places",
+   "title": "introducing a new vision for The Commons 🏛️",
+   "subtitle": "finding out who we actually are, in order to express ourselves from that place",
+   "date": "2023-09-13",
+   "url": "https://templeuponahill.substack.com/p/introducing-a-new-vision-for-the",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feda9cb03-1fe1-4850-aa6c-387e47e2cdc7_1976x1276.png"
+  },
+  {
+   "theme": "fourth-places",
+   "title": "introducing \"the fourth place\" & why \"third places\" have fallen short on their promise",
+   "subtitle": "reflections from 1 year of building The Commons",
+   "date": "2023-09-04",
+   "url": "https://templeuponahill.substack.com/p/introducing-the-fourth-place-and",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcd7591ce-3837-40a4-9d47-9fb08b30fb7b_4032x3024.jpeg"
+  },
+  {
+   "theme": "fourth-places",
+   "title": "a manifesto: the next era of third spaces as crucibles for meaning-making",
+   "subtitle": "meeting people where they are",
+   "date": "2023-07-16",
+   "url": "https://templeuponahill.substack.com/p/a-manifesto-the-next-era-of-third",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9fe27873-aaf2-4cb3-ad35-a43359621f99_1200x675.jpeg"
+  },
+  {
+   "theme": "notes",
+   "title": "dispatch from India",
+   "subtitle": "i'm alive!",
+   "date": "2023-04-12",
+   "url": "https://templeuponahill.substack.com/p/vol-54-dispatch-from-india",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F90e6621c-8abc-4e1b-a481-6bcc82c19de6_996x740.png"
+  },
+  {
+   "theme": "sacred",
+   "title": "our hearts deepest want",
+   "subtitle": "freedom in surrender",
+   "date": "2023-02-04",
+   "url": "https://templeuponahill.substack.com/p/vol-53-our-hearts-deepest-want",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F427f2ad0-fbfe-4067-8859-7f29f2d8fa2d_827x820.png"
+  },
+  {
+   "theme": "fourth-places",
+   "title": "going back to \"school\"",
+   "subtitle": "Campus 🏛️ at The SF Commons",
+   "date": "2022-12-11",
+   "url": "https://templeuponahill.substack.com/p/vol-52-going-back-to-school",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F38d99c35-9777-4fe0-817b-0b036c3c4b68_1814x992.png"
+  },
+  {
+   "theme": "fourth-places",
+   "title": "the journey",
+   "subtitle": "+ masterlist of third spaces in nyc, la, sf + bay area",
+   "date": "2022-11-26",
+   "url": "https://templeuponahill.substack.com/p/vol-51-the-journey",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F7bc9b132-a7de-4557-be8e-1dac6fd92524_4032x3024.jpeg"
+  },
+  {
+   "theme": "sacred",
+   "title": "the current state of affairs",
+   "subtitle": "meditation practice as a leaving and returning to",
+   "date": "2022-11-16",
+   "url": "https://templeuponahill.substack.com/p/vol-50-the-current-state-of-affairs",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F0f379ed9-0e2d-4dd7-9033-029d58ed6fb7_1072x1420.png"
+  },
+  {
+   "theme": "cities",
+   "title": "when picking furniture becomes spiritual",
+   "subtitle": "+ before & after photos of The Commons",
+   "date": "2022-09-08",
+   "url": "https://templeuponahill.substack.com/p/vol-49-when-picking-furniture-becomes",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc689a43e-7423-4fb0-ba89-93aa51a85277_1105x824.png"
+  },
+  {
+   "theme": "cities",
+   "title": "the spaces we dwell in",
+   "subtitle": "philosophy of architecture & muses",
+   "date": "2022-06-25",
+   "url": "https://templeuponahill.substack.com/p/-wellness-wisdom-vol-48-the-spaces",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F0b46b743-d448-4dde-bd86-9f3c5dd2bef2_1500x1200.jpeg"
+  },
+  {
+   "theme": "fourth-places",
+   "title": "why i'm building The Commons in SF",
+   "subtitle": "rekindling thoughtful dialogue, playful curiosity, and community in the heart of sf",
+   "date": "2022-05-01",
+   "url": "https://templeuponahill.substack.com/p/-wellness-wisdom-vol-47-why-im-building",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fbfd7f01a-b519-44bd-9b06-430de57e6ac5_1500x1125.jpeg"
+  },
+  {
+   "theme": "sacred",
+   "title": "good vibes and maps of consciousness",
+   "subtitle": "on the importance of vibe checks",
+   "date": "2022-02-28",
+   "url": "https://templeuponahill.substack.com/p/-wellness-wisdom-vol-46-good-vibes",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F9e97ade3-eaaf-47fb-9110-07aaa2786553_2560x2560.jpeg"
+  },
+  {
+   "theme": "notes",
+   "title": "30 pieces of unsolicited advice",
+   "subtitle": "reflections and wisdom from the past year",
+   "date": "2022-01-16",
+   "url": "https://templeuponahill.substack.com/p/-wellness-wisdom-vol45-30-pieces",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fa5b4ed94-bab5-40f0-9eb5-dd4bf18bfb05_1456x971.png"
+  },
+  {
+   "theme": "notes",
+   "title": "the simple and ordinary",
+   "subtitle": "to remember in film",
+   "date": "2021-11-10",
+   "url": "https://templeuponahill.substack.com/p/-wellness-wisdom-vol44-the-simple",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F96e71da4-2c45-43a9-b292-8220e6f36a13_640x426.gif"
+  },
+  {
+   "theme": "notes",
+   "title": "my current morning routine and new mini-films",
+   "subtitle": "☕",
+   "date": "2021-10-16",
+   "url": "https://templeuponahill.substack.com/p/-wellness-wisdom-vol42-my-current",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fe9c7d2fc-6fc3-4883-9910-7c4e881f9f7f_1108x676.png"
+  },
+  {
+   "theme": "sacred",
+   "title": "to be a monk or a capitalist?",
+   "subtitle": "",
+   "date": "2021-09-24",
+   "url": "https://templeuponahill.substack.com/p/-wellness-wisdom-vol42-to-be-a-monk",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F69b0d16b-8789-4ae1-b762-3a0731856bb1_1848x1362.png"
+  },
+  {
+   "theme": "fourth-places",
+   "title": "the future of virtual and physical third spaces (pt.3 of the third place series)",
+   "subtitle": "how to live a year like it's your last, doing a “universe has my back” audit, and rustic farm lifestyles",
+   "date": "2021-06-27",
+   "url": "https://templeuponahill.substack.com/p/-wellness-wisdom-vol40-the-future",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F6648056d-7d36-451f-ad9f-b7c2c428ba9b_2768x1618.png"
+  },
+  {
+   "theme": "notes",
+   "title": "bit by bit, then all at once",
+   "subtitle": "a poem",
+   "date": "2021-06-06",
+   "url": "https://templeuponahill.substack.com/p/-wellness-wisdom-vol40-bit-by-bit",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fccfb3004-34d0-4491-8946-e32d96807cb1_3024x4032.jpeg"
+  },
+  {
+   "theme": "fourth-places",
+   "title": "utopian cities and disconnection (pt.2 of the third place series)",
+   "subtitle": "walks in nature, lindy libraries, & beauty in solitude",
+   "date": "2021-05-16",
+   "url": "https://templeuponahill.substack.com/p/-wellness-wisdom-vol39-utopian-cities",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F70e4a5ce-87f6-4f4c-aaa1-f199b5691fb1_2160x1200.jpeg"
+  },
+  {
+   "theme": "fourth-places",
+   "title": "what is the third place? (pt.1 of the third place series)",
+   "subtitle": "third spaces, dating different arguments, Japanese morning routines",
+   "date": "2021-05-02",
+   "url": "https://templeuponahill.substack.com/p/-wellness-wisdom-vol38-what-is-the",
+   "thumb": "https://substackcdn.com/image/fetch/w_240,h_160,c_fill,f_auto,q_auto:good,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8f2daab0-23c5-40b8-bea4-382cdd6aaa17_1600x1066.jpeg"
+  }
+ ],
+ "projects": [
+  {
+   "id": "commons",
+   "name": "the commons",
+   "role": "co-founder",
+   "desc": "a community and third space rekindling intellectual curiosity, co-created play, & inner-exploration, in the heart of San Francisco.",
+   "links": [
+    [
+     "thesfcommons.com",
+     "https://www.thesfcommons.com"
+    ]
+   ],
+   "images": [
+    [
+     "proj-commons-1.jpg",
+     "the library lounge at The Commons"
+    ],
+    [
+     "proj-commons-2.jpg",
+     "a lounge lit by string lights and tapestries"
+    ],
+    [
+     "proj-commons-3.jpg",
+     "a long community dinner"
+    ],
+    [
+     "proj-commons-4.jpg",
+     "the open floor laid with cushions"
+    ],
+    [
+     "proj-commons-5.jpg",
+     "a group meditation"
+    ],
+    [
+     "proj-commons-6.jpg",
+     "the long study table"
+    ]
+   ]
+  },
+  {
+   "id": "hearth",
+   "name": "the mystical hearth",
+   "role": "sunday service",
+   "desc": "a sunday service for seekers of the sacred across every path.",
+   "links": [
+    [
+     "themysticalhearth.com",
+     "https://themysticalhearth.com/"
+    ]
+   ],
+   "images": [
+    [
+     "proj-hearth-1.jpg",
+     "a circle gathered around candles"
+    ],
+    [
+     "proj-hearth-2.jpg",
+     "candles and cards on the floor"
+    ],
+    [
+     "proj-hearth-3.jpg",
+     "a bonfire at night"
+    ],
+    [
+     "proj-hearth-4.jpg",
+     "a circle and a smiling participant with a notebook"
+    ],
+    [
+     "proj-hearth-5.jpg",
+     "candles and a reading"
+    ],
+    [
+     "proj-hearth-6.jpg",
+     "a sunday gathering at The Commons"
+    ]
+   ]
+  },
+  {
+   "id": "haumbody",
+   "name": "the haumbody",
+   "role": "interior design studio",
+   "desc": "an interior design studio creating environments for slow routines around self-connection, creativity, and mindfulness.",
+   "links": [
+    [
+     "thehaumbody.com",
+     "https://thehaumbody.com/"
+    ]
+   ],
+   "images": [
+    [
+     "proj-haumbody-1.jpg",
+     "a sunlit living room with a cream sofa"
+    ],
+    [
+     "proj-haumbody-2.jpg",
+     "a bedroom with a tower of books"
+    ],
+    [
+     "proj-haumbody-3.jpg",
+     "a bay window reading nook"
+    ],
+    [
+     "proj-haumbody-4.jpg",
+     "two armchairs and a knot pouf"
+    ],
+    [
+     "proj-haumbody-5.jpg",
+     "an attic workspace"
+    ],
+    [
+     "proj-haumbody-6.jpg",
+     "a lounge corner with a low table"
+    ]
+   ]
+  },
+  {
+   "id": "rabbit-holes",
+   "name": "rabbit holes",
+   "role": "curations & a coffee table book",
+   "desc": "a newsletter for the soul. weekly curation of the most psychoactive rabbit holes on the edges of the internet.",
+   "links": [
+    [
+     "therabbitholes.xyz",
+     "https://www.therabbitholes.xyz/"
+    ],
+    [
+     "the coffee table book",
+     "https://www.therabbitholes.xyz/book"
+    ]
+   ],
+   "images": [
+    [
+     "proj-rabbitholes-1.jpg",
+     "the Rabbit Holes coffee table book"
+    ],
+    [
+     "proj-rabbitholes-2.jpg",
+     "a spread from the book"
+    ],
+    [
+     "proj-rabbitholes-3.jpg",
+     "a spread from the book"
+    ],
+    [
+     "proj-rabbitholes-4.jpg",
+     "a spread from the book"
+    ],
+    [
+     "proj-rabbitholes-5.jpg",
+     "a spread from the book"
+    ],
+    [
+     "proj-rabbitholes-6.jpg",
+     "a spread from the book"
+    ]
+   ]
+  }
+ ],
+ "press": [
+  {
+   "title": "a salon for nones",
+   "source": "tablet magazine",
+   "url": "https://www.tabletmag.com/sections/community/articles/salon-nones-commons-san-francisco",
+   "image": null
+  },
+  {
+   "title": "patricia mou's desk setup and home workspace",
+   "source": "workspaces #368",
+   "url": "https://www.workspaces.xyz/p/368-patricia-mou",
+   "image": "press-workspaces.jpg"
+  },
+  {
+   "title": "self-respect, living like weasels, ideas are alive, in praise of shadows",
+   "source": "words that matter, issue 16",
+   "url": "https://words.getmatter.com/p/words-that-matter-issue-16-feat-patricia",
+   "image": "press-words-that-matter.jpg"
+  }
+ ]
+}
