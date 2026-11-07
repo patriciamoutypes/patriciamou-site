@@ -38,8 +38,8 @@ a{color:var(--rose);text-decoration:none}
 .ring{position:absolute;left:50%;top:50%;width:min(780px,112%);aspect-ratio:1;transform:translate(-50%,-50%);z-index:-1;pointer-events:none;overflow:visible}
 .ring circle.path{fill:none;stroke:#aaa5b8;stroke-width:1;vector-effect:non-scaling-stroke}
 .ring .m-dark{fill:#7a7588}
-.ring .m-lit{fill:#fdfcfa}
-.ring .m-edge{fill:none;stroke:#7a7588;stroke-width:1;vector-effect:non-scaling-stroke}
+.ring .m-lit{fill:#fff}
+.ring .m-edge{fill:none;stroke:#7a7588;stroke-width:1.8}
 /* the ring turns once a minute; each moon turns back the other way so it stays upright, lit side true */
 .ring .turn{transform-origin:400px 400px;animation:orbit 60s linear infinite}
 .ring .moon{transform-box:fill-box;transform-origin:center;animation:orbit 60s linear infinite reverse}
@@ -62,6 +62,13 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
 .field:focus{background:#fff;border-color:#aab2c3;box-shadow:0 0 0 4px rgba(188,194,207,.4)}
 .field::placeholder{color:#9a94a6}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.field.bad{border-color:#c79a9b;box-shadow:0 0 0 4px rgba(199,154,155,.18)}
+.status{margin:2px 0 0;min-height:1.5em;font-size:13px;color:#8a7d80}
+.button[disabled]{opacity:.55;cursor:default}
+.sent{padding:30px 0 10px}
+.sent-title{font:500 30px/1.2 var(--serif);margin:0 0 6px;color:var(--ink)}
+.sent p{margin:0;color:#5f5a6b}
 
 /* the send button: the same outlined rose pill as the home page */
 .button{justify-self:center;margin-top:8px;display:inline-block;padding:8px 18px;border:1px solid var(--rose);border-radius:999px;background:none;color:var(--rose);
@@ -106,22 +113,34 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
   <svg class="ring" viewBox="0 0 800 800" aria-hidden="true" shape-rendering="geometricPrecision">
     <circle class="path" cx="400" cy="400" r="392"/>
     <g class="turn">
-      <g transform="translate(400.00 8.00)"><g class="moon"><circle class="m-dark" r="11"/><circle class="m-edge" r="11"/></g></g>
-      <g transform="translate(550.01 37.84)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 1 0,11 A10.16,11 0 0 0 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
-      <g transform="translate(677.19 122.81)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 1 0,11 A7.78,11 0 0 0 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
-      <g transform="translate(762.16 249.99)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 1 0,11 A4.21,11 0 0 0 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
-      <g transform="translate(792.00 400.00)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 1 0,11 A0.00,11 0 0 0 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
-      <g transform="translate(762.16 550.01)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 1 0,11 A4.21,11 0 0 1 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
-      <g transform="translate(677.19 677.19)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 1 0,11 A7.78,11 0 0 1 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
-      <g transform="translate(550.01 762.16)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 1 0,11 A10.16,11 0 0 1 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
-      <g transform="translate(400.00 792.00)"><g class="moon"><circle class="m-lit" r="11"/><circle class="m-edge" r="11"/></g></g>
-      <g transform="translate(249.99 762.16)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 0 0,11 A10.16,11 0 0 0 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
-      <g transform="translate(122.81 677.19)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 0 0,11 A7.78,11 0 0 0 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
-      <g transform="translate(37.84 550.01)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 0 0,11 A4.21,11 0 0 0 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
-      <g transform="translate(8.00 400.00)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 0 0,11 A0.00,11 0 0 0 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
-      <g transform="translate(37.84 249.99)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 0 0,11 A4.21,11 0 0 1 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
-      <g transform="translate(122.81 122.81)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 0 0,11 A7.78,11 0 0 1 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
-      <g transform="translate(249.99 37.84)"><g class="moon"><circle class="m-dark" r="11"/><path class="m-lit" d="M0,-11 A11,11 0 0 0 0,11 A10.16,11 0 0 1 0,-11 Z"/><circle class="m-edge" r="11"/></g></g>
+      <g transform="translate(400.00 8.00)"><g class="moon"><circle class="m-lit" r="12"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(487.23 17.83)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A11.70,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(570.08 46.82)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A10.81,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(644.41 93.52)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A9.38,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(706.48 155.59)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A7.48,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(753.18 229.92)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A5.21,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(782.17 312.77)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A2.67,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(792.00 400.00)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A0.00,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(782.17 487.23)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A2.67,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(753.18 570.08)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A5.21,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(706.48 644.41)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A7.48,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(644.41 706.48)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A9.38,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(570.08 753.18)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A10.81,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(487.23 782.17)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 0 0,12 A11.70,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(400.00 792.00)"><g class="moon"><circle class="m-dark" r="12"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(312.77 782.17)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A11.70,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(229.92 753.18)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A10.81,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(155.59 706.48)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A9.38,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(93.52 644.41)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A7.48,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(46.82 570.08)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A5.21,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(17.83 487.23)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A2.67,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(8.00 400.00)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A0.00,12 0 0 0 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(17.83 312.77)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A2.67,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(46.82 229.92)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A5.21,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(93.52 155.59)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A7.48,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(155.59 93.52)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A9.38,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(229.92 46.82)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A10.81,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
+      <g transform="translate(312.77 17.83)"><g class="moon"><circle class="m-dark" r="12"/><path class="m-lit" d="M0,-12 A12,12 0 0 1 0,12 A11.70,12 0 0 1 0,-12 Z"/><circle class="m-edge" r="12"/></g></g>
     </g>
   </svg>
   <img class="disc disc-a" src="/assets/collage/connect-shell.jpg" alt="" aria-hidden="true"/>
@@ -130,14 +149,21 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
   <section class="panel" aria-labelledby="h-connect">
     <h1 id="h-connect">connect</h1>
     <p class="lede">send me a note, a book, an idea, a little inspiration</p>
-    <form id="note">
-      <textarea class="field" name="msg" placeholder="write to me…" aria-label="your message" required></textarea>
+    <form id="note" novalidate>
+      <textarea class="field" name="message" placeholder="write to me…" aria-label="your message" required></textarea>
       <div class="row">
-        <input class="field" name="link" placeholder="a link (optional)" aria-label="a link"/>
-        <input class="field" name="from" placeholder="your name (optional)" aria-label="your name"/>
+        <input class="field" type="email" name="email" placeholder="your email" aria-label="your email" autocomplete="email" required/>
+        <input class="field" name="name" placeholder="your name (optional)" aria-label="your name" autocomplete="name"/>
       </div>
+      <input class="field" name="link" placeholder="a link (optional)" aria-label="a link" inputmode="url"/>
+      <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true"/>
       <button class="button" type="submit">send 💌</button>
+      <p class="status" role="status" aria-live="polite"></p>
     </form>
+    <div class="sent" hidden>
+      <p class="sent-title">received 💌</p>
+      <p>thank you for writing. i'll write back soon.</p>
+    </div>
   </section>
 </main>
 
@@ -148,15 +174,45 @@ textarea.field{border-radius:26px;min-height:120px;resize:vertical;padding:16px 
 </p>
 </div>
 <script>
+/* notes go straight to Patricia's inbox through FormSubmit (formsubmit.co); the sender's email becomes the reply-to */
 (function () {
   var f = document.getElementById("note"); if (!f) return;
+  var status = f.querySelector(".status"), btn = f.querySelector("button");
+  var ENDPOINT = "https://formsubmit.co/ajax/impatriciamou@gmail.com";
+  function val(n) { return (f.elements[n].value || "").trim(); }
+  function mark(n, bad) { f.elements[n].classList.toggle("bad", bad); }
+  f.addEventListener("input", function (e) { if (e.target.classList) e.target.classList.remove("bad"); });
   f.addEventListener("submit", function (ev) {
     ev.preventDefault();
-    var v = function (n) { return (f.elements[n].value || "").trim(); };
-    var msg = v("msg"), link = v("link"), who = v("from");
-    var body = msg + (link ? "\n\n" + link : "") + (who ? "\n\n" + who : "");
-    location.href = "mailto:impatriciamou@gmail.com?subject=" + encodeURIComponent("a note for you" + (who ? " from " + who : "")) +
-      "&body=" + encodeURIComponent(body);
+    var msg = val("message"), email = val("email");
+    var okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    mark("message", !msg); mark("email", !okEmail);
+    if (!msg) { status.textContent = "write a few words first"; f.elements.message.focus(); return; }
+    if (!okEmail) { status.textContent = "add your email so i can write back"; f.elements.email.focus(); return; }
+    if (val("_honey")) return;
+    var who = val("name");
+    btn.disabled = true; status.textContent = "sending…";
+    fetch(ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        _subject: "a note for you from " + (who || email),
+        _template: "box",
+        name: who || "(no name)",
+        email: email,
+        message: msg,
+        link: val("link") || "(none)"
+      })
+    }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return { ok: r.ok, d: d }; }); })
+      .then(function (res) {
+        if (res.ok && String(res.d.success) === "true") {
+          f.hidden = true; f.nextElementSibling.hidden = false;
+        } else { throw new Error(res.d && res.d.message || "failed"); }
+      })
+      .catch(function () {
+        btn.disabled = false;
+        status.innerHTML = 'that didn\'t go through. try again, or write to <a href="mailto:hi@patriciamou.com">hi@patriciamou.com</a>';
+      });
   });
 })();
 </script>
