@@ -200,6 +200,7 @@ h1{{font:400 38px/1.1 var(--serif);margin:56px 0 30px}}
 </div>
 </div>
 {SCRIPT}
+<script src="/assets/sound/veil-963-v1.js" defer></script>
 </body>
 </html>
 '''
