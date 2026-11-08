@@ -1,7 +1,8 @@
 /* veil, as music: a 963 Hz drone with slow chords and a glass-flute melody.
    Made in the page with the Web Audio API, so there is no audio file.
-   Browsers only allow sound after a visitor interacts, so it starts softly on the
-   first click, tap or key press anywhere, and pauses while the tab is hidden. */
+   It tries to start as soon as the page loads. Browsers that block sound until a
+   visitor interacts (most do on a first visit) keep it waiting, and it starts on the
+   first click, tap or key press anywhere instead. It pauses while the tab is hidden. */
 (function () {
   var AC = window.AudioContext || window.webkitAudioContext;
   if (!AC) return;
@@ -99,4 +100,6 @@
     if (ctx.state !== "running") { var p = ctx.resume(); if (p && p.then) p.then(done); } else done();
   }
   EVENTS.forEach(function (e) { document.addEventListener(e, begin, true); });
+  // try right away; where the browser allows sound on load this plays immediately
+  try { begin(); } catch (e) {}
 })();
