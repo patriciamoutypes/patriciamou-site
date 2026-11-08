@@ -364,6 +364,11 @@ h2{font:400 27px/1.2 var(--serif);margin:0 0 10px}
   .pubs{margin-bottom:18px}
 }
 
+/* the Star of Ishtar: drawn in pale gold under the sheet, where the palette has deepened to night teal */
+.ishtar{display:flex;justify-content:center;margin-top:-16px;padding-bottom:80px}
+.pm-ishtar{width:140px}
+@media (max-width:860px){.ishtar{margin-top:8px;padding-bottom:56px}.pm-ishtar{width:116px}}
+
 /* phones only: the sheet is inset so the palette frames it, a few cut-outs hang off
    the sheet's edges at the section breaks, and the page ends on night teal */
 .mband,.mend{display:none}
@@ -685,8 +690,10 @@ h2{font:400 27px/1.2 var(--serif);margin:0 0 10px}
 <footer class="foot">© patricia mou</footer>
 </div>
 <div class="mend" aria-hidden="true"><img src="/assets/collage/spiral-light.jpg" alt="" loading="lazy" decoding="async" data-no-zoom style="--w:118px;--r:-5deg;--x:-62px;--y:34px"/><img src="/assets/collage/moon-pine.jpg" alt="" loading="lazy" decoding="async" data-no-zoom style="--w:140px;--r:3deg;--x:46px;--y:0px"/></div>
+<div class="ishtar"><div class="pm-ishtar" aria-label="the Star of Ishtar" role="img"></div></div>
 
 <script src="/assets/sigil.v8.js" defer></script>
+<script src="/assets/ishtar.v1.js" defer></script>
 <script src="/assets/zoom.v1.js" defer></script>
 <script>
 // palette: pearl and moonlit grey at the top, dusk blue and night teal at the bottom; cut-outs drift a little slower than the page
