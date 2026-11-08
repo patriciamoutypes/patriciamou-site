@@ -364,10 +364,10 @@ h2{font:400 27px/1.2 var(--serif);margin:0 0 10px}
   .pubs{margin-bottom:18px}
 }
 
-/* the Star of Ishtar: drawn in pale gold under the sheet, where the palette has deepened to night teal */
-.ishtar{display:flex;justify-content:center;margin-top:-16px;padding-bottom:80px}
-.pm-ishtar{width:140px}
-@media (max-width:860px){.ishtar{margin-top:8px;padding-bottom:56px}.pm-ishtar{width:116px}}
+/* the Star of Ishtar: a small, faint pale-gold star under the sheet, where the palette has deepened to night teal */
+.ishtar{display:flex;justify-content:center;margin-top:-8px;padding-bottom:72px}
+.pm-ishtar{display:block;width:64px;height:64px;color:rgba(232,218,188,.42)}
+@media (max-width:860px){.ishtar{margin-top:12px;padding-bottom:52px}.pm-ishtar{width:54px;height:54px}}
 
 /* phones only: the sheet is inset so the palette frames it, a few cut-outs hang off
    the sheet's edges at the section breaks, and the page ends on night teal */
@@ -472,10 +472,9 @@ h2{font:400 27px/1.2 var(--serif);margin:0 0 10px}
 <footer class="foot">© patricia mou</footer>
 </div>
 <div class="mend" aria-hidden="true"><img src="/assets/collage/spiral-light.jpg" alt="" loading="lazy" decoding="async" data-no-zoom style="--w:118px;--r:-5deg;--x:-62px;--y:34px"/><img src="/assets/collage/moon-pine.jpg" alt="" loading="lazy" decoding="async" data-no-zoom style="--w:140px;--r:3deg;--x:46px;--y:0px"/></div>
-<div class="ishtar"><div class="pm-ishtar" aria-label="the Star of Ishtar" role="img"></div></div>
+<div class="ishtar"><svg class="pm-ishtar" viewBox="-1.1 -1.1 2.2 2.2" role="img" aria-label="the Star of Ishtar"><g fill="none" stroke="currentColor" stroke-width=".03" stroke-linejoin="round"><circle r="1"/><path d="M-.115 -.277Q-.033 -.639 0 -1Q.033 -.639 .115 -.277Q.364 -.411 .58 -.58Q.411 -.364 .277 -.115Q.639 -.033 1 0Q.639 .033 .277 .115Q.411 .364 .58 .58Q.364 .411 .115 .277Q.033 .639 0 1Q-.033 .639 -.115 .277Q-.364 .411 -.58 .58Q-.411 .364 -.277 .115Q-.639 .033 -1 0Q-.639 -.033 -.277 -.115Q-.411 -.364 -.58 -.58Q-.364 -.411 -.115 -.277Z"/></g><circle r=".045" fill="currentColor"/></svg></div>
 
 <script src="/assets/sigil.v8.js" defer></script>
-<script src="/assets/ishtar.v1.js" defer></script>
 <script src="/assets/zoom.v1.js" defer></script>
 <script>
 // palette: pearl and moonlit grey at the top, dusk blue and night teal at the bottom; cut-outs drift a little slower than the page
