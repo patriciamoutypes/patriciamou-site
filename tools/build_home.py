@@ -93,22 +93,25 @@ for pr in data['projects']:
     # The photo is the "figure" if there is one, otherwise the gallery's first still image, otherwise the video.
     gallery = list(pr.get('images', []))
     has_text = bool(desc or pr.get('tagline') or pr.get('list') or pr.get('phases') or pr.get('desc_after'))
+    first = pr.get('photo_first', True)   # "photo_first": false keeps the older layout: words and links, then the gallery
     lead, rest = None, False
-    if pr.get('figure'):
+    if not first:
+        pass
+    elif pr.get('figure'):
         lead = pr['figure']
     elif has_text and gallery and not isinstance(gallery[0], dict):
         lead = gallery.pop(0)
         rest = True   # the gallery that follows loses its big first tile, since the lead photo is already above
     if lead:
         parts.append(f'<figure class="project-figure"><img src="/assets/{e(lead[0])}" alt="{e(lead[1])}" loading="lazy" decoding="async"/></figure>')
-    elif has_text and pr.get('video'):
+    elif first and has_text and pr.get('video'):
         v = pr['video']
         parts.append(f'<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{e(v["id"])}" title="{e(v["title"])}" '
                      'loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" '
                      'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>')
         pr = dict(pr, video=None)
     links = ''.join(f'<a class="ext" href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a>' for t, u in pr.get('links', []))
-    if links:
+    if links and first:
         parts.append(f'<p class="project-links project-links-top">{links}</p>')
     if pr.get('tagline'):
         parts.append(f'<p class="project-tagline">{e(pr["tagline"])}</p>')
@@ -120,7 +123,7 @@ for pr in data['projects']:
     if pr.get('phases'):
         parts.append('<ol class="project-phases">' + ''.join(f'<li><b>{e(l)}</b> {e(t)}</li>' for l, t in pr['phases']) + '</ol>')
     parts += [f'<p class="project-desc">{e(d)}</p>' for d in pr.get('desc_after', [])]
-    parts.append('<div class="project-gap"></div>')
+    parts.append(f'<p class="project-links">{links}</p>' if links and not first else '<div class="project-gap"></div>')
     if pr.get('video'):
         v = pr['video']
         parts.append(f'<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{e(v["id"])}" title="{e(v["title"])}" '
