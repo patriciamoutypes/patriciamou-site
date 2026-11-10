@@ -139,6 +139,9 @@ h2{font:400 27px/1.2 var(--serif);margin:0 0 10px}
 /* exactly four tiles: an even two-by-two */
 .gallery > *:first-child:nth-last-child(4),.gallery > *:first-child:nth-last-child(4) ~ *{grid-column:span 3;grid-row:span 2}
 .gallery > *:first-child:nth-last-child(2),.gallery > *:first-child:nth-last-child(2) ~ *{grid-column:span 3;grid-row:span 2}
+/* a gallery after the lead photo: even tiles in threes, a short last row of two runs wider */
+.gallery.gallery-rest > *:first-child:not(:nth-last-child(4)):not(:nth-last-child(2)){grid-column:span 2;grid-row:auto}
+.gallery.gallery-rest > *:nth-child(3n+1):nth-last-child(2),.gallery.gallery-rest > *:nth-child(3n+2):last-child{grid-column:span 3}
 .project-gap{height:14px}
 .project-figure{margin:10px 0 24px}
 .project-figure img{display:block;width:100%;height:auto;border-radius:4px;background:var(--wash)}

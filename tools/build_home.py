@@ -89,6 +89,27 @@ for pr in data['projects']:
     desc = pr.get('desc', [])
     desc = desc if isinstance(desc, list) else [desc]
     parts = [f'<div class="panel-head"><h3>{e(pr["name"])}</h3><span class="meta">{e(pr["role"])}</span></div>']
+    # every project opens with its photo, then its links, then the words; the rest of the media follows.
+    # The photo is the "figure" if there is one, otherwise the gallery's first still image, otherwise the video.
+    gallery = list(pr.get('images', []))
+    has_text = bool(desc or pr.get('tagline') or pr.get('list') or pr.get('phases') or pr.get('desc_after'))
+    lead, rest = None, False
+    if pr.get('figure'):
+        lead = pr['figure']
+    elif has_text and gallery and not isinstance(gallery[0], dict):
+        lead = gallery.pop(0)
+        rest = True   # the gallery that follows loses its big first tile, since the lead photo is already above
+    if lead:
+        parts.append(f'<figure class="project-figure"><img src="/assets/{e(lead[0])}" alt="{e(lead[1])}" loading="lazy" decoding="async"/></figure>')
+    elif has_text and pr.get('video'):
+        v = pr['video']
+        parts.append(f'<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{e(v["id"])}" title="{e(v["title"])}" '
+                     'loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" '
+                     'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>')
+        pr = dict(pr, video=None)
+    links = ''.join(f'<a class="ext" href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a>' for t, u in pr.get('links', []))
+    if links:
+        parts.append(f'<p class="project-links project-links-top">{links}</p>')
     if pr.get('tagline'):
         parts.append(f'<p class="project-tagline">{e(pr["tagline"])}</p>')
     parts += [f'<p class="project-desc">{e(d)}</p>' for d in desc]
@@ -98,20 +119,16 @@ for pr in data['projects']:
         parts.append('<ul class="project-list">' + ''.join(f'<li>{e(i)}</li>' for i in L['items']) + '</ul>')
     if pr.get('phases'):
         parts.append('<ol class="project-phases">' + ''.join(f'<li><b>{e(l)}</b> {e(t)}</li>' for l, t in pr['phases']) + '</ol>')
-    if pr.get('figure'):  # one wide image between the main text and desc_after
-        fg = pr['figure']
-        parts.append(f'<figure class="project-figure"><img src="/assets/{e(fg[0])}" alt="{e(fg[1])}" loading="lazy" decoding="async"/></figure>')
     parts += [f'<p class="project-desc">{e(d)}</p>' for d in pr.get('desc_after', [])]
-    links = ''.join(f'<a class="ext" href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a>' for t, u in pr.get('links', []))
-    parts.append(f'<p class="project-links">{links}</p>' if links else '<div class="project-gap"></div>')
+    parts.append('<div class="project-gap"></div>')
     if pr.get('video'):
         v = pr['video']
         parts.append(f'<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{e(v["id"])}" title="{e(v["title"])}" '
                      'loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" '
                      'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>')
-    if pr.get('images'):
+    if gallery:
         tiles = []
-        for it in pr['images']:
+        for it in gallery:
             if isinstance(it, dict):  # a short silent loop; the page script loads it when its panel is shown
                 tiles.append(f'<video muted loop playsinline preload="none" poster="/assets/{e(it["poster"])}" '
                              f'data-src="/assets/{e(it["video"])}" aria-label="{e(it["alt"])}"></video>')
@@ -119,7 +136,8 @@ for pr in data['projects']:
                 tiles.append(f'<img src="/assets/{e(it[0])}" alt="{e(it[1])}" loading="lazy" decoding="async"/>')
         imgs = ''.join(tiles)
         cls = 'gallery gallery-masonry' if pr.get('layout') == 'masonry' else 'gallery'
-        if pr.get('lead'): cls += ' gallery-lead'   # first photo runs across all columns, the rest flow below
+        if pr.get('lead'): cls += ' gallery-lead'
+        if rest: cls += ' gallery-rest'   # first photo runs across all columns, the rest flow below
         parts.append(f'<div class="{cls}">{imgs}</div>')
     for b in pr.get('blocks', []):  # hand-written sections in tools/partials/
         parts.append(open(os.path.join(HERE, 'partials', b), encoding='utf-8').read())
