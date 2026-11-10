@@ -126,6 +126,9 @@ for pr in data['projects']:
         parts.append(f'<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{e(v["id"])}" title="{e(v["title"])}" '
                      'loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" '
                      'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>')
+    if len(gallery) == 1 and not isinstance(gallery[0], dict):   # a lone photo after the words runs full width
+        it = gallery.pop()
+        parts.append(f'<figure class="project-figure"><img src="/assets/{e(it[0])}" alt="{e(it[1])}" loading="lazy" decoding="async"/></figure>')
     if gallery:
         tiles = []
         for it in gallery:
