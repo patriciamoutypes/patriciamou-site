@@ -733,6 +733,29 @@
    }
   },
   {
+   "id": "thresholds",
+   "name": "thresholds of the sacred",
+   "role": "curated exhibition & essay",
+   "tagline": "buddhist interfaces between worlds",
+   "desc": [
+    "Thresholds of the Sacred is an exhibition I curated of eighteen objects from Buddhist art and architecture, with an essay alongside it. It traces how Buddhist traditions used trees, relics, images and embodied practices to mark the threshold between the ordinary and the sacred, and to open portals between worlds.",
+    "My thesis is that these thresholds are invitations: material, visual and ritual technologies that let us approach what feels beyond us. The question I carry from them into design is how the spaces we make today, secular ones included, might hold that same potential for transformation."
+   ],
+   "figure": [
+    "proj-thresholds-hevajra.jpg",
+    "Hevajra Mandala, distemper on cloth, 15th century, Tibet"
+   ],
+   "desc_after": [
+    "The work lives in two places: the essay, and a virtual VR gallery of the exhibition you can walk through."
+   ],
+   "links": [
+    [
+     "read the essay",
+     "https://templeuponahill.substack.com/p/thresholds-of-the-sacred"
+    ]
+   ]
+  },
+  {
    "id": "council",
    "name": "council of the cosmos",
    "role": "workshop",
