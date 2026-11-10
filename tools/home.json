@@ -454,6 +454,32 @@
    ]
   },
   {
+   "id": "thresholds",
+   "name": "thresholds of the sacred",
+   "role": "curated exhibition & essay",
+   "tagline": "buddhist interfaces between worlds",
+   "desc": [
+    "Across centuries, Buddhist communities have shaped trees, relics, images and embodied practices into thresholds: places where the ordinary meets the sacred, and something within us softens, stirs, or quietly shifts. Thresholds of the Sacred gathers eighteen of these objects into an exhibition of portals between worlds. These thresholds are not just boundaries; they are invitations. And they leave me wondering how the spaces we design today, sacred or secular, might carry that same potential for transmutation."
+   ],
+   "figure": [
+    "proj-thresholds-temple.jpg",
+    "the temple upon a hill: White Tara seated on a lotus beneath a bodhi tree, ringed by still water under a pearl dome open to the full moon"
+   ],
+   "desc_after": [
+    "The work lives in two places: the essay, and a VR world of the exhibition you can walk through."
+   ],
+   "links": [
+    [
+     "enter the VR world",
+     "https://thresholds-of-the-sacred.netlify.app/"
+    ],
+    [
+     "read the essay",
+     "https://templeuponahill.substack.com/p/thresholds-of-the-sacred"
+    ]
+   ]
+  },
+  {
    "id": "commons",
    "name": "the commons",
    "role": "co-founder",
@@ -731,29 +757,6 @@
      }
     ]
    }
-  },
-  {
-   "id": "thresholds",
-   "name": "thresholds of the sacred",
-   "role": "curated exhibition & essay",
-   "tagline": "buddhist interfaces between worlds",
-   "desc": [
-    "Thresholds of the Sacred is an exhibition I curated of eighteen objects from Buddhist art and architecture, with an essay alongside it. It traces how Buddhist traditions used trees, relics, images and embodied practices to mark the threshold between the ordinary and the sacred, and to open portals between worlds.",
-    "My thesis is that these thresholds are invitations: material, visual and ritual technologies that let us approach what feels beyond us. The question I carry from them into design is how the spaces we make today, secular ones included, might hold that same potential for transformation."
-   ],
-   "figure": [
-    "proj-thresholds-hevajra.jpg",
-    "Hevajra Mandala, distemper on cloth, 15th century, Tibet"
-   ],
-   "desc_after": [
-    "The work lives in two places: the essay, and a virtual VR gallery of the exhibition you can walk through."
-   ],
-   "links": [
-    [
-     "read the essay",
-     "https://templeuponahill.substack.com/p/thresholds-of-the-sacred"
-    ]
-   ]
   },
   {
    "id": "council",
