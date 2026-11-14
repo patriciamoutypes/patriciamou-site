@@ -419,39 +419,79 @@
   {
    "id": "rabbit-holes",
    "name": "rabbit holes",
-   "role": "a newsletter & a coffee table book",
-   "desc": [
-    "curation of the most soulful and psychoactive rabbit holes on the edges of the internet.",
-    "a sanctuary to pause from the world of doing and pass into the world of wonder, self-reflection, and aliveness. i curate across philosophy, art & poetry, architecture, personal development, spirituality, and world-building."
+   "role": "a newsletter by subscription & a book",
+   "figure": [
+    "rh-cabinet.jpg",
+    "Brueghel and Rubens' Sight: a painted cabinet of wonders crowded with paintings, sculpture and instruments"
    ],
    "links": [
     [
-     "read the newsletter",
-     "https://curatedrabbitholes.substack.com/"
+     "subscribe to rabbit holes",
+     "https://www.therabbitholes.xyz/join/"
     ],
     [
-     "the coffee table book",
-     "https://www.therabbitholes.xyz/book"
+     "step inside",
+     "https://www.therabbitholes.xyz/"
     ]
+   ],
+   "tagline": "a curation of the most soulful & psychoactive rabbit holes on the edges of the internet",
+   "desc": [
+    "Each issue gathers the images, words, poetry and art that stir the soul, to be savored slowly, like a letter from a friend. A place to step out of horizontal time and into vertical time.",
+    "Every issue unfurls as a ritual in six movements: start the ritual, touch the heart, inspire the senses, engage the mind, nourish the soul, and build & create. Before you read, light a candle, make something warm, and press play on the soundscape curated for that issue.",
+    "Join 11K explorers who read slowly and feel deeply."
    ],
    "images": [
     [
-     "proj-rabbitholes-1.jpg",
-     "the Rabbit Holes coffee table book"
+     "rh-ritual-candle.jpg",
+     "start the ritual: Georges de La Tour's Magdalene by candlelight"
     ],
     [
-     "proj-rabbitholes-3.jpg",
-     "turning a page of the Rabbit Holes book"
+     "rh-heart.jpg",
+     "touch the heart: two faces resting together, eyes closed"
+    ],
+    [
+     "rh-senses.jpg",
+     "inspire the senses: a woman in a softly lit, carved white passageway"
+    ],
+    [
+     "rh-mind.jpg",
+     "engage the mind: Friedrich's Wanderer above the Sea of Fog"
+    ],
+    [
+     "rh-soul.jpg",
+     "nourish the soul: light pouring through an opening onto a valley"
+    ],
+    [
+     "rh-create.jpg",
+     "build & create: a glowing cabin in the snowy woods"
     ]
    ],
-   "tagline": "what does it mean to live a life of meaning and beauty?",
-   "desc_after": [
-    "The Rabbit Holes coffee table book comprises curations from over 50 issues over a period of 5 years, alongside personal essays and notes."
-   ],
-   "figure": [
-    "proj-rabbitholes-newsletter.jpg",
-    "the Rabbit Holes newsletter header: a line-drawn rabbit circled by photographs of faces, a train at dusk, a flower seller, and a painted cosmos"
-   ]
+   "coda": {
+    "title": "the rabbit holes book",
+    "desc": [
+     "The Rabbit Holes coffee table book comprises curations from over 50 issues over a period of 5 years, alongside personal essays and notes."
+    ],
+    "images": [
+     [
+      "rh-book-cover.jpg",
+      "the Rabbit Holes book cover"
+     ],
+     [
+      "rh-book-hands.jpg",
+      "turning the pages of the Rabbit Holes book"
+     ],
+     [
+      "rh-book-spread.jpg",
+      "an open spread of the Rabbit Holes book"
+     ]
+    ],
+    "links": [
+     [
+      "the coffee table book",
+      "https://www.therabbitholes.xyz/book/"
+     ]
+    ]
+   }
   },
   {
    "id": "thresholds",

@@ -99,6 +99,7 @@ for pr in data['projects']:
         pass
     elif pr.get('figure'):
         lead = pr['figure']
+        rest = True
     elif has_text and gallery and not isinstance(gallery[0], dict):
         lead = gallery.pop(0)
         rest = True   # the gallery that follows loses its big first tile, since the lead photo is already above
@@ -158,6 +159,14 @@ for pr in data['projects']:
                      f'<ol class="slides-track" tabindex="0" aria-label="{e(sl["title"])}">{frames}</ol></div>')
     if pr.get('program'):
         parts.append(f'<h4 class="program-head">{e(pr["program"]["title"])}</h4>{ritual(pr["program"]["steps"])}')
+    if pr.get('coda'):  # a closing section at the very end: a small heading, words, photos in a row, links
+        cd = pr['coda']
+        parts.append(f'<h4 class="program-head">{e(cd["title"])}</h4>')
+        parts += [f'<p class="project-desc">{e(d)}</p>' for d in cd.get('desc', [])]
+        if cd.get('images'):
+            parts.append('<div class="gallery gallery-rest">' + ''.join(f'<img src="/assets/{e(f)}" alt="{e(a)}" loading="lazy" decoding="async"/>' for f, a in cd['images']) + '</div>')
+        cl = ''.join(f'<a class="ext" href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a>' for t, u in cd.get('links', []))
+        if cl: parts.append(f'<p class="project-links project-coda-links">{cl}</p>')
     panels.append((pr['id'], ''.join(parts)))
 projects = shelf('projects', 'projects', '<p class="shelf-note">community design, rituals, zines, and physical place-making</p>', items, panels)
 
