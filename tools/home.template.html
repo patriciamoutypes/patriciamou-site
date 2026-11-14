@@ -571,6 +571,14 @@ h2{font:400 27px/1.2 var(--serif);margin:0 0 10px}
         tab.addEventListener("mouseleave", function () { clearTimeout(timer); });
       }
     });
+    // deep links: /#projects-thresholds opens that project's panel
+    function fromHash() {
+      var h = decodeURIComponent(location.hash.slice(1));
+      var tab = h && document.getElementById("tab-" + h);
+      if (tab && tabs.indexOf(tab) > -1) { select(tab); shelf.scrollIntoView({ block: "start" }); }
+    }
+    fromHash();
+    window.addEventListener("hashchange", fromHash);
   });
 })();
 
